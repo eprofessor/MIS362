@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <title>MIS202 Speaker Series Reflection</title>
+</head>
+
+<body class="container-fluid">
+
+<form class="container-fluid"
+      action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp"
+      method="post"
+      name="frmAssignment"
+      id="frmAssignment">
+
+    <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+    <h1 class="text-center">College of Business Speaker Series Reflection</h1>
+
+    <!-- Student Information (your constants.js fills these) -->
+    <h2 id="student-info" class="sr-only">Student Information</h2>
+    <div class="row" aria-labelledby="student-info">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="FirstName" class="text-dark">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" readonly aria-readonly="true" autocomplete="given-name" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="LastName" class="text-dark">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" readonly aria-readonly="true" autocomplete="family-name" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="StarID" class="text-dark">StarID:</label>
+                <input class="form-control" name="StarID" id="StarID" type="text" readonly aria-readonly="true" autocomplete="username" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="email" class="text-dark">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" readonly aria-readonly="true" autocomplete="email" />
+            </div>
+        </div>
+    </div>
+    <input name="pin" id="pin" type="hidden" />
+
+    <!-- Course Information -->
+    <h2 id="course-info" class="sr-only">Course Information</h2>
+    <div class="row" aria-labelledby="course-info">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="Semester" class="text-dark">Semester:</label>
+                <input class="form-control" name="Semester" id="Semester" type="text" readonly aria-readonly="true" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="Class" class="text-dark">Class:</label>
+                <input class="form-control" name="Class" id="Class" type="text" readonly aria-readonly="true" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="Section" class="text-dark">Section:</label>
+                <input class="form-control" name="Section" id="Section" type="text" readonly aria-readonly="true" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="assignment" class="text-dark">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" type="text"
+                       readonly value="AP_Speaker01" aria-readonly="true" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit button -->
+    <div class="col-lg-12">
+        <br />
+        <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+        <br />
+    </div>
+
+
+    <!-- Learning Objectives -->
+    <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+    <div id="Objectives" class="collapse in col-lg-12">
+        <p>After completing this assignment you will be able to:</p>
+        <ul>
+            <li>Practice professional networking behaviors in a low-stakes setting</li>
+            <li>Identify how organizations use MIS to solve real business problems</li>
+            <li>Compare different viewpoints and reflect with an open mind</li>
+        </ul>
+        <hr />
+    </div>
+
+    <!-- Overview -->
+    <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+    <div id="Overview" class="collapse in col-lg-12">
+        <p>
+            Attend <strong>any 2</strong> College of Business Speaker Series events-most are in-person but occasionally virtual<br />
+            After each event, submit your reflection using this web form
+        </p>
+        <ul>
+            <li><strong> see D2L for exact due dates </strong></li>
+            <li><strong>Submission #1 due:</strong> ~ week 8</li>
+            <li><strong>Submission #2 due:</strong> ~ week 15</li>
+        </ul>
+        <p>
+            Keep answers short. This is about being present, asking questions, and realizing the role of MIS in the real world.
+        </p>
+        <hr />
+    </div>
+
+    <!-- Reflection -->
+    <div class="col-lg-12"><a href="#Reflection" class="btn btn-info" data-toggle="collapse">Reflection Questions</a></div>
+    <div id="Reflection" class="collapse in col-lg-12">
+
+        <p><strong>(Required)</strong> Complete these fields. Short answers only.</p>
+        <div id="clientErrors" class="alert alert-danger" style="display:none;"></div>
+        <hr />
+
+
+        <p>(1) Event attended (choose from list)
+            <select name="q1" id="q1" class="form-control">
+                <option value="">Loading events...</option>
+                <option value="Other">Other (type below)</option>
+            </select>
+        </p>
+
+        <p>(2) If “Other”, type event name here
+            <input type="text" name="q2" id="q2" maxlength="160" class="form-control" value="Other event name (if needed): " />
+        </p>
+
+
+
+        <p>(3) Speaker role/title
+            <input type="text" name="q3" id="q3" maxlength="160" class="form-control" value="Role/title: " />
+        </p>
+
+        <p>(4) Company/organization represented
+            <input type="text" name="q4" id="q4" maxlength="160" class="form-control" value="Organization: " />
+        </p>
+
+        <p>(5) In-person or virtual?
+            <select name="q5" id="q5" class="form-control">
+                <option value="">Select one</option>
+                <option value="In-person">In-person</option>
+                <option value="Virtual">Virtual</option>
+            </select>
+        </p>
+
+        <hr />
+
+        <p><strong>Engagement (questions + networking)</strong></p>
+
+        <p>(6) Question you asked (required)
+            <input type="text" name="q6" id="q6" maxlength="200" class="form-control" value="My question: " />
+        </p>
+
+        <p class="text-muted"><em>If you did not ask a question during the event, Q10 should be a strong question you would ask next time.</em></p>
+
+        <p>(7) Question you wish you had asked (or will ask next time) (required)
+            <input type="text" name="q7" id="q7" maxlength="200" class="form-control" value="Next time / wish I asked: " />
+        </p>
+
+        <p>(8) Networking action you took (1 sentence)
+            <input type="text" name="q8" id="q8" maxlength="200" class="form-control" value="Networking action: " />
+        </p>
+
+        <hr />
+
+        <p><strong>MIS takeaway (most important thing you learned)</strong></p>
+
+        <p>(9) What system / data / technology did they mention (even indirectly)?
+            <input type="text" name="q9" id="q9" maxlength="200" class="form-control" value="System/data/tech: " />
+        </p>
+
+        <p>(10) What business problem did MIS help solve?
+            <input type="text" name="q10" id="q10" maxlength="200" class="form-control" value="Problem solved: " />
+        </p>
+
+        <hr />
+
+        <p><strong>Open mind / growth</strong></p>
+
+        <p>(11) Before this talk I thought _____.
+            <input type="text" name="q11" id="q11" maxlength="220" class="form-control" value="Before: " />
+        </p>
+
+        <p>(12) Now I think _____.
+            <input type="text" name="q12" id="q12" maxlength="220" class="form-control" value="Now: " />
+        </p>
+
+
+        <hr />
+
+        <p><strong>Also Required: event photo-Upload to D2L Assignment Folder</strong></p>
+
+        <hr />
+    </div>
+
+    <!-- Submission 
+    <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Submit</a></div>
+        -->
+
+    <div id="ExerciseAssignmentSubmission" class="collapse in col-lg-12">
+       
+
+        <p>Press <strong>Submit</strong> at the top or bottom of this page. Read the confirmation page and fix any errors.</p>
+    </div>
+
+    <div class="col-lg-12">
+        <br />
+        <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+        <br />
+    </div>
+
+</form>
+
+<footer>
+    <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+    <div id="footerText" class="col-lg-12 text-muted"></div>
+</footer>
+
+<!-- Scripts -->
+<script src="../../ReadOnly/jquery-1.js"></script>
+<script src="../../ReadOnly/bootstrap.js"></script>
+<script src="../studentConstants.js"></script>
+<script src="../../ReadOnly/courseConstants.js"></script>
+
+<!-- Current semester events list + loader -->
+<script src="../../ReadOnly/speakerEventsCurrent.js"></script>
+<script src="../../ReadOnly/speakerEvents_loader.js"></script>
+
+<script src="../../ReadOnly/domForms.js"></script>
+
+<script>
+    // Populate dropdown after scripts load
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof populateSpeakerSeriesEvents === "function") {
+            populateSpeakerSeriesEvents("q1");
+        } else {
+            // fallback so the form still works
+            var dd = document.getElementById("q1");
+            if (dd) {
+                dd.innerHTML = "";
+                var opt0 = document.createElement("option");
+                opt0.value = "";
+                opt0.text = "Select event (speakerEvents_loader.js not loaded)";
+                dd.appendChild(opt0);
+                var optOther = document.createElement("option");
+                optOther.value = "Other";
+                optOther.text = "Other (type below)";
+                dd.appendChild(optOther);
+            }
+        }
+    });
+
+    // ---------- Simple Client-Side Checks ----------
+    (function () {
+        var form = document.getElementById("frmAssignment");
+        var errBox = document.getElementById("clientErrors");
+
+        function getVal(id) {
+            var el = document.getElementById(id);
+            return el ? (el.value || "").trim() : "";
+        }
+
+        // Treat unchanged "prompt-like" values as empty
+        function isMeaningful(val, exactPrompt) {
+            if (!val) return false;
+            var v = val.trim();
+            if (!v) return false;
+            if (exactPrompt && v.toLowerCase() === exactPrompt.toLowerCase()) return false;
+            // also reject "Label:" leftovers (e.g., "Speaker name: ")
+            if (/^[-A-Za-z0-9 \/]+:\s*$/.test(v)) return false;
+            return true;
+        }
+
+        function showErrors(errors) {
+            if (!errors || errors.length === 0) {
+                errBox.style.display = "none";
+                errBox.innerHTML = "";
+                return;
+            }
+            errBox.style.display = "block";
+            errBox.innerHTML = "<strong>Please fix the following before submitting:</strong><ul><li>" +
+                errors.join("</li><li>") +
+                "</li></ul>";
+            errBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        form.addEventListener("submit", function (e) {
+            var errors = [];
+
+            // Required selects
+            if (getVal("q1") === "") errors.push("Select the event you attended (Question 2).");
+
+            // If event is Other, require q2 meaningful
+            if (getVal("q1") === "Other") {
+                if (!isMeaningful(getVal("q2"), "Other event name (if needed):")) {
+                    errors.push("Because you chose “Other,” you must type the event name (Question 3).");
+                }
+            }
+
+            // Basic required event info
+            if (!isMeaningful(getVal("q4"), "Organization:")) errors.push("Enter the company/organization (Question 4).");
+            if (getVal("q5") === "") errors.push("Select in-person or virtual (Question 5).");
+
+            // Required questions
+            if (!isMeaningful(getVal("q6"), "My question:")) errors.push("Enter the question you asked (Question 6).");
+            if (!isMeaningful(getVal("q7"), "Next time / wish I asked:")) errors.push("Enter the question you wish you had asked / will ask next time (Question 7).");
+
+            // Required key MIS lesson
+            if (!isMeaningful(getVal("q10"), "My key lesson:")) errors.push("Enter business problem MIS solved (Question 10).");
+
+            // Optional but useful: require Before/Now to avoid blanks
+            if (!isMeaningful(getVal("q11"), "Before:")) errors.push("Complete 'Before this talk I thought' (Question 11).");
+            if (!isMeaningful(getVal("q12"), "Now:")) errors.push("Complete 'Now I think' (Question 12).");
+
+            if (errors.length > 0) {
+                e.preventDefault();
+                showErrors(errors);
+                return false;
+            }
+
+            showErrors([]);
+            return true;
+        });
+    })();
+</script>
+
+</body>
+</html>
