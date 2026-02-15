@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 
+	PgP 5/29/2024 created LateWork assignment  
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <title>Generative Artificial Intelligence</title>
+</head>
+
+
+
+<body>
+
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <!-- had to put assignment here, because it is used in the path calculation -->
+        <!-- <input  name="assignment" id="assignment" value="Formative00" type="hidden" > -->
+
+<h1 class=" text-center">Introduction to Generative AI</h1>
+
+        <hr />
+
+<h2 id="student-info" class="sr-only">Student Information</h2>
+<div class="row" aria-labelledby="student-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="FirstName" class="text-dark">First Name:</label>
+            <input class="form-control"
+                   name="FirstName"
+                   id="FirstName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="given-name"
+                   aria-label="First Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="LastName" class="text-dark">Last Name:</label>
+            <input class="form-control"
+                   name="LastName"
+                   id="LastName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="family-name"
+                   aria-label="Last Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="StarID" class="text-dark">StarID:</label>
+            <input class="form-control"
+                   name="StarID"
+                   id="StarID"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="username"
+                   aria-label="StarID"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="email" class="text-dark">Email:</label>
+            <input class="form-control"
+                   name="email"
+                   id="email"
+                   type="email"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="email"
+                   aria-label="Email"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+<input name="pin" id="pin" type="hidden" aria-hidden="true" />
+
+<h2 id="course-info" class="sr-only">Course Information</h2>
+<div class="row" aria-labelledby="course-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Semester" class="text-dark">Semester:</label>
+            <input class="form-control"
+                   name="Semester"
+                   id="Semester"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Semester"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Class" class="text-dark">Class:</label>
+            <input class="form-control"
+                   name="Class"
+                   id="Class"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Class"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Section" class="text-dark">Section:</label>
+            <input class="form-control"
+                   name="Section"
+                   id="Section"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Section"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="assignment" class="text-dark">Assignment:</label>
+            <input class="form-control"
+                   name="assignment"
+                   id="assignment"
+                   type="text"
+                   readonly
+                   value="GenAI"
+                   aria-readonly="true"
+                   aria-label="Assignment"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+		<div class="col-lg-12 h3 text-danger">
+			300 Points
+			<hr />
+		</div>
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Objective</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+
+            <p>
+                You are expected and encouraged to use Generative Artificial Intelligence (genAI) as an aid in this course.<br />
+                Realize genAI is not a replacement for doing course work.<br />
+                Using genAI without an understanding of the course material will not serve you well in your career, or in your lifelong learning journey.
+            </p>
+
+            <h3>Guidelines:
+            </h3>
+
+            <ul>
+                <li>
+                    Do NOT upload anything that will reveal your personal identity, exams, unpublished research
+                </li>
+                <li>Obtain accounts with Microsoft Copilot/Bing Chat and OpenAI chatGPT
+                </li>
+
+                <li>Setup AI accounts, many have free subscriptions
+                </li>
+
+                <li>Make use of these resources to enhance and extend your learning in this course<br />
+                    AI is your Intelligent Assistant
+                </li>
+
+                <li>
+                    Cite AI usage with 'tool name, date, prompt summary, your edits'
+                </li>
+
+                <li>Remember the maxim &#39;Garbage In, Garbage Out&#39; applies to using computers, and also using genAI.
+                </li>
+            </ul>
+
+            <hr />
+
+            <h3>AI Assistants</h3>
+
+            <p>These are available to all WSU students, staff and faculty.<br />
+                Off-campus access requires a VPN connection.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://classes.winona.edu/ppaulson/ai/mis202.html" class="bg-info" target="_blank">MIS202 Assistant</a>
+                </li>
+
+                <li>
+                    <a href="https://classes.winona.edu/ppaulson/ai/MIS312.html" class="bg-info" target="_blank" >MIS312/Python Assistant</a>
+                </li>
+
+                <li>
+                    <a href="https://classes.winona.edu/ppaulson/AI/MIS342.html" class="bg-info" target="_blank" >MIS342 Assistant
+                </a>
+                </li>
+
+                <li>
+                    <a href="https://classes.winona.edu/ppaulson/AI/MIS362.html" class="bg-info" target="_blank" >MIS362 Assistant</a>
+                </li>
+
+                <li>
+                    <a href="https://classes.winona.edu/ppaulson/AI/MIS462.html" class="bg-info" target="_blank" >MIS462/Excel Assistant
+                </a>
+                </li>
+            </ul>
+            <hr />
+
+        </div>
+
+        <div class="col-lg-12">
+        </div>
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise01-Microsoft Copilot</a></div>
+
+        <div id="Exercise01" class="collapse in  col-lg-12">
+
+            <p>
+                Access your Microsoft Copilot account.
+            </p>
+
+            <ol>
+                <li>Using the Microsoft Edge browser login to Copilot:<br />
+                    <code>
+                        <a href="https://copilot.microsoft.com?FORM=undexpand&">https://copilot.microsoft.com?FORM=undexpand&
+                        </a>
+                    </code>
+                    This will open Copilot in a full screen window.<br />
+                    It is strongly suggested that you bookmark this page, and or add it as a browser start-up tab.
+                </li>
+                <li>Note-if this is the first time you have logged in, you will be prompted-enter your StarID and network password.<br />
+                    <a href="images/copilotLogin.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/copilotLogin.PNG', 'popup'); return false;">
+                        <img src="images/copilotLogin.PNG" width="300" alt="copilot login" class="img-responsive img-responsive" /></a>
+                    Copilot login with StarID<br />
+                </li>
+
+
+            </ol>
+
+            <p>
+                Craft some prompts:
+            </p>
+
+            <ol>
+                <li>
+                    Paste a D2L Announcement and ask for a 5-bullet summary
+                </li>
+                <li>
+                    Ask for a 30 minutes/day study plan based on the D2L Material>Content for any week
+                </li>
+                <li>
+                    Generate 5 flashcards for a term from a prior class Zoom AI Companion summary
+                </li>
+
+
+
+            </ol>
+
+
+
+        </div>
+
+        <hr />
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise02-OpenAI-chatGPT</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Create an OpenAI chatGPT account.
+            </p>
+
+            <ol>
+                <li>Using a web browser create an OpenAI chatGPT account:<br />
+                    <code>
+                        <a href="https://platform.openai.com">https://platform.openai.com
+                        </a>
+                    </code>
+                    Your account does not have to be associated with WSU.<br />
+                    Feel free to use whatever email address you like.<br />
+                </li>
+                <li>Note-after you have logged in, you are encouraged to avail yourself of the tutorials, prompt examples, and other resources.<br />
+                    What you learn about prompting and using one genAI will be applicable to other genAIs.<br />
+
+                    <a href="images/openAIsignup.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/openAIsignup.PNG', 'popup'); return false;">
+                        <img src="images/openAIsignup.PNG" width="300" alt="openAI signup" class="img-responsive img-responsive" /></a>
+                    OpenAI signup 
+
+                </li>
+            </ol>
+
+            <p>
+                Craft some prompts:
+            </p>
+
+            <ol>
+                <li>
+                    Paste a D2L Announcement and ask for a 5-bullet summary
+                </li>
+                <li>
+                    Ask for a 30 minutes/day study plan based on the D2L Material>Content for any week
+                </li>
+                <li>
+                    Generate 5 flashcards for a term from a prior class Zoom AI Companion summary
+                </li>
+
+
+
+            </ol>
+
+        </div>
+        <hr />
+
+
+
+
+
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise03-Keep Up with genAI</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Generative AI is among the fastest adopted technologies ever.             
+                <br />
+                And because of this, demand is soaring, putting pressure on genAI providers to distinguish themselves from their competition.<br />
+                This means a constant flow of new features.
+                <br />
+                As a result, it is difficult to keep up with these changes, and you are strongly encouraged to use LinkedIn Learning and periodically search for new content that can help you keep up to date in areas of interest to you.
+                <br />
+
+                                    <a href="images/Lil.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/Lil.PNG', 'popup'); return false;">
+                        <img src="images/Lil.PNG" width="300" alt="search LinkedIn Learning signup" class="img-responsive img-responsive" /></a>
+                    LinkedIn Learning, search for generative AI content<br />
+                </p>
+            <p>
+                For this assignment search LinkedIn Learning for a &#39;Generative AI&#39; course of interest to you.<br />
+                Watch the course and print out the &#39;certificate of completion&#39;.
+
+
+                Save ths certificate as GenAI.pdf file in your   ' <code><span id="Path1"></span></code>
+                ' folder.<br />
+            </p>
+
+            <p>
+                Reflect on what you learned watching this course.<br />
+                (50) 1. Below, briefly summarize the most important lesson learned about GenerativeAI in this course.<br />
+                <input type="text" id="q1" name="q1" size="120" maxlength="120" class="form-control" value="GenAI lesson:" />
+            </p>
+
+            <br />
+
+            <p>
+                (50) 2. Upload a copy of your file &#39;GenAI.pdf&#39; to the  
+                D2L &#39;GenAI&#39;  folder.<br />
+
+
+            </p>
+
+            <div class="text-danger">
+                <h2>GenAI.pdf</h2>
+                <hr />
+            </div>
+
+
+        </div>
+
+
+
+		<div class=" col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise04-Critical Thinking With AI</a> </div>
+
+		<div id="Exercise04" class="collapse in  col-lg-12">
+
+            <h3>Data Integrity</h3>
+
+			<p>Research &quot;Who is Wazoo at Winona State University?&quot; in three different generative AI models of your choice.<br />
+                Reflect on the results between the models and consider:</p>
+            <ul>
+                <li>Are the answers consistent?</li>
+                <li>Are the answers accurate?</li>
+                <li>Can you prove or disprove any of the statements?</li>
+            </ul>
+			<p>
+				(50) 3. Reflect on this research process. How do you know whether you can trust the results?
+				<br>
+			</p>
+
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text">
+			<br>
+
+
+
+            <hr />
+
+            <h3>Precise Calculations</h3>
+
+			<p>Use at least three generative AI models to determine what is the Present Value (PV) of receiving a payment of $100.00/year for 5 years if the discount rate is 7.5% per year?</p>
+
+            <p>
+                Here is the correct solution using Excel:<br />
+
+                                    <a href="images/PV.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/PV.PNG', 'popup'); return false;">
+                        <img src="images/PV.PNG" width="300" alt="Present Value" class="img-responsive img-responsive" /></a><br />
+                    PV of $100.00/year for 5 years at 7.5%<br />
+            </p>
+
+			<p>
+				(50) 4. Did any of the models provide the correct answer ($404.59)?
+				<br>
+			</p>
+
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q4" id="q4" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text">
+			<br>
+
+
+
+        <hr />
+
+
+
+
+
+            <h3>Bias</h3>
+
+			<p>Use at least 3 different generative AI models to "Create a picture containing 10 typical college students".</p>
+
+            <p>
+                Study the results carefully, discuss with classmates.  <br />
+            </p>
+
+			<p>
+				(50) 5. Do all the pictures  depict typical college students? <br />
+                Do some models produce more diverse results?<br />
+                Any thoughts on bias or diversity?
+				<br>
+			</p>
+
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q5" id="q5" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text">
+			<br>
+
+
+		</div>
+
+        <hr />
+
+        <!-- ================== Prompt Bank (uses the same expand/collapse pattern) ================== -->
+        <div class="col-lg-12"><a href="#PromptBank" class="btn btn-info" data-toggle="collapse">Prompt Bank-Study, Exams, Research</a></div>
+
+        <div id="PromptBank" class="collapse in col-lg-12">
+            <p>Copy any of these into Copilot or ChatGPT and replace the angled brackets with your topic/course.</p>
+
+            <h4>Study Support (concepts & readings)</h4>
+<pre>You are my study coach for &lt;CourseName&gt;.
+Summarize this concept at a first-year level: &lt;topic&gt;.
+Give: 1) a 150-word summary, 2) a 5-bullet checklist of key ideas,
+3) two common misconceptions, 4) a 3-question self-quiz (answers hidden).</pre>
+
+            <h4>Exam Prep (active recall)</h4>
+<pre>Act as a quiz generator for &lt;topic&gt;.
+Create 10 mixed-difficulty questions across recall, application, and analysis.
+After I answer, grade concisely and explain the reasoning for each item.
+Then suggest 3 targeted review items based on my mistakes.</pre>
+
+            <h4>Research & Sources (credible work)</h4>
+<pre>I am researching &lt;research question&gt;.
+Propose 3 search strategies with keywords and Boolean operators.
+List 5 credible sources with a 1-2 sentence rationale for each.
+Draft a 150-word abstract outline with 3 APA citation placeholders.</pre>
+
+            <h4>Homework & Problem Solving (show your work)</h4>
+<pre>Help me solve this problem step-by-step: &lt;problem&gt;.
+Ask clarifying questions first.
+Show a worked solution with labeled steps and a final check.
+Add 2 similar practice problems (no solutions).</pre>
+
+            <h4>Project Planner (scaffolded output)</h4>
+<pre>You are my project planner for &lt;assignment&gt; in &lt;CourseName&gt;.
+Produce: 1) a one-paragraph aim, 2) a 5-step plan with time estimates,
+3) risks and mitigations, 4) a checklist I can paste into my notes.</pre>
+
+            <h4>Source Checking (verification)</h4>
+<pre>Given this claim: '&lt;claim&gt;', provide: 
+1) specific search queries to verify it, 
+2) likely authoritative sources, 
+3) what evidence would confirm or refute it, 
+4) a short paragraph on remaining uncertainty.</pre>
+
+            <h4>Concept Compare/Contrast</h4>
+<pre>Compare and contrast &lt;concept A&gt; vs &lt;concept B&gt;.
+Provide: definition, key differences (table), use-cases, and a quick rule-of-thumb.</pre>
+
+            <h4>Code/Formula Explainer (Excel, Python, SQL, etc.)</h4>
+<pre>Explain what this code does, step-by-step, add comments, then show a simpler version:
+&lt;paste code or formula&gt;
+Include 2 mistakes beginners often make and how to avoid them.</pre>
+
+            <h4>Ethics & Limitations</h4>
+<pre>For &lt;topic/task&gt;, list: 1) ethical risks, 2) data/privacy concerns,
+3) ways to mitigate them, 4) what should be cited when I use AI in my assignments.</pre>
+            <hr />
+        </div>
+
+        <!-- ================== end Prompt Bank ================== -->
+
+
+			<p>
+				(50) 6. Reflect on the above prompts. <br />
+                Which one do you think will be the most useful in this course?<br />
+                Briefly explain why.
+                
+				<br>
+			</p>
+
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="Briefly state and explain the most useful prompt above for this course" type="text">
+			<br>
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+    <hr />
+
+    <div class="col-lg-12">
+
+    <h3>
+        Next Steps
+    </h3>
+        <p>
+            With Generative AI being so prominent in our lives, you may want to consider signing up for the University of Helsinki Course, '<a href="https://www.classcentral.com/course/independent-elements-of-ai-12469"> 
+                <code>
+                Elements of AI 
+                </code> </a>'.<br />
+
+
+
+        </p>
+
+
+ 
+       <p>
+                    The goal of this course is to demystify AI</p>
+                <p style="background: transparent; border: 0px; margin: 0px 0px 1em; outline: 0px; padding: 0px; vertical-align: baseline;">
+                    The elements of AI is a free online course for everyone interested in learning what AI is, what is possible (and not possible) with AI, and how it affects our lives&nbsp; - with no complicated math or programming required. By completing the course you can earn a LinkedIn certificate.&nbsp; The course is available from May 14, 2018.</p>
+                <p style="background: transparent; border: 0px; margin: 0px 0px 1em; outline: 0px; padding: 0px; vertical-align: baseline;">
+                    After taking the course, you will be able to:</p>
+                <ul style="background: transparent; border: 0px; margin: 1em 0px 1em 1.1em; outline: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px !important; vertical-align: baseline;">
+                    <li style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px !important; vertical-align: baseline; list-style: circle !important;">Understand some of the major implications of AI</li>
+                    <li style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px !important; vertical-align: baseline; list-style: circle !important;">Think critically about AI news and claims&nbsp;</li>
+                    <li style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px !important; vertical-align: baseline; list-style: circle !important;">Define and discuss what AI is</li>
+                    <li style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px !important; vertical-align: baseline; list-style: circle !important;">Explain the methods that make AI possible</li>
+                </ul>
+                <p style="background: transparent; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">
+                    &nbsp;</p>
+            </div>
+       
+        <p>
+            &nbsp;</p>
+
+   
+
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>
