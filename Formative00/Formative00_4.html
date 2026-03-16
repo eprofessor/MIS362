@@ -1,0 +1,601 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--
+        PgP 5/28/2025 update to html and javascript to coincide with best coding practices
+        Formative00 split into 3 separate html files instead of using tabs, too unwieldly
+		PgP 7/17/2020  Final version, with all updates for fall 2020
+		-->
+
+    <!-- With this version going to put the firstname, lastname... on the first page.
+		This will allow student to see assignment with blank fields.  Then when they get to Part 2 and do Exercise 1, put in
+		-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>Formative00Part4</title>
+
+</head>
+
+
+<body>
+
+
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <!-- had to put assignment here, because it is used in the path calculation -->
+        <!-- <input  name="assignment" id="assignment" value="Formative00" type="hidden" > -->
+
+        <hr />
+
+
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName" class="text-dark">First Name:</label>
+                    <input class="form-control"
+                        name="FirstName"
+                        id="FirstName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="given-name"
+                        aria-label="First Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName" class="text-dark">Last Name:</label>
+                    <input class="form-control"
+                        name="LastName"
+                        id="LastName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="family-name"
+                        aria-label="Last Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID" class="text-dark">StarID:</label>
+                    <input class="form-control"
+                        name="StarID"
+                        id="StarID"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="username"
+                        aria-label="StarID"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email" class="text-dark">Email:</label>
+                    <input class="form-control"
+                        name="email"
+                        id="email"
+                        type="email"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="email"
+                        aria-label="Email"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+        <input name="pin" id="pin" type="hidden" aria-hidden="true" />
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester" class="text-dark">Semester:</label>
+                    <input class="form-control"
+                        name="Semester"
+                        id="Semester"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Semester"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class" class="text-dark">Class:</label>
+                    <input class="form-control"
+                        name="Class"
+                        id="Class"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Class"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section" class="text-dark">Section:</label>
+                    <input class="form-control"
+                        name="Section"
+                        id="Section"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Section"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment" class="text-dark">Assignment:</label>
+                    <input class="form-control"
+                        name="assignment"
+                        id="assignment"
+                        type="text"
+                        readonly
+                        value="Formative00_4"
+                        aria-readonly="true"
+                        aria-label="Assignment"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class=" text-center">Basic Digital Technologies-Part 4: Dev Environment + Local AI</h1>
+
+        <hr />
+
+        <div class="col-lg-4 h3 text-danger">200 points</div>
+
+        <div id="Objectives" class="col-lg-12 ">
+            <h2 class="text-center">Learning Objectives</h2>
+
+            <p>
+                In business, your laptop is your primary work tool. In this course 
+                you will repeatedly use a <strong>standard development environment</strong> to work with files, data, APIs,
+                and local AI models.
+           
+            </p>
+
+            <p>
+                This part introduces a simple, repeatable setup:
+           
+            </p>
+
+            <ul>
+                <li><strong>PowerShell 7</strong> for reliable commands and scripts</li>
+                <li><strong>Miniforge (Conda)</strong> to create a clean, reusable Python environment</li>
+                <li><strong>JupyterLab</strong> to run notebooks for labs and system checks</li>
+                <li><strong>Ollama</strong> to run a small local LLM and call it through an API</li>
+
+                <!--
+                <li>(Optional) <strong>Docker + Open WebUI</strong> for a browser-based chat UI and RAG later in the semester</li>
+                -->
+
+            </ul>
+
+            <p>After completing this assignment you will be able to:</p>
+            <ol>
+                <li>Install and verify PowerShell 7 and run basic diagnostic commands.</li>
+                <li>Create a standard working folder structure in <code>C:\Users\&lt;StarID&gt;\Temp</code> and <code>C:\Users\&lt;StarID&gt;\html</code>.</li>
+                <li>Install Miniforge and create a Python environment from a <code>.yml</code> file.</li>
+                <li>Start JupyterLab, open a notebook, and run a full “system check”.</li>
+                <li>Install Ollama, pull a starter model, and make a simple API call to your local LLM.</li>
+            </ol>
+
+            <p>Conda Quick Reference Commands:</p>
+
+            <ul>
+                <li><code>conda info</code> — Show your Conda setup + active environment</li>
+                <li><code>conda env list</code> — List all Conda environments (active one marked with <code>*</code>)</li>
+                <li><code>conda activate &lt;ENV_NAME&gt;</code> — Switch to an environment (example: <code>conda activate wsu_mis_base</code>)</li>
+                <li><code>conda list</code> — List packages installed in the active environment</li>
+                <li><code>where python</code> — Confirm which Python executable is being used (path)</li>
+                <li><code>python -c "import sys; print(sys.executable)"</code> — Print the exact Python path for the active environment</li>
+            </ul>
+
+
+
+            <hr />
+
+            <div class="col-lg-12">
+                <h3>Important notes before you begin</h3>
+                <ul>
+                    <li><strong>Do NOT put Conda environments in OneDrive.</strong> (Use local folders indicated below)</li>
+                    <li>For web demos and local servers, we will use:
+                       
+                        <code>C:\Users\&lt;StarID&gt;\html</code> and (in some courses) <code>C:\Users\&lt;StarID&gt;\inetpub</code>.</li>
+                    <li>If something fails, take a screenshot of the error and write 1–2 sentences explaining what you tried.</li>
+                </ul>
+                <hr />
+            </div>
+
+            <!-- =================== EXERCISE 11 =================== -->
+            <div class="col-lg-12"><a href="#Exercise11" class="btn btn-info" data-toggle="collapse">Exercise 11 — Install & Verify PowerShell 7</a></div>
+            <div id="Exercise11" class="collapse in col-lg-12">
+
+                <p class="text-primary">
+                    <strong>Goal:</strong> Install PowerShell 7 and confirm you can run commands in <code>pwsh</code>.
+               
+                </p>
+
+                <ol>
+                    <li>Open <strong>Windows PowerShell</strong> (not PowerShell 7 yet).</li>
+                    <li>Install PowerShell 7 using WinGet:</li>
+                </ol>
+
+                <pre><code>winget install -e --id Microsoft.PowerShell</code></pre>
+
+                <ol start="3">
+                    <li>Close Windows PowerShell and open <strong>PowerShell 7</strong> (search: <code>pwsh</code>).</li>
+                    <li>Run these verification commands:</li>
+                </ol>
+
+                <pre><code>$PSVersionTable.PSVersion
+pwsh --version
+where pwsh</code></pre>
+
+
+                <h3>Screenshot Ex11</h3>
+                <p>
+                    <br>
+                    <strong>(50)</strong> Take a screenshot showing your PowerShell 7 window with the three commands above and their output.<br>
+                    Save it as <code>Ex11_PowerShell7</code> (png/jpg) in your OneNote artifact.<br>
+                    Add one sentence explaining what the screenshot verifies.
+               
+                </p>
+
+                <hr />
+            </div>
+
+
+
+
+            <!-- =================== EXERCISE 12 =================== -->
+            <div class="col-lg-12">
+                <a href="#Exercise12" class="btn btn-info" data-toggle="collapse">New Exercise 12 — Install Miniforge + Create the Standard Python Environment
+                </a>
+            </div>
+
+            <div id="Exercise12" class="collapse in col-lg-12">
+
+                <p class="text-primary">
+                    <strong>Goal:</strong> Install Miniforge, confirm it’s working, and create the course Python environment from a <code>.yml</code> file.
+                </p>
+
+                <ol>
+                    <li>Download the Miniforge installer (Windows x86_64) from Professor Paulson's ReadOnly OneDrive folder, available in D2L.</li>
+
+                    <li>Run the installer using the default location. (Do not install into OneDrive.)</li>
+
+                    <li>Open <strong>Miniforge Prompt</strong> (Start Menu).</li>
+
+                    <li>Verify Miniforge and Python are accessible:
+      <pre><code>conda --version
+python --version</code></pre>
+                    </li>
+
+                    <li>Verify environment and executable paths to confirm you are using the Miniforge-managed Python:
+      <pre><code>conda env list
+where python
+python -c "import sys; print(sys.executable)"</code></pre>
+                    </li>
+
+                    <li>Install <code>mamba</code> into the base environment (faster installs):
+      <pre><code>conda install -n base mamba -y
+mamba --version</code></pre>
+                    </li>
+
+                    <li>Create a working folder for this semester (use PowerShell 7):
+      <pre><code>New-Item -ItemType Directory -Force C:\Users\$env:USERNAME\Temp\WSU_MIS\env
+New-Item -ItemType Directory -Force C:\Users\$env:USERNAME\Temp\WSU_MIS\notebooks
+New-Item -ItemType Directory -Force C:\Users\$env:USERNAME\html\mis_api_demo</code></pre>
+                    </li>
+
+                    <li>Download the provided environment file <code>wsu_mis_base.yml</code> to:
+      <p><code>C:\Users\&lt;StarID&gt;\Temp\WSU_MIS\env\wsu_mis_base.yml</code></p>
+                    </li>
+
+                    <li>In <strong>Miniforge Prompt</strong>, change into the folder and create the environment:
+      <pre><code>cd C:\Users\%USERNAME%\Temp\WSU_MIS\env
+mamba env create -f wsu_mis_base.yml</code></pre>
+
+                        <p class="text-primary">
+                            <strong>Required:</strong> Create the AI environment too. We keep AI-related packages separate so the base environment stays fast and stable.
+                        </p>
+
+                        <pre><code>mamba env create -f wsu_mis_ai.yml</code></pre>
+
+                        <p class="text-primary">
+                            <strong>Required:</strong> Register both environments as Jupyter kernels so you can pick the correct kernel inside JupyterLab.
+                        </p>
+
+                        <pre><code>conda activate wsu_mis_base
+python -m ipykernel install --user --name wsu_mis_base --display-name "WSU MIS Base (wsu_mis_base)"
+
+conda activate wsu_mis_ai
+python -m ipykernel install --user --name wsu_mis_ai --display-name "WSU MIS AI (wsu_mis_ai)"</code></pre>
+                    </li>
+
+                    <li>Activate the environment and verify:
+      <pre><code>conda activate wsu_mis_base
+python --version
+conda env list</code></pre>
+                    </li>
+                </ol>
+
+                <h3>Screenshot Ex12</h3>
+                <br>
+
+                <p>
+                    <strong>(50)</strong>
+                    Take a screenshot showing Miniforge Prompt with
+    <code>conda --version</code>, <code>python --version</code>, and <code>conda activate wsu_mis_base</code>.<br>
+                    Save as <code>Ex12_Miniforge</code> and add one verification sentence.
+                </p>
+
+                <hr />
+            </div>
+
+
+
+
+            <!-- =================== EXERCISE 13 =================== -->
+            <div class="col-lg-12"><a href="#Exercise13" class="btn btn-info" data-toggle="collapse">Exercise 13 — Launch JupyterLab + Run the System Check Notebook</a></div>
+            <div id="Exercise13" class="collapse in col-lg-12">
+
+                <p class="text-primary">
+                    <strong>Goal:</strong> Launch JupyterLab from the <code>wsu_mis_base</code> environment and run a notebook end-to-end.
+               
+                </p>
+
+                <ol>
+                    <li>Open <strong>Miniforge Prompt</strong>.</li>
+                    <li>Activate your environment:</li>
+                </ol>
+
+                <pre><code>conda activate wsu_mis_base</code></pre>
+
+                <ol start="3">
+                    <li>Download the provided notebook <code>Formative00_Part4_SystemCheck.ipynb</code> into:</li>
+                </ol>
+
+                <p><code>C:\Users\&lt;StarID&gt;\Temp\WSU_MIS\notebooks</code></p>
+
+                <ol start="4">
+                    <li>Start JupyterLab:</li>
+                </ol>
+
+                <pre><code>jupyter lab</code></pre>
+
+                <ol start="5">
+                    <li>In JupyterLab, open the system check notebook. At the top-right, confirm the kernel is <strong>WSU MIS Base (wsu_mis_base)</strong>. Then click: <strong>Run → Run All Cells</strong>.</li>
+                </ol>
+                <h3>Screenshot Ex13</h3>
+                <br>
+                <p>
+                    <strong>(50)</strong>
+                    Take a screenshot showing JupyterLab with the system check notebook open and the final cell output
+                    indicating the checks ran successfully.<br>
+                    Save as <code>Ex13_JupyterLab</code> and add one verification sentence.
+               
+                </p>
+
+                <hr />
+            </div>
+
+            <!-- =================== EXERCISE 14 =================== -->
+            <div class="col-lg-12"><a href="#Exercise14" class="btn btn-info" data-toggle="collapse">Exercise 14 — Install Ollama + Call Your Local LLM via API</a></div>
+            <div id="Exercise14" class="collapse in col-lg-12">
+
+                <p class="text-primary">
+                    <strong>Goal:</strong> Install Ollama, pull a small model, and make a basic API call.
+               
+                </p>
+
+                <ol>
+                    <li>Install Ollama for Windows (x64 is 1.2GB) from<a href="https://ollama.com/download/windows"> this link</a> and accept adding Ollama to PATH.</li>
+                    <li>Open <strong>PowerShell 7</strong> and verify Ollama:</li>
+                </ol>
+
+                <pre><code>ollama --version ollama list</code></pre>
+
+                <ol start="3">
+                    <li>Pull the starter model (small enough for i5 / 16GB):</li>
+                </ol>
+
+                <pre><code>ollama pull llama3.2:1b</code></pre>
+
+                <p class="text-muted">
+                    Optional (higher quality, slower on CPU): <code>ollama pull llama3.2:3b</code>
+                </p>
+
+                <ol start="4">
+                    <li>Run a quick local chat test:</li>
+                </ol>
+
+                <pre><code>ollama run llama3.2:1b
+# Then type: Explain what an API is in exactly 2 sentences for a business student.</code></pre>
+
+                <ol start="5">
+                    <li>Make a direct API call (this proves your laptop can call a local LLM like an app would):</li>
+                </ol>
+
+                <pre><code>$body = @{ model="llama3.2:1b"; prompt="Write a 3-bullet checklist for a student submitting an assignment." } | ConvertTo-Json
+Invoke-RestMethod -Uri "http://localhost:11434/api/generate" -Method Post -Body $body -ContentType "application/json"</code></pre>
+
+                <h3>Screenshot Ex14</h3>
+                <br>
+                <p>
+                    <strong>(50)</strong>
+                    Take a screenshot showing PowerShell 7 with the <code>ollama</code> verification and the API call response.<br>
+                    Save as <code>Ex14_Ollama</code> and add one verification sentence.
+               
+                </p>
+
+                <hr />
+            </div>
+
+
+
+
+            <!-- =================== OPTIONAL EXERCISE 15 =================== 
+            <div class="col-lg-12"><a href="#Exercise15" class="btn btn-info" data-toggle="collapse">Optional Exercise 15 — Docker + Open WebUI (Optional / Early-Finisher)</a></div>
+            <div id="Exercise15" class="collapse col-lg-12">
+
+                <p class="text-primary">
+                    <strong>Optional Goal:</strong> Install Docker Desktop (WSL2) and launch Open WebUI.
+                </p>
+
+                <p>
+                    If you finish early, this optional setup gives you a browser-based chat UI and prepares you for later RAG labs.
+                    If you do not finish during class, you may skip this for now.
+                </p>
+
+                <ol>
+                    <li>Install <strong>WSL2</strong> (if prompted) and <strong>Docker Desktop</strong>.</li>
+                    <li>In PowerShell 7, verify Docker:</li>
+                </ol>
+
+<pre><code>docker --version
+wsl --status</code></pre>
+
+                <ol start="3">
+                    <li>Run Open WebUI (Docker):</li>
+                </ol>
+
+<pre><code>docker run -d -p 3000:8080 --name open-webui --restart unless-stopped -v open-webui:/app/backend/data ghcr.io/open-webui/open-webui:main</code></pre>
+
+                <p>
+                    Browse to: <code>http://localhost:3000</code> and connect it to Ollama (local).
+                </p>
+
+                <p>
+                    <strong>(Optional Screenshot Ex15)</strong><br>
+                    Screenshot the Open WebUI page showing it loaded in your browser.
+                    Save as <code>Ex15_OpenWebUI</code> and add one verification sentence.
+                </p>
+
+                <hr />
+            </div>
+
+-->
+
+
+
+
+
+
+
+
+            <!-- =================== DELIVERABLE =================== -->
+            <div class="col-lg-12">
+                <h2>Deliverable — OneNote Artifact PDF</h2>
+
+                <p>
+                    You will document your work using OneNote, then export to a PDF for D2L submission.
+                    This mirrors professional documentation practices.
+               
+                </p>
+
+                <ol>
+                    <li>Open <strong>Microsoft OneNote</strong>.</li>
+                    <li>Create a new page named: <code>Formative00_Part4</code>.</li>
+                    <li>Paste the required screenshots: <strong>Ex11</strong>, <strong>Ex12</strong>, <strong>Ex13</strong>, <strong>Ex14</strong>.</li>
+                    <li>Below each screenshot, add one sentence explaining what it verifies.</li>
+                    <li>Export the OneNote page to PDF (File → Print → Microsoft Print to PDF).</li>
+                    <li>Upload the PDF to the D2L Assignment folder: <strong>Formative00_Part4</strong>.</li>
+                </ol>
+
+                <p class="text-muted">
+                    Tip: If you had an error, include a screenshot of the error and write what you tried. Troubleshooting is part of the work.
+               
+                </p>
+
+                <hr />
+            </div>
+
+
+            <!-- =================== QUICK REFERENCE GUIDE =================== -->
+            <div class="col-lg-12">
+                <h2>Common Conda Commands</h2>
+
+
+                <ul>
+                    <li><code>conda --version</code> — Show Conda version</li>
+                    <li><code>conda info</code> — Summary of your Conda setup (active env, base env, channels, platform)</li>
+                    <li><code>conda config --show</code> — Show your Conda configuration (channels, settings)</li>
+                    <li><code>conda config --show-sources</code> — Show where config values are coming from (<code>.condarc</code> locations)</li>
+
+                    <li><code>conda env list</code> (or <code>conda info --envs</code>) — List all Conda environments and the active one</li>
+                    <li><code>conda list</code> — List packages installed in the active environment</li>
+                    <li><code>conda list -n &lt;ENV_NAME&gt;</code> — List packages installed in a specific environment</li>
+                    <li><code>conda list --explicit</code> — Export the exact package specs for the active environment</li>
+
+                    <li><code>where conda</code> (Windows) — Show which <code>conda.exe</code> is being used (path)</li>
+                    <li><code>where python</code> (Windows) — Show which <code>python.exe</code> is being used (path)</li>
+                    <li><code>python -c "import sys; print(sys.executable)"</code> — Print the exact Python executable path</li>
+
+                    <li><code>conda env export --from-history</code> — Export only the packages you explicitly installed (cleaner environment file)</li>
+                    <li><code>conda env export</code> — Export the full environment (often includes many dependencies)</li>
+
+                    <li><code>conda search &lt;PACKAGE&gt;</code> — Search for a package in configured channels</li>
+                    <li><code>conda search -c conda-forge &lt;PACKAGE&gt;</code> — Search a specific channel (example: conda-forge)</li>
+
+                    <li><code>conda clean --all</code> — Clean caches (can reclaim disk space; use with care)</li>
+                    <li><code>conda list --revisions</code> — Show install history (revisions) for the current environment</li>
+                    <li><code>conda install --revision &lt;N&gt;</code> — Roll back environment to a previous revision number</li>
+
+                    <li><code>pip --version</code> — Show pip version (inside the active environment)</li>
+                    <li><code>pip list</code> — List pip-installed packages (inside the active environment)</li>
+
+                    <li><strong>Models (if you use Ollama):</strong> <code>ollama list</code> — List local Ollama models</li>
+                    <li><strong>Models (if you use LM Studio CLI, if installed):</strong> <code>lms --help</code> — Show LM Studio CLI commands</li>
+                </ul>
+
+
+
+
+            </div>
+
+            <div class="col-lg-12">
+                <hr />
+                <input class="text-danger btn-block btn-lg" name="Submit" value="SUBMIT" type="submit" />
+                <br />
+            </div>
+
+        </div>
+
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>
