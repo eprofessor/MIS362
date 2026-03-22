@@ -1,0 +1,386 @@
+<!doctype html>
+
+<html lang="en">
+
+<!--
+PgP 8/3/2025 model AI feedback assignment case file, MIS362
+PgP 3/2/2020 updating MIS202 files to align with other assignments 
+PgP 3/31/2021 updating this for all MIS362 classes 
+PgP 2/18/2018 model  assignment file, version 1 released 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative08</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <h1 class=" text-center">Enterprise Systems </h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName" class="text-dark">First Name:</label>
+                    <input class="form-control"
+                        name="FirstName"
+                        id="FirstName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="given-name"
+                        aria-label="First Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName" class="text-dark">Last Name:</label>
+                    <input class="form-control"
+                        name="LastName"
+                        id="LastName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="family-name"
+                        aria-label="Last Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID" class="text-dark">StarID:</label>
+                    <input class="form-control"
+                        name="StarID"
+                        id="StarID"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="username"
+                        aria-label="StarID"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email" class="text-dark">Email:</label>
+                    <input class="form-control"
+                        name="email"
+                        id="email"
+                        type="email"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="email"
+                        aria-label="Email"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+        <input name="pin" id="pin" type="hidden" />
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester" class="text-dark">Semester:</label>
+                    <input class="form-control"
+                        name="Semester"
+                        id="Semester"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Semester"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class" class="text-dark">Class:</label>
+                    <input class="form-control"
+                        name="Class"
+                        id="Class"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Class"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section" class="text-dark">Section:</label>
+                    <input class="form-control"
+                        name="Section"
+                        id="Section"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Section"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment" class="text-dark">Assignment:</label>
+                    <input class="form-control"
+                        name="assignment"
+                        id="assignment"
+                        type="text"
+                        readonly
+                        value="Summative08"
+                        aria-readonly="true"
+                        aria-label="Assignment"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+
+        <!-- -end-Student, class and assignment information-end -->
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+        <div class="col-lg-12 h3 text-danger">
+            450 Points
+            <hr />
+        </div>
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+            <p>These exercises introduce concepts used to define how organizations use enterprise to meet their objectives.</p>
+            <p>After completing this module you will be able to:</p>
+            <ol>
+                <li>Identify the basic activities and business objectives common to all transaction processing systems</li>
+                <li>&nbsp;Describe the transaction processing systems associated with the order processing, purchasing, and accounting business functions</li>
+                <li>&nbsp;Identify the basic functions performed and the benefits derived from the implementation of an enterprise resource planning system, customer resource management, and product lifecycle management system</li>
+                <li>&nbsp;Describe the hosted software model for enterprise systems and explain why this approach is so appealing to SMEs</li>
+                <li>&nbsp;Identify the challenges that organizations face in planning, building, and operating their enterprise systems</li>
+                <li>&nbsp;Identify tips for avoiding many of the common causes for failed enterprise system implementations</li>
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+
+
+            <p>
+                The goal of this assignment is to familiarize you with how organizations have used enterpise systems to transform the organization.
+                <br />
+                You are expected to develop a working knowledge of the following tasks.<br />
+                If you are having trouble there are several resources available, besides a Google Search<br />
+                You can also ask a teaching assistant or the instructor for assistance.
+            </p>
+            <ol>
+                <li>Transaction Processing Systems
+            	<ol>
+                    <li>Traditional Transaction Processing Methods</li>
+                    <li>Processing for Entrepreneurs and Small Medium Enterprises-SME</li>
+                    <li>Transaction Processing Activities </li>
+                </ol>
+                </li>
+
+                <li>Enterprise Systems<ol>
+                    <li>Enterprise Resource Planning-ERP</li>
+                    <li>ERP Advantages</li>
+                    <li>Leading ERP Systems</li>
+                    <li>Supply Chain Management-SCM</li>
+                    <li>Customer Relationship Management-CRM</li>
+                    <li>Product Lifecycle Management-PLM</li>
+                    <li>Enterprise Systems Challenges</li>
+                    <li>Hosted Enterprise Systems</li>
+                </ol>
+                </li>
+
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Transaction Processing Systems</a></div>
+
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <p>
+                Well-constructed and well-run Transaction Processing Systems are&nbsp; a vital part of the management information system for any organization. <br />
+            </p>
+
+            <p>
+                Briefly summarize two of the major benefits of a Transaction Processing System to a Small or Medium Enterprise.<br /></p>
+
+            <p>
+                (50) 1.  Benefit of well-constructed TPS:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="tps1:" type="text"><br />
+            </p>
+
+            <p>
+                (50) 2.  Benefit of well-constructed TPS:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="tps2:" type="text"><br />
+            </p>
+            <hr />
+
+            <p>Research transaction processing activities, and describe decisions the owner must make in how to run the business.</p>
+            <p>
+                (50) 3. List three (3) important tasks that need to be accomplished by any TPS:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q3" id="q3" size="120" maxlength="120" class="form-control" value="3 tasks:" type="text"><br />
+            </p>
+            <p>
+                (50) 4. Compose a brief argument supporting either of these positions, based on either your experience working for a business, or your research:<br />
+                -the owner should use general purpose software-spreadsheets and databases, to run the business<br />
+                -the owner should purchase an integrated software package to run the business:<br />
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q4" id="q4" size="120" maxlength="120" class="form-control" value="general or integrated:" type="text"><br />
+            </p>
+
+            <hr />
+
+        </div>
+
+
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Enterprise Systems</a></div>
+
+        <div id="Exercise02" class="collapse in col-lg-12">
+
+            <p>
+                Based on your major and career interests, research a company you admire that is or has recently undertaken or completed an upgrade to the Enterprise System.<br />
+            </p>
+
+            <p>
+                (50) 5. Briefly state why the project considered a success or a failure.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q5" id="q5" size="120" maxlength="120" class="form-control" value="company, enterprise application:" type="text">
+            </p>
+
+            <hr />
+
+
+            <p>
+                Look for information on the lessons learned during this process.
+            </p>
+
+            <p>
+                (50) 6.  Briefly summarize one lesson learned by the organization during the project.<br />
+                It is okay if it failed.<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input name="q6" id="q6" size="120" maxlength="120" class="form-control" value="organization, results:" type="text">
+            </p>
+            <hr />
+
+</div>
+
+
+
+
+
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                  <code><span id="Path1"></span></code>
+                 ' folder.<br />
+            </p>
+            <br />
+
+            <p>
+                (50) 7. Save your file 'Summative08.pdf' to the ' 
+                  <code><span id="Path2"></span></code>
+                ' folder.<br />
+            </p>
+
+            <div class="text-danger">
+                <h2>Summative08.pdf</h2>
+                <hr />
+            </div>
+
+</div>
+        <hr />
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>
+            </p>
+
+            (50) 8. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
+
+            (50) 9. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        </div>
+        <hr />
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,465 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+	<title>IOT05</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- PgP 7/11/2019 summative assignment for Raspberry Pi, Arduino Uno, micro:bit -->
+	<!-- Bootstrap -->
+	<link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <!-- had to put assignment here, because it is used in the path calculation -->
+        <!-- <input  name="assignment" id="assignment" value="Formative00" type="hidden" > -->
+
+        <hr />
+
+<h2 id="student-info" class="sr-only">Student Information</h2>
+<div class="row" aria-labelledby="student-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="FirstName" class="text-dark">First Name:</label>
+            <input class="form-control"
+                   name="FirstName"
+                   id="FirstName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="given-name"
+                   aria-label="First Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="LastName" class="text-dark">Last Name:</label>
+            <input class="form-control"
+                   name="LastName"
+                   id="LastName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="family-name"
+                   aria-label="Last Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="StarID" class="text-dark">StarID:</label>
+            <input class="form-control"
+                   name="StarID"
+                   id="StarID"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="username"
+                   aria-label="StarID"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="email" class="text-dark">Email:</label>
+            <input class="form-control"
+                   name="email"
+                   id="email"
+                   type="email"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="email"
+                   aria-label="Email"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+<input name="pin" id="pin" type="hidden" aria-hidden="true" />
+
+<h2 id="course-info" class="sr-only">Course Information</h2>
+<div class="row" aria-labelledby="course-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Semester" class="text-dark">Semester:</label>
+            <input class="form-control"
+                   name="Semester"
+                   id="Semester"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Semester"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Class" class="text-dark">Class:</label>
+            <input class="form-control"
+                   name="Class"
+                   id="Class"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Class"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Section" class="text-dark">Section:</label>
+            <input class="form-control"
+                   name="Section"
+                   id="Section"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Section"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="assignment" class="text-dark">Assignment:</label>
+            <input class="form-control"
+                   name="assignment"
+                   id="assignment"
+                   type="text"
+                   readonly
+                   value="IOT05"
+                   aria-readonly="true"
+                   aria-label="Assignment"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+
+
+		<div class="col-lg-12">
+			<br />
+			<input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT"><br />
+		</div>
+
+		<div class="h3 text-danger col-lg-12">
+			100 Points<hr />
+		</div>
+
+
+		<div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+		<div id="Objectives" class=" collapse in col-lg-12">
+
+
+			<p>
+				These instructions will show you how to run Apache2 website software on a Raspberry Pi.<br />
+				<br />
+
+				More information on <a href="https://httpd.apache.org/" class="bg-info text-white" target="_blank">Apache</a> is available online.<br />
+
+				Being able to use this software will greatly simplify working with the Raspberry Pi to learn how websites work.
+			</p>
+			<p>After completing this assignment you will be able to:</p>
+			<ol>
+				<li>Run Apache2 on a Raspberry Pi</li>
+				<li>Find and edit a website file served by Apache2</li>
+				<li>View your (or other&#39;s) website on your Raspberry Pi and laptop</li>
+			</ol>
+			<hr />
+		</div>
+
+
+
+		<div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+		<div id="Overview" class="collapse in  col-lg-12">
+			<h3>When you encounter technical issues, please first review <a href="../IOT00/IOT00.html"  class="bg-info text-white" target="_blank" >IOT00</a>.    </h3>
+
+			This assignment reviews basic computer concepts that you will need in this course and throughout your career.
+            <br />
+			<p>
+				You are expected to have a working knowledge of SBC hardware and software.<br />
+				If you do not understand how to use an item, perform a Google Search, 
+                refer to the <a href="https://learn.winona.edu/WSU_Technology_Knowledge_Base" class="bg-info text-white" target="_blank">WSU Technology Knowledge Base</a>,&nbsp; ask a teaching assistant, or ask the instructor.
+			</p>
+
+			<hr />
+		</div>
+
+		<!--Exercise 1-->
+
+		<div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Running Apache2</a><a href="#Exercise01"></a></div>
+
+		<div id="Exercise01" class="collapse in  col-lg-12">
+
+			<p>ref: <a href="https://pimylifeup.com/raspberry-pi-apache/" class="bg-info text-white" target="_blank">PiMyLifeUp Article</a>  </p>
+			<ol>
+				<li>These steps are performed on the Raspberry Pi.</li>
+
+				<li>If Apache webserver is not installed, in the Terminal window enter the following command to install the Apache2 webserver:<br />
+                    <code>
+                        sudo apt install apache2 -7
+                    </code>
+				</li>
+
+				<li>Open a browser and ensure the Apache2 webserver is running by browsing to both these urls:<br />
+					<code>127.0.0.1</code><br />
+					<code>current IP address</code>  can be found by entering <code>hostname -I</code> into a Terminal window
+				</li>
+
+				<li>If the Apache2 webserver is not running, in a Terminal window enter the following command:<br />
+					<code>/etc/init.d/apache2 restart</code><br />
+					To stop the Apache2 webserver, in a Terminal window enter the following command:<br />
+					<code>/etc/init.d/apache2 stop</code><br />
+				</li>
+
+				<li>After Apache2 begins, the following webpage will load, which you must read.<br />
+					<p>
+						<a href="images/apache2.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/apache2.PNG', 'popup'); return false;">
+							<img src="images/apache2.PNG" width="300" alt="webserver" class="img-responsive img-responsive" /></a>Apache Webserver<br />
+					</p>
+				</li>
+
+				<li>If the webpage does not appear, troubleshoot and resolve any issues.<br />
+				</li>
+
+			</ol>
+			<hr />
+		</div>
+
+
+
+		<!--Exercise 2-->
+
+		<div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Examine Apache2</a></div>
+
+		<div id="Exercise02" class="collapse in  col-lg-12">
+
+			<ol>
+				<li>These steps are performed on your Raspberry Pi.</li>
+
+				<li>The materials on the &#39;Apache2 Debian Default Page&#39; describe details of the webserver installation.<br />
+					Note that the local website root folder is at <code>/var/www/html/</code>
+				</li>
+				<li>Create a new &#39;page&#39; for your website by using VNC Viewer to transfer the file &#39;<a href="mypage.html"  class="bg-info text-white" target="_blank">mypage.html</a>&#39; from this IOT05 assignment folder to the desktop. <br />
+                    Note a copy of 'mypage.html' is also on the RPi in the Desktop 'IoT_Files' folder<br />
+                    <code>/home/pi/Desktop/</code>
+					<br />
+				</li>
+
+				<li>In the terminal window do the following to modify the mypage.html file:
+					<br />
+					<code>cd Desktop</code> then press Enter<br />
+					<code>sudo nano mypage.html</code>then press Enter, and you are in superuser(su) edit mode<br />
+				</li>
+
+				<li>Press the space key, then the backspace key, and &#39;Modified&#39; will appear in the top right corner.<br />
+
+					<p>
+						<a href="images/sudoEdit.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/sudoEdit.PNG', 'popup'); return false;">
+							<img src="images/sudoEdit.PNG" width="300" alt="edit homepage file" class="img-responsive img-responsive" /></a>Modify mypage.html<br />
+					</p>
+				</li>
+
+				<li>Press the &#39;Ctrl+X&#39; keys, then press &#39;y&#39; and then press &#39;Enter&#39;
+					<br />
+					In the &#39;File Name to Write&#39; row, enter
+					<br />
+					<code>/var/www/html/mypage.html</code><br />
+					and then press enter.<br />
+					When asked to save file under a different name, press 
+                    &#39;y&#39;<p>
+						<a href="images/SaveFile.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/SaveFile.PNG', 'popup'); return false;">
+							<img src="images/SaveFile.PNG" width="300" alt="save homepage file" class="img-responsive img-responsive" /></a>Save homepage to Website Root Folder<br />
+					</p>
+				</li>
+
+			</ol>
+			<hr />
+		</div>
+
+
+
+
+		<!--Exercise 3-->
+
+
+		<div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Screenshot</a></div>
+
+		<div id="Exercise03" class="collapse in  col-lg-12">
+
+			<p>
+				Use your laptop to view your modified webpage on the Raspberry Pi running the Apache2 webserver.<br />
+			</p>
+
+			<ol>
+				<li>Find the IP address of your Raspberry Pi by opening VNC server in the upper right corner.
+				</li>
+
+				<li>Type this Raspberry Pi IP address into the address bar of your laptop browser.</li>
+
+				<li>Your modified home page will appear, similar to below:<br />
+					<a href="images/NewHomePage.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/NewHomePage.PNG', 'popup'); return false;">
+						<img src="images/NewHomePage.PNG" width="300" alt="new home page" class="img-responsive img-responsive" /></a>New Home Page<br />
+				</li>
+
+
+				<li>On the Raspberry Pi, open a text editor and enter the following information:<br />
+					Your Name<br />
+					Your Class<br />
+					Todays Date<br />
+					IOT05<br />
+				</li>
+
+				<li>Take a screenshot with Apache2 running and displaying &#39;mypage.html&#39; along with your personal information in the text editor.                
+				</li>
+
+				<li>On your laptop save the screenshot  as &quot;IOT05&quot; in your ' 
+             <code><span id="Path1"></span></code>
+					' folder.<br />
+
+			</ol>
+			<hr />
+		</div>
+
+
+		<div class="col-lg-12 text-danger">
+			<h2>Screenshot IOT05</h2>
+			<hr />
+		</div>
+
+
+
+		<div class="col-lg-12"><a href="#UploadScreenShot" class="btn btn-info" data-toggle="collapse">Upload Screenshot</a></div>
+
+		<div id="UploadScreenShot" class="collapse in  col-lg-12">
+			<p>
+				Submit to the appropriate D2L Assignment folder a screenshot that documents your work.<br />
+			</p>
+			<br />
+		</div>
+
+		<div class="col-lg-12 text-primary">
+			<p>
+				(50) 1. Upload your screenshot to the &#39;IOT05&#39; D2L Assignment Folder.
+			</p>
+			<hr />
+		</div>
+
+
+		<!--Exercise 4-->
+
+		<div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Reflections</a></div>
+
+		<div id="Exercise04" class="collapse in  col-lg-12">
+
+			<p>
+				Based on your experience in this exercise and what you just learned, develop a brief statement about the value of Apache2 as a web server software platform for organizations.<br />
+				Think about what type of problems these devices could solve, and would it be cost-effective?<br />
+				Consider businesses that deploy IoT 'solutions', on the order of thousands or millions of devices-how can Apache2 equipped Raspberry Pis support or automate these efforts?<br />
+				One example is the need to monitor and display sensor or actuator information from IoT devices-are they online? are they working? are they reporting problems?<br />
+				References:<br />
+				Apache2: <a href="https://httpd.apache.org/" class="bg-info text-white" target="_blank">Apache</a><br />
+
+				PiMyLifeUp <a href="https://pimylifeup.com/raspberry-pi-apache/" class="bg-info text-white" target="_blank">Apache2 Article </a>
+
+			</p>
+
+			<div class="col-lg-12 text-primary">
+				(20) 2. Reflections-value<br />
+
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q2" type="text" id="q2" value="value of Apache2 webserver:">
+				<hr />
+			</div>
+
+			<hr />
+
+
+			<div class="col-lg-12 text-primary">
+				(20) 3. Reflections-content<br />
+				Research the internet to determine what type of data (text, numbers, audio, video...) can be displayed in a webserver.<br />
+				List a use that you find particularly interesting.
+
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q3" type="text" id="q3" value="interesting web server use:">
+				<hr />
+			</div>
+			<hr />
+		</div>
+
+
+
+
+
+
+
+
+		<div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
+
+
+		<div class="col-lg-12">
+			<p>
+				When all tasks are completed press the Submit button.
+			</p>
+			<hr />
+		</div>
+
+		<div class="col-lg-12 text-primary">
+			(10) 4. Assignment submission<br />
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input class="form-control" name="q4" type="text" id="q4" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOT05.">
+			<hr />
+		</div>
+
+
+
+
+
+		<hr />
+
+
+		<hr />
+
+		<div class="col-lg-12">
+			<p>
+				Congratulations! You have successfully used Apache2, a web server, on a Raspberry Pi single board computer.                
+			</p>
+			<hr />
+		</div>
+
+
+
+
+		<div class=" col-lg-12">
+			<br />
+			<input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
+			<br />
+		</div>
+
+	</form>
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+
+</body>
+</html>
