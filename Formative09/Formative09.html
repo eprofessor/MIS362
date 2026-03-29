@@ -1,0 +1,336 @@
+<!doctype html>
+
+<html lang="en">
+
+<!--
+PgP 8/3/2025 model AI feedback assignment case file, MIS362
+PgP 3/2/2020 updating MIS202 files to align with other assignments 
+PgP 3/31/2021 updating this for all MIS362 classes 
+PgP 2/18/2018 model  assignment file, version 1 released 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Formative09</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <h1 class=" text-center">XLOOKUP() </h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName" class="text-dark">First Name:</label>
+                    <input class="form-control"
+                        name="FirstName"
+                        id="FirstName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="given-name"
+                        aria-label="First Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName" class="text-dark">Last Name:</label>
+                    <input class="form-control"
+                        name="LastName"
+                        id="LastName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="family-name"
+                        aria-label="Last Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID" class="text-dark">StarID:</label>
+                    <input class="form-control"
+                        name="StarID"
+                        id="StarID"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="username"
+                        aria-label="StarID"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email" class="text-dark">Email:</label>
+                    <input class="form-control"
+                        name="email"
+                        id="email"
+                        type="email"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="email"
+                        aria-label="Email"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+        <input name="pin" id="pin" type="hidden" />
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester" class="text-dark">Semester:</label>
+                    <input class="form-control"
+                        name="Semester"
+                        id="Semester"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Semester"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class" class="text-dark">Class:</label>
+                    <input class="form-control"
+                        name="Class"
+                        id="Class"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Class"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section" class="text-dark">Section:</label>
+                    <input class="form-control"
+                        name="Section"
+                        id="Section"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Section"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment" class="text-dark">Assignment:</label>
+                    <input class="form-control"
+                        name="assignment"
+                        id="assignment"
+                        type="text"
+                        readonly
+                        value="Formative09"
+                        aria-readonly="true"
+                        aria-label="Assignment"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+
+        <!-- -end-Student, class and assignment information-end -->
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+		<div class="col-lg-12 h3 text-danger">
+			160 Points
+            <hr />
+		</div>
+
+		<!-- -start-objectives-start -->
+		<div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+		<div id="Objectives" class=" collapse in col-lg-12">
+
+			<!--Above this line similar except for Assignment number and title   -->
+
+
+
+			<p>After completing this assignment you will be familiar with:</p>
+			<ul>
+				<li>XLookup Function</li>
+			</ul>
+			<hr />
+
+
+
+		</div>
+
+		<div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+		<div id="Overview" class="collapse in  col-lg-12">
+
+
+
+			<p>Note:  Save this  assignment to your website.</p>
+			<p>
+				The purpose of this assignment is to consider the application of the new XLookup() function to businesses and organizations.
+                <br />
+			</p>
+			<ul>
+				<li>Business Intelligence</li>
+				<li>Business Analytics</li>
+			</ul>
+			<p>This exercise will investigate some of the current issues.</p>
+			<hr />
+		</div>
+
+
+
+		<div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-XLookup</a></div>
+
+		<div id="Exercise01" class="collapse in  col-lg-12">
+			Download <a href="xLookup.xlsx" class="bg-info text-white">this Excel file</a>, and save it as 
+     &quot;Formative09&quot; in your ' 
+            <code><span id="Path1"></span></code>
+ 			' folder.<br />
+
+
+			<p>You have been assigned the task of determing the last date certain gift cards were used.</p>
+			<p>Where to begin?</p>
+
+			<p>Review this <a href="https://www.linkedin.com/learning/excel-tracking-data-easily-and-efficiently/xlookup-the-newest-function-in-office-365" class="bg-info text-white" target="_blank">LinkedIn Learning video on Xlookup()</a></p>
+			<p>Instead of manually searching the spreadsheet, use the new <a href="https://support.office.com/en-us/article/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929" class="bg-info text-white" target="_blank">Excel XLookup() function</a>, which is an improvement on VLookup().</p>
+			<hr />
+
+		</div>
+
+
+
+
+		<div class=" col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Last Used Date</a></div>
+
+		<div id="Exercise02" class="collapse in  col-lg-12">
+
+
+			<p>
+				Use your knowledge of Xlookup() to determine the last date the following gift cards were used. 
+			</p>
+
+
+			<p>
+				(45) 1.  Write the most recent date that the gift card was used.<br />
+			</p>
+			<h3>AX3228000</h3>
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q1" id="q1" size="120" maxlength="120" class="form-control" value="most recent date used" type="text">
+			<br />
+
+
+			<hr />
+
+			<p>
+				(45) 2.  Write the most recent date that the gift card was used.<br />
+			</p>
+			<h3>AX3344510</h3>
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input name="q2" id="q2" size="120" maxlength="120" class="form-control" value="most recent date used" type="text">
+			<br />
+			<br />
+
+
+			<hr />
+
+		</div>
+
+
+		<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+		<div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-D2L Assignment Submission</a></div>
+
+		<div id="ExercisePDF" class="collapse in  col-lg-12">
+
+			<p>
+				Save your file 'Formative09.xlsx' to your '
+          <code><span id="Path2"></span></code>
+				' folder.<br />
+			</p>
+
+
+			<p>(50) 3. Upload your completed file 'Formative09.xlsx' to the D2L 'Formative09' Assignment folder.</p>
+		</div>
+
+		<div class="col-lg-12 text-danger">
+			<h2>Formative09.xlsx</h2>
+			<hr />
+
+		</div>
+
+
+
+
+
+		<div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+		<div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+			<p>
+				Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+				Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br />
+			</p>
+
+			(10) 4. Home Page Hyperlink<br />
+			Check and verify that this assignment is hyperlinked on your home page.<br />
+			<br />
+
+			(10) 5. Assignment submission<br />
+			Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+		</div>
+		<hr />
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+</body>
+</html>
