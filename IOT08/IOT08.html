@@ -1,0 +1,518 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>IOT08</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- PgP 7/11/2019 summative assignment for Raspberry Pi, Arduino Uno, micro:bit -->
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <!-- had to put assignment here, because it is used in the path calculation -->
+        <!-- <input  name="assignment" id="assignment" value="Formative00" type="hidden" > -->
+
+        <hr />
+        <h1 class="text-center">Nagios Monitoring on a Raspberry Pi</h1>
+
+<h2 id="student-info" class="sr-only">Student Information</h2>
+<div class="row" aria-labelledby="student-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="FirstName" class="text-dark">First Name:</label>
+            <input class="form-control"
+                   name="FirstName"
+                   id="FirstName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="given-name"
+                   aria-label="First Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="LastName" class="text-dark">Last Name:</label>
+            <input class="form-control"
+                   name="LastName"
+                   id="LastName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="family-name"
+                   aria-label="Last Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="StarID" class="text-dark">StarID:</label>
+            <input class="form-control"
+                   name="StarID"
+                   id="StarID"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="username"
+                   aria-label="StarID"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="email" class="text-dark">Email:</label>
+            <input class="form-control"
+                   name="email"
+                   id="email"
+                   type="email"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="email"
+                   aria-label="Email"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+<input name="pin" id="pin" type="hidden" aria-hidden="true" />
+
+<h2 id="course-info" class="sr-only">Course Information</h2>
+<div class="row" aria-labelledby="course-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Semester" class="text-dark">Semester:</label>
+            <input class="form-control"
+                   name="Semester"
+                   id="Semester"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Semester"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Class" class="text-dark">Class:</label>
+            <input class="form-control"
+                   name="Class"
+                   id="Class"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Class"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Section" class="text-dark">Section:</label>
+            <input class="form-control"
+                   name="Section"
+                   id="Section"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Section"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="assignment" class="text-dark">Assignment:</label>
+            <input class="form-control"
+                   name="assignment"
+                   id="assignment"
+                   type="text"
+                   readonly
+                   value="IOT08"
+                   aria-readonly="true"
+                   aria-label="Assignment"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT"><br />
+        </div>
+
+        <div class="h3 text-danger col-lg-12">
+            100 Points<hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+
+            <p>
+                These instructions will show you how to run Nagios 4.x on a Raspberry Pi.<br />
+                This software allows you to run a machine monitoring program on a Raspberry Pi.<br />
+                <br />
+
+                More information on <a href="https://www.nagios.com/products/nagios-core/" class="bg-info text-white" target="_blank">Nagios Core</a> is available online.<br />
+
+                This software allows you to monitor devices on your network(s).
+            </p>
+            <p>After completing this assignment you will be able to:</p>
+            <ol>
+                <li>Obtain Nagios</li>
+                <li>Start Nagios Core and Plug-Ins on a Raspberry Pi</li>
+                <li>Run Nagios</li>
+                <li>Monitor a computer using Nagios</li>
+            </ol>
+            <hr />
+        </div>
+
+
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+			<h3>When you encounter technical issues, please first review <a href="../IOT00/IOT00.html"  class="bg-info text-white" target="_blank" >IOT00</a>.    </h3>
+
+            This assignment reviews basic computer concepts that you will need in this course and throughout your career.
+            <br />
+            <p>
+                You are expected to have a working knowledge of SBC hardware and software.<br />
+                If you do not understand how to use an item, perform a Google Search, 
+                refer to the <a href="https://learn.winona.edu/WSU_Technology_Knowledge_Base" class="bg-info text-white" target="_blank">WSU Technology Knowledge Base</a>,&nbsp; ask a teaching assistant, or ask the instructor.
+            </p>
+
+            <hr />
+        </div>
+
+        <!--Exercise 1-->
+
+        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Review Nagios Intallation</a><a href="#Exercise01"></a></div>
+
+        <div id="Exercise01" class="collapse in  col-lg-12">
+
+            <p>ref: <a href="https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source-96.html#Raspbian" class="bg-info text-white" target="_blank">Nagios Core Raspian Installation Instructions</a>   Best to follow this procedure </p>
+            <ol>
+                <li>These steps have already been performed on the Raspberry Pi Image, and are for information purposes.</li>
+
+                <li>Open a Terminal window and enter the following commands to ensure your Raspberry Pi is up to date<br />
+                    <code>sudo apt update</code><br />
+                    <code>sudo apt upgrade</code>
+                </li>
+
+                <li>Open the Chromium broswer to the following url:<br />
+                    <code>https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source-96.html#Raspbian</code><br />
+                    This article contains all the background information for this assignment.
+                </li>
+
+                <li>In the Terminal window enter the following sets of commands to install Nagios 4.x and required prerequisites:<br />
+                    <code>sudo apt-get install -y autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-dev</code><br />
+                    <code> apt-get install openssl libssl-dev</code>
+                    <code>cd /tmp</code><br />
+                    <code>sudo wget -O nagioscore.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.14.tar.gz </code>  This downloads the code<br />
+                    <code>sudo tar xzf nagioscore.tar.gz </code>  <br />
+                    <code>cd /tmp/nagioscore-nagios-4.4.14/</code><br />
+                    <code>sudo ./configure --with-httpd-conf=/etc/apache2/sites-enabled</code><br />
+                    <code>sudo make all</code>  This compiles Nagios, and takes some time<br /><br />
+                    <code>sudo make install-groups-users</code><br />
+                    <code>sudo usermod -a -G nagios www-data</code><br />
+                    <code>sudo make install</code><br />
+                    <code>sudo make install-daemoninit</code><br />
+                    <code>sudo make install-commandmode</code><br />
+                    <code>sudo make install-config</code><br />
+                    <code>sudo make install-webconf</code><br />
+                    <code>sudo a2enmod rewrite</code><br />
+                    <code>sudo a2enmod cgi</code><br />
+                    <code>sudo iptables -I INPUT -p tcp --destination-port 80 -j ACCEPT</code><br />
+                    <code>sudo apt-get install -y iptables-persistent</code>Answer YES twice to save existing rules<br />
+                    <code>sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin</code><br />
+                    When prompted, set the password to: <code>Nagio$</code><br />
+                    <p>
+                        <a href="images/NagiosAdmin.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/NagiosAdmin.PNG', 'popup'); return false;">
+                            <img src="images/NagiosAdmin.PNG" width="300" alt="Nagios Password" class="img-responsive img-responsive" /></a>Nagios Password Prompt<br />
+                    </p>
+                    <code>sudo systemctl restart apache2.service</code><br />
+                    <code>sudo systemctl start nagios.service</code>  This will start Nagios Core<br />
+
+
+                </li>
+
+
+                <li>After the Nagios 4.4.6 install is complete, point your browser to the url: <code>127.0.0.1/nagios</code><br />
+                    Enter username <code>nagiosadmin</code> and password <code>Nagio$</code>
+                    <p>
+                        <a href="images/Nagios4.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/Nagios4.PNG', 'popup'); return false;">
+                            <img src="images/Nagios4.PNG" width="300" alt="Nagios4" class="img-responsive img-responsive" /></a>Nagios4 Running<br />
+                    </p>
+                </li>
+
+                <li>It is a good idea to reboot the Raspberry Pi, then open Chromium to Nagios:<br />
+                    <code>http://127.0.0.1/nagios</code>
+                </li>
+
+                <li>If the webpage does not appear, troubleshoot and resolve any issues.<br />
+                </li>
+                <li>Note-you can also access the Raspberry Pi Nagios interface from another computer using the IP address:
+                    <code>http://10.30.19.x</code>
+                </li>
+
+            </ol>
+            <hr />
+        </div>
+
+
+
+        <!--Exercise 2-->
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Review Nagios Plug-Ins</a></div>
+
+        <div id="Exercise02" class="collapse in  col-lg-12">
+
+            <ol>
+                <li>These steps have already been performed on your Raspberry Pi, they are here for review, or in case you decide to install additional plug-ins.</li>
+                
+                <li>Note, these steps can also be performed from another computer.</li>
+
+                <li>On the RPi, open the browser to: <code>127.0.0.1/nagios</code>  <br />
+                    If using another computer browse to: <code>10.38.19.x/nagios</code>
+                </li>
+
+                <li>The home page contains links to the currrent status of your Raspberry Pi, and getting started.<br />
+                </li>
+
+                <li>In the left column, under the Current Status section, click the  &#39;Services&#39; link and examine the details. <br />
+                    You will notice some errors, so follow the steps below that will install the plug-ins to resolve this situation.<br />
+
+                    <p>
+                        <a href="images/Nagios4ServiceErrors.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/Nagios4ServiceErrors.PNG', 'popup'); return false;">
+                            <img src="images/Nagios4ServiceErrors.PNG" width="300" alt="Nagios4 Service Errors" class="img-responsive img-responsive" /></a>Nagios4 Service Errors<br />
+                    </p>
+                </li>
+
+                <li>Open a Terminal window and enter the following commands:<br />
+                    <code>sudo apt-get install -y autoconf gcc libc6 libmcrypt-dev make libssl-dev wget bc gawk dc build-essential snmp libnet-snmp-perl gettext</code><br />
+                    <code>cd /tmp</code><br />
+                    <code>wget --no-check-certificate -O nagios-plugins.tar.gz https://github.com/nagios-plugins/nagios-plugins/archive/release-2.4.6.tar.gz </code><br />
+                    <code>sudo tar zxf nagios-plugins.tar.gz </code><br />
+                    <code>cd /tmp/nagios-plugins-release-2.4.6/</code><br />
+                    <code>sudo ./tools/setup</code> This command will take a while to execute<br />
+                    <code>sudo ./configure</code>  This command will take a while to complete<br />
+                    <code>sudo make</code>  This command will take a while to complete<br />
+                    <code>sudo make install</code><br />
+
+                    In practice, it is a good idea to install the snmpd on each network host so that you can monitor it with Nagios.<br />
+                    To do this, learn to add the new host to the Nagios configuration file.<br />
+                    Installing snmpd is not required for this assignment.
+                </li>
+
+                <li>After installing the plug-ins, reboot the Raspberry Pi</li>
+                <li>Open the Chromium browser to the following url:<br />
+                    <code>http://127.0.0.1/nagios</code>
+                </li>
+                <li>Under the &#39;Current Status&#39; section, select &#39;Services&#39; </li>
+                <li>Note that with the plug-ins installed most, if not all, of the services are now running</li>
+
+            </ol>
+            <hr />
+        </div>
+
+
+
+
+        <!--Exercise 3-->
+
+
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Screenshot</a></div>
+
+        <div id="Exercise03" class="collapse in  col-lg-12">
+
+            <p>Point the browser to  <code>127.0.0.1/nagios</code><br />or <br />
+                <code>10.30.19.x/nagios</code><br />
+                From the homepage, under the &#39;Current Status&#39; section, select &#39;Services&#39; and you will see a page similar to below.<br />               
+            </p>
+
+                    <p>
+                        <a href="images/Nagios4ServicesSS.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/Nagios4ServicesSS.PNG', 'popup'); return false;">
+                            <img src="images/Nagios4ServicesSS.PNG" width="300" alt="Nagios" class="img-responsive img-responsive" /></a>Nagios4 Services<br />
+                    </p>
+
+            <ol>
+                <li>On the Raspberry Pi, position the browser window next to your name on the desktop.</li>
+
+                <li> Take a screenshot with Nagios Services displaying &#39;Service Status Details&#39; to document your work.<br />
+                Note: this can be done using the Snipping Tool if you are running VNC, or use the <code>scrot</code> command if you are connected to the Raspberry Pi with a keyboard and mouse.
+                </li>
+
+                <li>On your laptop save the screenshot  as &quot;IOT08&quot; in your ' 
+             <code><span id="Path1"></span></code>
+                    ' folder.<br />
+
+            </ol>
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screenshot IOT08</h2>
+            <hr />
+        </div>
+
+
+
+        <div class="col-lg-12"><a href="#UploadScreenShot" class="btn btn-info" data-toggle="collapse">Upload Screenshot</a></div>
+
+        <div id="UploadScreenShot" class="collapse in  col-lg-12">
+            <p>
+                Submit to the appropriate D2L Assignment folder a screenshot that documents your work.<br />
+            </p>
+            <br />
+        </div>
+
+        <div class="col-lg-12 text-primary">
+            <p>
+                (50) 1. Upload your screenshot to the &#39;IOT08&#39; D2L Assignment Folder.
+            </p>
+            <hr />
+        </div>
+
+		<!--Exercise 4-->
+
+		<div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Reflections</a></div>
+
+		<div id="Exercise04" class="collapse in  col-lg-12">
+
+			<p>
+				Based on your experience in this exercise, consider the value of Nagios for organizations, especially the Information Technology staff.<br />
+				Think about what type of problems a Raspberry Pi equipped Nagios monitor could solve, and whether it could be cost-effective.<br />
+				Businesses are deploying IoT 'solutions'-how can Nagios equipped Raspberry Pis support or automate these efforts?<br />
+				<br />
+				References:<br />
+				Nagios: <a class="bg-info text-white" href="https://www.nagios.com/products/nagios-core/" target="_blank">Nagios Core</a><br />
+
+				Nagios :&nbsp; <a class="bg-info text-white" href="https://support.nagios.com/kb/article/nagios-core-installing-nagios-core-from-source-96.html#Raspbian" target="_blank">Users&#39; Installation </a><br />
+
+				Guru99   <a href="https://www.guru99.com/nagios-tutorial.html" class="bg-info text-white" target="_blank">Nagios</a><br />
+
+                Nagios: <a href="https://www.nagios.org/ncpa/getting-started.php#windows" class="bg-info text-white" target="_blank">NCPA-Windows</a><br />
+
+
+			</p>
+			<p>
+				&nbsp;</p>
+
+			<div class="col-lg-12 text-primary">
+				(20) 2. Reflections-value<br />
+				List a specific problem that a low-cost Nagios monitor could solve.<br />
+
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				<input class="form-control" name="q2" type="text" id="q2" value="specific problem:">
+				<hr />
+			</div>
+
+			<hr />
+
+
+			<div class="col-lg-12 text-primary">
+				(20) 3. Reflections-content<br />
+				Research the internet on the topic of network device monitoring.<br />	
+                Why would an organization&#39;s IT department use nmap to monitor their own organization&#39;s network?<br />
+                Hint:&nbsp; <a href="https://www.guru99.com/nagios-tutorial.html" class="bg-info text-white" target="_blank"  >Nagios Tutorial</a>
+                
+				<!-- Enter your answer in the VALUE field below   GROK -->
+				
+				<input class="form-control" name="q3" type="text" id="q3" value="monitor network:">
+				<hr />
+			</div>
+			<hr />
+
+
+
+		</div>
+
+
+
+
+
+
+
+
+		<div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
+
+
+		<div class="col-lg-12">
+			<p>
+				When all tasks are completed press the Submit button.
+			</p>
+			<hr />
+		</div>
+
+		<div class="col-lg-12 text-primary">
+			(10) 4. Assignment submission<br />
+
+			<!-- Enter your answer in the VALUE field below   GROK -->
+			<input class="form-control" name="q4" type="text" id="q4" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOT08.">
+			<hr />
+		</div>
+
+
+
+
+
+		<hr />
+
+
+		<hr />
+
+		<div class="col-lg-12">
+			<p>
+				Congratulations! You have used Nagios, a network monitoring tool, on a Raspberry Pi single board computer.                
+			</p>
+			<hr />
+		</div>
+
+
+
+
+
+
+		<div class=" col-lg-12">
+			<br />
+			<input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
+			<br />
+		</div>
+
+	</form>
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+
+</body>
+</html>
+
+
+
+
