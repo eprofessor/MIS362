@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+    <title>MIS362 Formative05</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid"
+        action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx"
+        method="post"
+        name="frmAssignment"
+        id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Formative05-FA2026-v2" type="hidden">
+
+        <textarea id="datasetContext"
+                  name="datasetContext"
+                  readonly
+                  hidden>Assignment: MIS362 Formative05 — SmartBean Data Types, Sorting, and Encoding. The workbook contains 1-Sorting, 2-BusinessDataTypes, 3-EncodingText, 4-NumberVsText, and Reference. Students compare numeric and text sorting, determine when digit-only business values should be stored as text or numbers, review how Bean, Mocha, and Latte are separated into characters and encoded using ASCII and binary, and compare the number 497 with the text value “497.” The assignment connects these concepts to database field types, leading zeros, arithmetic, searches, matching, imports, and trusted information. Students complete and verify the detailed worksheet analysis. Web answers should be brief and should state the essential conclusion and strongest supporting reason. The AI does not receive the workbook. Evaluate whether each answer demonstrates that the student considered the required worksheet analysis and reached a reasonable conclusion. Do not require students to reproduce sorted lists, formulas, ASCII codes, binary values, or worksheet tables unless the question specifically asks for them. Do not penalize concise answers when the conclusion is clear, relevant, and consistent with the assignment. Accept alternative reasonable examples and explanations. Evaluate data-type reasoning, interpretation of sorting and encoding, business relevance, database implications, and understanding of trusted information.</textarea>
+
+        <h1 class="text-center">SmartBean Data Types, Sorting, and Encoding</h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text"
+                        readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text"
+                        readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text"
+                        readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email"
+                        readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text"
+                        value="Formative05" readonly aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            150 Points
+            <hr>
+        </div>
+
+        
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Formative05
+Return later: /resume Formative05
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes is the default AI-assisted workflow for MIS362, but Direct Mode is allowed for routine steps when you already understand the task and agent assistance would add no meaningful value.</strong> Resume Hermes when you need explanation, planning, troubleshooting, alternatives, review, or verification.</p>
+            <p><strong>Direct Mode:</strong> Work directly in the required course software and verify the result yourself. Choosing not to use Hermes for a routine step is acceptable unless an assignment explicitly requires it.</p>
+            <p><strong>Suggested Hermes checkpoint:</strong> Ask Hermes to suggest two ways to sort, encode, rank, or interpret the SmartBean data. Use the method you understand best and verify the result in the workbook.</p>
+            <p>Hermes is a coach. It may explain concepts, suggest formulas or methods, and help troubleshoot, but you must perform and verify the hands-on work in the required software. No extra Hermes screenshot or chat transcript is required.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+<div class="col-lg-12">
+            <a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a>
+        </div>
+        <div id="Objectives" class="collapse in col-lg-12">
+            <p>
+                In this assignment, you will examine how data types, sorting, and encoding affect SmartBean's databases and trusted information.
+            </p>
+            <p>After completing this assignment, you will be able to:</p>
+            <ol>
+                <li>Distinguish numeric data from text data.</li>
+                <li>Explain why numbers and text may sort differently.</li>
+                <li>Identify business values that should remain text even when they contain only digits.</li>
+                <li>Explain how character encoding represents text for computer storage and exchange.</li>
+                <li>Evaluate how incorrect data types or encoding can reduce trust in database results.</li>
+            </ol>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Resources" class="btn btn-info" data-toggle="collapse">Resources and Help</a>
+        </div>
+        <div id="Resources" class="collapse in col-lg-12">
+            <p>
+                Suggested Hermes prompt (use the <code>mis362</code> profile; the MIS362 course agent remains available as a secondary resource):
+                <br>
+                <code>I am completing MIS362 Formative05. Explain how numbers and text differ in sorting, arithmetic, database storage, and encoding. Help me interpret the worksheet results and verify my conclusions without requiring me to memorize ASCII or binary codes.</code>
+            </p>
+            <p>
+                The AI does not receive your workbook. Complete and verify the worksheet work, then submit a brief conclusion and strongest supporting reason for each question.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a>
+        </div>
+        <div id="Overview" class="collapse in col-lg-12">
+            <p>
+                SmartBean stores quantities, prices, product IDs, ZIP codes, employee IDs, customer information, and product names. These values may look similar on a screen but require different data types and may sort, calculate, or match differently.
+            </p>
+            <p>
+                Correct data types and encoding help databases return accurate searches, joins, reports, and decisions. Incorrect choices can remove leading zeros, prevent arithmetic, produce unexpected sorting, or corrupt imported text.
+            </p>
+            <p>
+                Download and open <a href="Formative05_SmartBean_SortingEncoding.xlsx" class="bg-info text-white">Formative05_SmartBean_SortingEncoding.xlsx</a>. Save a working copy as <strong>Formative05.xlsx</strong>.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1 — Numeric and Text Sorting</a>
+        </div>
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>1-Sorting</strong>.</li>
+                <li>Sort the numeric values in ascending numeric order.</li>
+                <li>Sort the text values in ascending text order.</li>
+                <li>Compare the results and consider why the product code <code>0110</code> should retain its leading zero.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q1"><strong>1. (20) Question 1</strong></label>
+                <textarea class="form-control" id="q1" name="q1" rows="7" readonly aria-readonly="true">Using the 1-Sorting worksheet, compare the numeric and text sorting results. Briefly explain why the same visible digits can appear in a different order when stored as numbers rather than text.</textarea>
+                <br>
+                <label for="a1"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a1" name="a1" rows="5" maxlength="1500" placeholder="State your conclusion and strongest supporting reason..."></textarea>
+                <small id="charCount-a1" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2 — Business Data Types</a>
+        </div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>2-BusinessDataTypes</strong>.</li>
+                <li>Select Text or Number for each SmartBean field.</li>
+                <li>Explain your choices in the Student Reason column.</li>
+                <li>Pay particular attention to leading zeros and whether arithmetic is meaningful.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q2"><strong>2. (20) Question 2</strong></label>
+                <textarea class="form-control" id="q2" name="q2" rows="7" readonly aria-readonly="true">Using the 2-BusinessDataTypes worksheet, review the SmartBean fields and their recommended data types. Briefly explain the most important rule for deciding whether a digit-only business value should be stored as text or as a number.</textarea>
+                <br>
+                <label for="a2"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a2" name="a2" rows="5" maxlength="1500" placeholder="State your conclusion and strongest supporting reason..."></textarea>
+                <small id="charCount-a2" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3 — Encoding SmartBean Text</a>
+        </div>
+        <div id="Exercise03" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>3-EncodingText</strong>.</li>
+                <li>Review how Bean, Mocha, and Latte are separated into individual characters.</li>
+                <li>Review the ASCII and binary representation of each character.</li>
+                <li>Focus on why encoding is necessary rather than memorizing the codes.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q3"><strong>3. (20) Question 3</strong></label>
+                <textarea class="form-control" id="q3" name="q3" rows="7" readonly aria-readonly="true">Using the 3-EncodingText worksheet, review how Bean, Mocha, and Latte are represented as character codes and binary values. Briefly explain why computers must encode text before it can be stored, processed, or exchanged.</textarea>
+                <br>
+                <label for="a3"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a3" name="a3" rows="5" maxlength="1500" placeholder="State your conclusion and strongest supporting reason..."></textarea>
+                <small id="charCount-a3" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4 — Number versus Text and Trusted Information</a>
+        </div>
+        <div id="Exercise04" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>4-NumberVsText</strong>.</li>
+                <li>Compare the number <code>497</code> with the text value <code>"497"</code>.</li>
+                <li>Review their arithmetic, concatenation, encoding, and database uses.</li>
+                <li>Consider how the wrong type could affect SmartBean queries and reports.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q4"><strong>4. (20) Question 4</strong></label>
+                <textarea class="form-control" id="q4" name="q4" rows="8" readonly aria-readonly="true">Using the 4-NumberVsText worksheet, compare the number 497 with the text value “497.” Briefly explain why selecting the correct data type matters for calculations, sorting, searches, matching, and trusted SmartBean information.</textarea>
+                <br>
+                <label for="a4"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a4" name="a4" rows="5" maxlength="1500" placeholder="State your conclusion and strongest supporting reason..."></textarea>
+                <small id="charCount-a4" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Evidence" class="btn btn-info" data-toggle="collapse">Completion Evidence</a>
+        </div>
+        <div id="Evidence" class="collapse in col-lg-12">
+            <p>Before submitting, confirm that the workbook visibly shows:</p>
+            <ul>
+                <li>completed numeric and text sorting results;</li>
+                <li>Text or Number selected for each SmartBean business field;</li>
+                <li>brief reasons for the selected data types;</li>
+                <li>review of the Bean, Mocha, and Latte encoding examples;</li>
+                <li>review of the number 497 versus text “497” comparison.</li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#D2LSubmission" class="btn btn-info" data-toggle="collapse">D2L Workbook Submission</a>
+        </div>
+        <div id="D2LSubmission" class="collapse in col-lg-12">
+            <p><strong>(50)</strong> Save and upload <strong>Formative05.xlsx</strong> to the D2L <code>Formative05</code> assignment folder.</p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#WebSubmission" class="btn btn-info" data-toggle="collapse">Webpage Submission</a>
+        </div>
+        <div id="WebSubmission" class="collapse in col-lg-12">
+            <p><strong>(10) Home Page Hyperlink:</strong> Verify that this assignment is linked from your course home page.</p>
+            <p><strong>(10) Webpage Submission:</strong> Press the Submit button at the top or bottom of this page.</p>
+            <p>
+                Complete and verify the worksheet analysis. Your web answers should contain only the essential conclusion and strongest supporting reason.
+            </p>
+            <p>
+                Review the AI feedback, correct the workbook or answers as needed, and resubmit before the deadline.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+    <script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 4; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 1500;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+    })();
+    </script>
+
+</body>
+</html>
