@@ -1,0 +1,482 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>IOT04</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- PgP 7/11/2019 summative assignment for Raspberry Pi, Arduino Uno, micro:bit -->
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <!-- had to put assignment here, because it is used in the path calculation -->
+        <!-- <input  name="assignment" id="assignment" value="Formative00" type="hidden" > -->
+
+        <hr />
+
+<h2 id="student-info" class="sr-only">Student Information</h2>
+<div class="row" aria-labelledby="student-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="FirstName" class="text-dark">First Name:</label>
+            <input class="form-control"
+                   name="FirstName"
+                   id="FirstName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="given-name"
+                   aria-label="First Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="LastName" class="text-dark">Last Name:</label>
+            <input class="form-control"
+                   name="LastName"
+                   id="LastName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="family-name"
+                   aria-label="Last Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="StarID" class="text-dark">StarID:</label>
+            <input class="form-control"
+                   name="StarID"
+                   id="StarID"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="username"
+                   aria-label="StarID"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="email" class="text-dark">Email:</label>
+            <input class="form-control"
+                   name="email"
+                   id="email"
+                   type="email"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="email"
+                   aria-label="Email"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+<input name="pin" id="pin" type="hidden" aria-hidden="true" />
+
+<h2 id="course-info" class="sr-only">Course Information</h2>
+<div class="row" aria-labelledby="course-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Semester" class="text-dark">Semester:</label>
+            <input class="form-control"
+                   name="Semester"
+                   id="Semester"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Semester"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Class" class="text-dark">Class:</label>
+            <input class="form-control"
+                   name="Class"
+                   id="Class"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Class"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Section" class="text-dark">Section:</label>
+            <input class="form-control"
+                   name="Section"
+                   id="Section"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Section"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="assignment" class="text-dark">Assignment:</label>
+            <input class="form-control"
+                   name="assignment"
+                   id="assignment"
+                   type="text"
+                   readonly
+                   value="IOT04"
+                   aria-readonly="true"
+                   aria-label="Assignment"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+
+        <div class="col-lg-12">
+            <br />
+            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT"><br />
+        </div>
+
+        <div class="h3 text-danger col-lg-12">
+            100 Points<hr />
+        </div>
+
+
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+
+            <p>
+                These instructions will show you how to use WaveMon on a Raspberry Pi.<br />
+                This software allows you to monitor local wireless networks available to a Raspberry Pi.<br />
+                <br />
+
+                More information on <a href="https://www.systutorials.com/docs/linux/man/1-wavemon/" class="bg-info text-white" target="_blank">WaveMon</a> is available online.<br />
+
+                Being able to use this software will greatly simplify working with the Raspberry Pi to find available wireless networks.
+            </p>
+            <p>After completing this assignment you will be able to:</p>
+            <ol>
+                <li>Run WaveMon</li>
+                <li>Interpret the results produced by WaveMon</li>
+            </ol>
+            <hr />
+        </div>
+
+
+
+        <div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+        <div id="Overview" class="collapse in  col-lg-12">
+            <h3>When you encounter technical issues, please first review <a href="../IOT00/IOT00.html" class="bg-info text-white" target="_blank">IOT00</a>.    </h3>
+
+            This assignment reviews basic computer concepts that you will need in this course and throughout your career.
+            <br />
+            <p>
+                You are expected to have a working knowledge of SBC hardware and software.<br />
+                If you do not understand how to use an item, perform a Google Search, 
+                refer to the <a href="https://learn.winona.edu/WSU_Technology_Knowledge_Base" class="bg-info text-white" target="_blank">WSU Technology Knowledge Base</a>,&nbsp; ask a teaching assistant, or ask the instructor.
+            </p>
+
+            <hr />
+        </div>
+
+        <!--Exercise 1-->
+
+        <div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Prepare for WaveMon</a><a href="#Exercise01"></a></div>
+
+        <div id="Exercise01" class="collapse in  col-lg-12">
+            <ol>
+                <li>These steps are performed on the Raspberry Pi, either by using a mouse and keyboard attached directly to the Raspberry Pi, or establishing a VNC connection per <a href="../IOTP02/IOTP02.html" class="bg-info text-white" target="_blank">IOTP02</a>.</li>
+
+                <li>Make sure your Raspberry Pi is connected to the Som301and304 wireless network.<br />
+                    To establish a VNC connection, your laptop must be attached to the WSU network via a wired connection.<br />
+                    See <a href="../IOTP02/IOTP02.html" class="bg-info text-white" target="_blank">IOTP02</a> for details.<br />
+                </li>
+
+                <li>Wavemon should already be installed, but if not then run this command:<br />
+                    <code>sudo apt install wavemon</code><br />
+                </li>
+
+                <li>Open a browser to: <a href="https://www.raspberrypi-spy.co.uk/2014/10/how-to-use-wavemon-to-monitor-your-wifi-connection/" class="bg-info text-white" target="_blank">https://www.raspberrypi-spy.co.uk/2014/10/how-to-use-wavemon-to-monitor-your-wifi-connection/</a><br />
+                    and review how to use wavemon. </li>
+
+                <li>For more details <a href="https://github.com/uoaerg/wavemon" class="bg-info text-white" target="_blank">visit the wavemon GitHub site</a>.
+                </li>
+
+
+            </ol>
+            <hr />
+        </div>
+
+
+
+        <!--Exercise 2-->
+
+        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Run WaveMon</a></div>
+
+        <div id="Exercise02" class="collapse in  col-lg-12">
+
+            <ol>
+                <li>These steps are performed on your Raspberry Pi.</li>
+
+                <li>Open a Terminal window and start the Wavemon program by entering:<br />
+                    <code>sudo wavemon</code><br />
+                </li>
+
+
+                <li>After WaveMon begins, and you are at the main screen, examine and run the available functions, F1, F2, F7:<br />
+                    <p>
+                        <a href="images/wavemon_screenshot_01.png" class="img-responsive img-rounded" target="popup" onclick="window.open('images/wavemon_screenshot_01.PNG', 'popup'); return false;">
+                            <img src="images/wavemon_screenshot_01.png" width="300" alt="WaveMon functions" class="img-responsive img-responsive" /></a>WaveMon Function 1-Info
+                    </p>
+                    <p>
+                        <br />
+                    </p>
+                </li>
+
+                <li>Function 2-History:<br />
+                    <p>
+                        <a href="images/f2.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/f2.PNG', 'popup'); return false;">
+                            <img src="images/f2.PNG" width="300" alt="WaveMon history function" class="img-responsive img-responsive" /></a>WaveMon Function 2-History
+                    </p>
+                    <p>
+                        <br />
+                    </p>
+                </li>
+
+                <li>Function 3-Scan:<br />
+                    <p>
+                        <a href="images/f3.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/f3.PNG', 'popup'); return false;">
+                            <img src="images/f3.PNG" width="300" alt="WaveMon history function" class="img-responsive img-responsive" /></a>WaveMon Function 3-Scan
+                    </p>
+                    <p>
+                        <br />
+                    </p>
+                </li>
+
+
+                <li>Function 7-History:<br />
+                    <p>
+                        <a href="images/f7.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/f7.PNG', 'popup'); return false;">
+                            <img src="images/f7.PNG" width="300" alt="WaveMon preferences function" class="img-responsive img-responsive" /></a>WaveMon Function 7-Preferences
+                    </p>
+                    <p>
+                        <br />
+                    </p>
+                </li>
+
+                <li>Run each function and examine the results.<br />
+                    Modify the preferences and examine the resulting changes.
+                </li>
+
+            </ol>
+            <hr />
+        </div>
+
+
+
+
+        <!--Exercise 3-->
+
+
+        <div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Screenshot</a></div>
+
+        <div id="Exercise03" class="collapse in  col-lg-12">
+
+            <p>
+                Take a screenshot with WaveMon running in F1-info mode to document your work.<br />
+                Note: this can be done using the Snipping Tool if you are running VNC, or use the <code>scrot</code> command if you are connected to the Raspberry Pi with a keyboard and mouse.
+            </p>
+
+            <ol>
+                <li>On the Raspberry Pi desktop, open the text editor and enter the following information:<br />
+                    Your Name<br />
+                    Your Class<br />
+                    Todays Date<br />
+                    IOT04<br />
+                </li>
+                <li>On the Raspberry Pi, position the wavemon F1-Info window next the text editor on the desktop.</li>
+
+                <li>Take a screenshot.
+                </li>
+
+                <li>On your laptop save the screenshot  as &quot;IOT04&quot; in your ' 
+             <code><span id="Path1"></span></code>
+                    ' folder.<br />
+
+            </ol>
+
+            <br />
+
+
+            <p>
+                <a href="images/screenshot.PNG" class="img-responsive img-rounded" target="popup" onclick="window.open('images/screenshot.PNG', 'popup'); return false;">
+                    <img src="images/screenshot.PNG" width="300" alt="sample screen shot" class="img-responsive img-responsive" /></a>Sample Screenshot
+            </p>
+
+            <hr />
+        </div>
+
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screenshot IOT04</h2>
+            <hr />
+        </div>
+
+
+
+
+
+
+        <div class="col-lg-12"><a href="#UploadScreenShot" class="btn btn-info" data-toggle="collapse">Upload Screenshot</a></div>
+
+        <div id="UploadScreenShot" class="collapse in  col-lg-12">
+            <p>
+                Submit to the appropriate D2L Assignment folder a screenshot that documents your work.<br />
+            </p>
+            <br />
+        </div>
+
+        <div class="col-lg-12 text-primary">
+            <p>
+                (50) 1. Upload your screenshot to the &#39;IOT04&#39; D2L Assignment Folder.
+            </p>
+            <hr />
+        </div>
+
+
+
+
+        <!--Exercise 4-->
+
+        <div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-Reflections</a></div>
+
+        <div id="Exercise04" class="collapse in  col-lg-12">
+
+            <p>
+                Based on your experience in this exercise and what you just learned, develop a brief statement about the value of wavemon as a WiFi management tool for organizations.<br />
+                Think about what type of problems these devices could solve, and would it be cost-effective?<br />
+                Consider businesses that deploy IoT 'solutions', on the order of thousands or millions of devices-how can wavemon equipped Raspberry Pis support or automate these efforts?<br />
+                One example is the need to monitor any and all Wi-Fi capable devices-are they authorized? are they illicit? are they sanctioned?<br />
+                References:<br />
+                <a href="https://www.systutorials.com/docs/linux/man/1-wavemon/" class="bg-info text-white" target="_blank">WaveMon</a><br />
+
+                How to use wavemon: <a href="https://www.raspberrypi-spy.co.uk/2014/10/how-to-use-wavemon-to-monitor-your-wifi-connection/" class="bg-info text-white" target="_blank">https://www.raspberrypi-spy.co.uk/2014/10/how-to-use-wavemon-to-monitor-your-wifi-connection/</a>
+                <br />
+
+                <a href="https://github.com/uoaerg/wavemon" class="bg-info text-white" target="_blank">Wavemon GitHub site</a><br />
+
+                Rogue Wireless Access Points:   <a href="https://www.networkworld.com/article/2320333/low-tech--high-tech-crime---and-stopping-it.html" class="bg-info text-white" target="_blank">Israeli Bank Heist? </a>
+                <br />
+
+                War Driving:  <a href="https://www.zdnet.com/article/wi-fi-hack-caused-tk-maxx-security-breach/" class="bg-info text-white" target="_blank">Is this network secure? </a>
+                <br />
+            </p>
+
+            <div class="col-lg-12 text-primary">
+                (20) 2. Reflections-value<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input class="form-control" name="q2" type="text" id="q2" value="value of wavemon WiFi monitoring:">
+                <hr />
+            </div>
+
+            <hr />
+
+
+            <div class="col-lg-12 text-primary">
+                (20) 3. Reflections-signal<br />
+                Using the various wavemon screens, determine the SSID with the largest signal strength:<br />
+
+                <!-- Enter your answer in the VALUE field below   GROK -->
+                <input class="form-control" name="q3" type="text" id="q3" value="SSID with strongest signal:">
+                <hr />
+            </div>
+            <hr />
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseSubmit" class="btn btn-info" data-toggle="collapse">Submit Assignment</a></div>
+
+
+        <div class="col-lg-12">
+            <p>
+                When all tasks are completed press the Submit button.
+            </p>
+            <hr />
+        </div>
+
+        <div class="col-lg-12 text-primary">
+            (10) 4. Assignment submission<br />
+
+            <!-- Enter your answer in the VALUE field below   GROK -->
+            <input class="form-control" name="q4" type="text" id="q4" value="I have completed all the exercises, and uploaded my screenshot to the D2L Assignment folder IOT04.">
+            <hr />
+        </div>
+
+
+
+
+
+        <hr />
+
+
+        <hr />
+
+        <div class="col-lg-12">
+            <p>
+                Congratulations! You have successfully used WaveMon, a WiFi monitoring program on a Raspberry Pi single board computer.                
+            </p>
+            <hr />
+        </div>
+
+
+
+
+
+
+        <div class=" col-lg-12">
+            <br />
+            <input class=" text-danger btn-block btn-lg" type="submit" name="Submit" value="SUBMIT -once you have completed this assignment- SUBMIT">
+            <br />
+        </div>
+
+    </form>
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+</body>
+</html>

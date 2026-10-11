@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link href="../../ReadOnly/bootstrap.css" rel="stylesheet"/>
+<title>MIS362 Formative06</title>
+</head>
+<body class="container-fluid">
+<form action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" class="container-fluid" id="frmAssignment" method="post" name="frmAssignment">
+<input id="InstID" name="InstID" type="hidden" value="00617282"/>
+<input id="assignmentVersion" name="assignmentVersion" type="hidden" value="Formative06-FA2026-v3"/>
+<textarea hidden="" id="datasetContext" name="datasetContext" readonly="">Assignment: MIS362 Formative06 — SmartBean Networks, Internet Services, and Cloud Computing. The workbook contains 1-Latency, 2-InternetServices, 3-CloudOptions, 4-NetworkControls, and Reference. Students estimate satellite and terrestrial latency, compare generic connection technologies for a main café, branch café, and mobile event unit, compare local, public-cloud, and hybrid computing, calculate expected annual downtime for availability levels from 99% through 99.9999%, and review encryption, VPN, network segmentation, multifactor authentication, backup connectivity, logging, tested recovery, and zero trust. Students should compare download and upload capacity, consider when symmetrical service is useful, and understand that provider marketing names may obscure the underlying generic technology, such as fiber, cable, fixed wireless, cellular, or satellite. Five nines means 99.999% availability, which corresponds to approximately 5.26 minutes of expected downtime in a 365-day year. Students complete and verify the detailed worksheet analysis. Web answers should be brief and should state the essential conclusion and strongest supporting reason. The AI does not receive the workbook. Evaluate whether each answer demonstrates that the student considered the required worksheet analysis and reached a reasonable conclusion. Do not require students to reproduce calculations, tables, ratings, or all alternatives unless the question specifically asks for them. Do not penalize concise answers when the conclusion is clear, relevant, and consistent with the assignment. Accept alternative reasonable recommendations when supported. Evaluate networking reasoning, latency interpretation, technology selection, cloud reasoning, availability interpretation, security, continuity, business relevance, and recognition of tradeoffs.</textarea>
+<h1 class="text-center">SmartBean Networks, Internet Services, and Cloud Computing</h1>
+<h2 class="sr-only" id="student-info">Student Information</h2>
+<div aria-labelledby="student-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="FirstName">First Name:</label>
+<input aria-readonly="true" autocomplete="given-name" class="form-control" id="FirstName" name="FirstName" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="LastName">Last Name:</label>
+<input aria-readonly="true" autocomplete="family-name" class="form-control" id="LastName" name="LastName" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="StarID">StarID:</label>
+<input aria-readonly="true" autocomplete="username" class="form-control" id="StarID" name="StarID" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="email">Email:</label>
+<input aria-readonly="true" autocomplete="email" class="form-control" id="email" name="email" readonly="" type="email"/>
+</div>
+</div>
+</div>
+<input id="pin" name="pin" type="hidden"/>
+<h2 class="sr-only" id="course-info">Course Information</h2>
+<div aria-labelledby="course-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="Semester">Semester:</label>
+<input aria-readonly="true" class="form-control" id="Semester" name="Semester" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="Class">Class:</label>
+<input aria-readonly="true" class="form-control" id="Class" name="Class" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="Section">Section:</label>
+<input aria-readonly="true" class="form-control" id="Section" name="Section" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="assignment">Assignment:</label>
+<input aria-readonly="true" class="form-control" id="assignment" name="assignment" readonly="" type="text" value="Formative06"/>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database, and receive AI feedback"/>
+<br/>
+</div>
+<div class="col-lg-12 h3 text-danger">
+            150 Points
+            <hr/>
+</div>
+
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Formative06
+Return later: /resume Formative06
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes is the default AI-assisted workflow for MIS362, but Direct Mode is allowed for routine steps when you already understand the task and agent assistance would add no meaningful value.</strong> Resume Hermes when you need explanation, planning, troubleshooting, alternatives, review, or verification.</p>
+            <p><strong>Direct Mode:</strong> Work directly in the required course software and verify the result yourself. Choosing not to use Hermes for a routine step is acceptable unless an assignment explicitly requires it.</p>
+            <p><strong>Suggested Hermes checkpoint:</strong> Ask Hermes to explain one network, cloud, encryption, or availability concept used in the workbook and identify how you can independently verify the calculation or conclusion.</p>
+            <p>Hermes is a coach. It may explain concepts, suggest formulas or methods, and help troubleshoot, but you must perform and verify the hands-on work in the required software. No extra Hermes screenshot or chat transcript is required.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Objectives">Learning Objectives</a>
+</div>
+<div class="collapse in col-lg-12" id="Objectives">
+<p>
+                In this assignment, you will use Excel to evaluate SmartBean network performance, internet-service choices, cloud options, and continuity controls.
+            </p>
+<p>After completing this assignment, you will be able to:</p>
+<ol>
+<li>Interpret how latency affects networked business applications.</li>
+<li>Compare generic internet-access technologies without relying on vendor marketing names.</li>
+<li>Compare local, public-cloud, and hybrid computing options.</li>
+<li>Calculate and interpret expected downtime from availability percentages.</li>
+<li>Evaluate network security and business-continuity controls.</li>
+</ol>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Resources">Resources and Help</a>
+</div>
+<div class="collapse in col-lg-12" id="Resources">
+<p>
+                Suggested Hermes prompt (use the <code>mis362</code> profile; the MIS362 course agent remains available as a secondary resource):
+                <br/>
+<code>I am completing MIS362 Formative06. Explain latency, generic internet technologies, local versus public cloud versus hybrid computing, availability percentages, and network controls. Help me interpret the worksheet results and compare tradeoffs without assuming there is only one correct recommendation.</code>
+</p>
+<p>
+                Provider marketing terms may make ordinary technologies sound unique. Identify the underlying generic technology first: fiber, cable, fixed wireless, cellular, or satellite.
+            </p>
+<p>
+                The AI does not receive your workbook. Complete and verify the worksheet analysis, then submit a brief conclusion and strongest supporting reason for each question.
+            </p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Overview">Assignment Overview</a>
+</div>
+<div class="collapse in col-lg-12" id="Overview">
+<p>
+                SmartBean operates a main café, a branch café, and a mobile event unit. Each location depends on point-of-sale systems, cloud applications, communications, backups, and secure internet access.
+            </p>
+<p>
+                Download and open <a class="bg-info text-white" href="Formative06_SmartBean_NetworkCloud_v2.xlsx">Formative06_SmartBean_NetworkCloud_v2.xlsx</a>. Save a working copy as <strong>Formative06.xlsx</strong>.
+            </p>
+<p>
+                Five nines means <strong>99.999% availability</strong>. Over a 365-day year, that corresponds to approximately <strong>5.26 minutes of expected downtime</strong>. It does not guarantee that every outage will be brief or that every cause of failure is covered.
+            </p>
+<p>
+Availability targets such as 99.9% or 99.999% are often included in a Service Level Agreement (SLA). SmartBean should independently monitor its website from outside the vendor’s network and retain uptime records rather than relying only on vendor reports.
+                </p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise01">Exercise 1 — Latency and Network Performance</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise01">
+<ol>
+<li>Open <strong>1-Latency</strong>.</li>
+<li>Review the distance, signal-speed, and delay formulas.</li>
+<li>Compare one-way and round-trip satellite delay with the illustrative terrestrial path.</li>
+<li>Consider the effect on voice/video, payments, and cloud backup.</li>
+</ol>
+<p>
+<img alt="Geosynchronous communications satellite relaying microwave signals between two ground stations" class="img-fluid img-responsive img-rounded" src="GeoSync.jpg"/>
+</p>
+<div class="form-group">
+<label for="q1"><strong>1. (20) Question 1</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q1" name="q1" readonly="" rows="7">Using the 1-Latency worksheet, verify the satellite-delay estimate and review its effect on SmartBean voice/video, payment, and cloud-backup applications. Briefly state which application is most affected and why.</textarea>
+<br/>
+<label for="a1"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a1" maxlength="1500" name="a1" placeholder="State your conclusion and strongest supporting reason..." rows="5"></textarea>
+<small class="text-muted" id="charCount-a1">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise02">Exercise 2 — Internet Service Selection</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise02">
+<ol>
+<li>Open <strong>2-InternetServices</strong>.</li>
+<li>Compare the generic technologies for the main café, branch café, and mobile event unit.</li>
+<li>Review bandwidth, latency, reliability, mobility, cost, and backup options.</li><li>Consider whether SmartBean needs symmetrical service, where upload and download speeds are similar, especially for cloud backups, video meetings, security-camera uploads, datasets, and AI files.</li>
+<li>Do not treat a provider's marketing name as a separate technology unless its underlying service is actually different.</li>
+<li>Do not select a service based only on advertised speed; consider bandwidth, latency, reliability, upload capacity, and backup connectivity.</li></ol>
+
+<div class="form-group">
+<label for="q2"><strong>2. (20) Question 2</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q2" name="q2" readonly="" rows="7">Using the 2-InternetServices worksheet, review the alternatives for all three SmartBean locations. Briefly identify the best primary connection for the location with the greatest requirements and state the strongest reason for your choice.</textarea>
+<br/>
+<label for="a2"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a2" maxlength="1500" name="a2" placeholder="State your conclusion and strongest supporting reason..." rows="5"></textarea>
+<small class="text-muted" id="charCount-a2">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise03">Exercise 3 — Local, Public Cloud, and Hybrid</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise03">
+<ol>
+<li>Open <strong>3-CloudOptions</strong>.</li>
+<li>Compare local, public-cloud, and hybrid approaches.</li>
+<li>Review remote access, scalability, internet dependence, control, cost, backup, and Generative AI workload fit.</li>
+<li>Review the expected annual downtime for each availability percentage.</li>
+<li>Consider whether five nines is necessary for every SmartBean system.</li>
+<li>
+    Consider how SmartBean could independently verify whether the availability
+    it experiences matches the vendor's SLA, rather than relying only on the
+    vendor's reports.
+</li> </ol>
+<p>For AI workloads, consider where the model runs, where prompts and files are processed, and what happens when the internet or cloud service is unavailable. </p>
+<div class="form-group">
+<label for="q3"><strong>3. (20) Question 3</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q3" name="q3" readonly="" rows="8">Using the 3-CloudOptions worksheet, compare local, public-cloud, and hybrid computing and review the availability calculations. Briefly recommend an approach for SmartBean's future cloud and Generative AI work and identify the most important tradeoff.</textarea>
+<br/>
+<label for="a3"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a3" maxlength="1500" name="a3" placeholder="State your conclusion and strongest supporting reason..." rows="5"></textarea>
+<small class="text-muted" id="charCount-a3">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise04">Exercise 4 — Security and Business Continuity</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise04">
+<ol>
+<li>Open <strong>4-NetworkControls</strong>.</li>
+<li>Review encryption, VPN, segmentation, MFA, backup connectivity, monitoring, and tested recovery.</li>
+<li>Consider which controls reduce data exposure and which keep operations running during failures.</li>
+<li>Add a brief reason for each control in the Student Reason column.</li>
+<li>Review the Zero trust entry on the Reference worksheet as the principle connecting identity verification, least privilege, segmentation, and other access controls.</li></ol>
+<div class="form-group">
+<label for="q4"><strong>4. (20) Question 4</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q4" name="q4" readonly="" rows="8">Using the 4-NetworkControls worksheet, review the proposed security and continuity controls. Briefly identify the single most important control for protecting SmartBean operations and explain why it should receive priority.</textarea>
+<br/>
+<label for="a4"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a4" maxlength="1500" name="a4" placeholder="State your conclusion and strongest supporting reason..." rows="5"></textarea>
+<small class="text-muted" id="charCount-a4">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Evidence">Completion Evidence</a>
+</div>
+<div class="collapse in col-lg-12" id="Evidence">
+<p>Before submitting, confirm that the workbook visibly shows:</p>
+<ul>
+<li>completed latency calculations and application interpretations;</li>
+<li>recommendations for the SmartBean locations using generic internet technologies;</li>
+<li>review of local, public-cloud, and hybrid options;</li>
+<li>correct availability and expected-downtime calculations;</li>
+<li>reasons for the selected network security and continuity controls;</li>
+<li>no formula errors such as <code>#DIV/0!</code>, <code>#VALUE!</code>, <code>#REF!</code>, or <code>#NAME?</code>.</li>
+</ul>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#D2LSubmission">D2L Workbook Submission</a>
+</div>
+<div class="collapse in col-lg-12" id="D2LSubmission">
+<p><strong>(50)</strong> Save and upload <strong>Formative06.xlsx</strong> to the D2L <code>Formative06</code> assignment folder.</p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#WebSubmission">Webpage Submission</a>
+</div>
+<div class="collapse in col-lg-12" id="WebSubmission">
+<p><strong>(10) Home Page Hyperlink:</strong> Verify that this assignment is linked from your course home page.</p>
+<p><strong>(10) Webpage Submission:</strong> Press the Submit button at the top or bottom of this page.</p>
+<p>
+                Complete and verify the worksheet analysis. Your web answers should contain only the essential conclusion and strongest supporting reason.
+            </p>
+<p>
+                Review the AI feedback, correct the workbook or answers as needed, and resubmit before the deadline.
+            </p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database, and receive AI feedback"/>
+<br/>
+</div>
+</form>
+<footer>
+<div class="col-lg-12 text-muted" id="licenseInfo"></div>
+<div class="col-lg-12 text-muted" id="footerText"></div>
+</footer>
+<script src="../../ReadOnly/jquery-1.js"></script>
+<script src="../../ReadOnly/bootstrap.js"></script>
+<script src="../studentConstants.js"></script>
+<script src="../../ReadOnly/courseConstants.js"></script>
+<script src="../../ReadOnly/domForms.js"></script>
+<script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 4; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 1500;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+    })();
+    </script>
+</body>
+</html>

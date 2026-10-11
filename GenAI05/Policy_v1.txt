@@ -1,0 +1,6 @@
+SmartBean response policy — version 1, teaching simulation
+1. Target a first employee response within two business days.
+2. The AI assistant may draft but may not send customer messages.
+3. Refunds and credits require manager approval; this excerpt gives no dollar threshold.
+4. Policy owner: SmartBean service manager. Record version and effective date.
+Effective date: 2026-09-01.

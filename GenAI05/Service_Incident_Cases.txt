@@ -1,0 +1,3 @@
+S1 — TABLETOP only
+A local terminal command succeeds, but a model request returns a service error. Identify what has actually been verified, possible causes (network, provider, key budget, or rate limit), one safe check, a manual work step, and a resume criterion. Do not expose a key or induce an outage.
+Actual error codes, if any, must be reported accurately. A hypothesis is not a proven diagnosis.

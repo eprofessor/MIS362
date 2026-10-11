@@ -1,0 +1,7 @@
+Hermes runs in Ubuntu WSL2. Windows provides the host network path. OpenRouter routes the request to a remote model provider running the selected Nemotron 3 Super model.
+A responding terminal proves local execution only. A model answer proves a model response only; inspect file-tool results separately.
+Local execution is not network-disabled and is not Docker-isolated. Use fictional course inputs only.
+A previous answer may reflect previously read content. Replacing a file does not prove the model reread it; explicitly request a fresh read and verify the version and answer.
+The instructor is the authority for supplied teaching materials. In the simulated business the service manager owns policy, and the student is the working-copy custodian.
+OneDrive is an archive/source copy, not an automatically synchronized Linux folder.
+The key's $5 semester limit is managed by the instructor at OpenRouter. No automatic switch to another model is configured by the course installer. Provider routing within the same model is different from switching models.

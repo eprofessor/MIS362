@@ -1,0 +1,545 @@
+<!doctype html>
+
+<html lang="en">
+
+<!--
+PgP 8/5/2026 standardized simplified Summative structure using reviewed Summative05 model
+PgP 8/3/2025 model AI feedback assignment case file, MIS362
+PgP 3/2/2020 updating MIS202 files to align with other assignments 
+PgP 3/31/2021 updating this for all MIS362 classes 
+PgP 2/18/2018 model  assignment file, version 1 released 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS362 Summative06</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Summative06-FA2026-v1" type="hidden">
+        <input name="reflectionQuestion" id="reflectionQuestion" value="7" type="hidden">
+
+        <h1 class="text-center">Networks, Internet Services, and Cloud Computing</h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName" class="text-dark">First Name:</label>
+                    <input class="form-control"
+                        name="FirstName"
+                        id="FirstName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="given-name"
+                        aria-label="First Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName" class="text-dark">Last Name:</label>
+                    <input class="form-control"
+                        name="LastName"
+                        id="LastName"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="family-name"
+                        aria-label="Last Name"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID" class="text-dark">StarID:</label>
+                    <input class="form-control"
+                        name="StarID"
+                        id="StarID"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="username"
+                        aria-label="StarID"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email" class="text-dark">Email:</label>
+                    <input class="form-control"
+                        name="email"
+                        id="email"
+                        type="email"
+                        readonly
+                        aria-readonly="true"
+                        autocomplete="email"
+                        aria-label="Email"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+        <input name="pin" id="pin" type="hidden" />
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester" class="text-dark">Semester:</label>
+                    <input class="form-control"
+                        name="Semester"
+                        id="Semester"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Semester"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class" class="text-dark">Class:</label>
+                    <input class="form-control"
+                        name="Class"
+                        id="Class"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Class"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section" class="text-dark">Section:</label>
+                    <input class="form-control"
+                        name="Section"
+                        id="Section"
+                        type="text"
+                        readonly
+                        aria-readonly="true"
+                        aria-label="Section"
+                        tabindex="0" />
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment" class="text-dark">Assignment:</label>
+                    <input class="form-control"
+                        name="assignment"
+                        id="assignment"
+                        type="text"
+                        readonly
+                        value="Summative06"
+                        aria-readonly="true"
+                        aria-label="Assignment"
+                        tabindex="0" />
+                </div>
+            </div>
+        </div>
+
+        <!-- -end-Student, class and assignment information-end -->
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit to the web database and receive AI feedback" type="submit">
+            <br />
+        </div>
+
+		<div class="col-lg-12 h3 text-danger">
+            850 Points
+            <hr />
+		</div>
+
+
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Summative06
+Return later: /resume Summative06
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes is the default AI-assisted workflow for MIS362, but Direct Mode is allowed for routine steps when you already understand the task and agent assistance would add no meaningful value.</strong> Resume Hermes when you need explanation, planning, troubleshooting, alternatives, review, or verification.</p>
+            <p><strong>Direct Mode:</strong> Work directly in the required course software and verify the result yourself. Choosing not to use Hermes for a routine step is acceptable unless an assignment explicitly requires it.</p>
+            <p><strong>Suggested Hermes checkpoint:</strong> Ask Hermes to trace one network/cloud request path and identify one security, availability, performance, or privacy assumption. Verify the conclusion using the assignment evidence.</p>
+            <p>Hermes may help you understand, plan, analyze, troubleshoot, and review. It does not replace the required course software, independent verification, Digital Artifact Notebook evidence, or your final business judgment. Do not add a Hermes screenshot merely to prove use unless the assignment specifically asks for one.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+		<!-- -start-assignment-guidance-start -->
+        <div class="col-lg-12">
+            <h2>Assignment Completion Sequence</h2>
+            <p>Use this sequence as the main checklist for completing the assignment.</p>
+            <ol>
+                <li>
+                    Review the assignment purpose, exercises, questions, and required <strong>Screenshot A, B...</strong> evidence before beginning.
+                </li>
+                <li>
+                    Create the <code><span class="SummativeID"></span></code> page in your OneNote Digital Artifact Notebook and copy the
+                    <a href="../DigitalArtifactNotebook/ArtifactTemplate.html" class="bg-info text-white" target="_blank">Digital Artifact Notebook Template</a> to that page.
+                </li>
+                <li>
+                    Complete the exercise questions in Visual Studio. Capture, label, paste, and organize each required screenshot in OneNote as you complete the related exercise.
+                    You do not need to wait for AI feedback.
+                </li>
+                <li>
+                    For each screenshot, add a verification statement explaining what it proves and a business or course relevance statement explaining why it matters.
+                </li>
+                <li>
+                    Publish the assignment to your course website. Open the published webpage and verify that your student information and answers are correct.
+                </li>
+                <li>
+                    Complete the Final Assignment Reflection in the published webpage at least once, keep a copy, and submit the webpage to the web database for formative AI feedback.
+                </li>
+                <li>
+                    Review the AI feedback and revise your answers in Visual Studio when appropriate. Additional submissions are optional but permitted.
+                    Republish before resubmitting revised answers. You are not required to submit the reflection again.
+                </li>
+                <li>
+                    Follow the <strong>Complete and Submit the Assignment</strong> instructions near the bottom of this page to create <code>WebPage.pdf</code>,
+                    complete the OneNote page, export <code><span class="SummativeID"></span>.pdf</code>, and make both required submissions.
+                </li>
+            </ol>
+
+            <div class="alert alert-info" role="note">
+                <strong>Two separate submissions are required:</strong> submit the webpage to the web database and upload
+                <code><span class="SummativeID"></span>.pdf</code> to D2L.
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="col-lg-12"><a href="#Purpose" class="btn btn-info" data-toggle="collapse">Assignment Purpose and Learning Outcomes</a></div>
+        <div id="Purpose" class="collapse in col-lg-12">
+            <p>
+                The goal of this assignment is to connect network fundamentals with Internet services, cloud platforms, connected devices, and access to cloud or network-hosted AI models.
+            </p>
+            <p>After completing this assignment, you will be able to:</p>
+            <ol>
+                <li>Explain why organizations use networks for communication, collaboration, resource sharing, and service delivery.</li>
+                <li>Identify basic network addressing and describe client-to-service communication.</li>
+                <li>Trace a Hermes request from a student computer to a cloud or network-hosted model and back.</li>
+                <li>Distinguish Software as a Service, Platform as a Service, and Infrastructure as a Service.</li>
+                <li>Explain how IoT systems and cloud services support business processes.</li>
+                <li>Evaluate privacy and security concerns when transmitting information to public AI services.</li>
+                <li>Recommend when public, private, or hybrid network services are appropriate.</li>
+            </ol>
+            <p><strong>Primary course learning-outcome alignment:</strong> CLO3, CLO7, CLO10, CLO11, and CLO12.</p>
+            <p>
+                Questions 1 through 12 require concise answers of no more than 500 characters. Respond directly to every part of each question.
+                The Final Assignment Reflection allows a longer response.
+            </p>
+            <hr />
+        </div>
+
+        <div class="col-lg-12"><a href="#Resources" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Resources">Resources and Help</a></div>
+        <div id="Resources" class="collapse in col-lg-12">
+            <p>
+                Hermes Agent in the <code>mis362</code> profile is the default AI-assisted workflow for this assignment. The <a href="https://teams.microsoft.com/l/app/?titleId=T_9404ba1f-6434-86d1-3f64-81c38847396b" class="bg-info text-white" target="_blank">MIS362 Copilot/M365 course agent</a>, course materials, reliable external sources, teaching assistants, and the instructor remain available as secondary resources. Verify AI-generated information before using it.
+            </p>
+            <p>
+                Recommended Hermes prompt:<br>
+                <code>I am completing MIS362 <span class="SummativeID"></span>. Create a concise checklist for the assignment. Identify each required screenshot, explain what it should show, and remind me how to verify my work.</code>
+            </p>
+            <hr />
+        </div>
+
+        <!-- -end-assignment-guidance-end -->
+
+
+		<div class="col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Network Fundamentals</a></div>
+        <div id="Exercise01" class="collapse in col-lg-12"><p>Identify why organizations use networks and connected services.</p>
+            <p>
+                <label for="q1"><strong>(50) Question 1</strong></label>
+                <textarea class="form-control" id="q1" name="q1" rows="3" readonly aria-readonly="true">Identify and briefly explain organizational reason 1 for using a computer network.</textarea>
+                <br />
+                <label for="a1"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a1" id="a1" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q2"><strong>(50) Question 2</strong></label>
+                <textarea class="form-control" id="q2" name="q2" rows="3" readonly aria-readonly="true">Identify and briefly explain organizational reason 2 for using a computer network.</textarea>
+                <br />
+                <label for="a2"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a2" id="a2" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q3"><strong>(50) Question 3</strong></label>
+                <textarea class="form-control" id="q3" name="q3" rows="3" readonly aria-readonly="true">Identify and briefly explain organizational reason 3 for using a computer network.</textarea>
+                <br />
+                <label for="a3"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a3" id="a3" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q4"><strong>(50) Question 4</strong></label>
+                <textarea class="form-control" id="q4" name="q4" rows="3" readonly aria-readonly="true">Identify and briefly explain organizational reason 4 for using a computer network.</textarea>
+                <br />
+                <label for="a4"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a4" id="a4" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q5"><strong>(50) Question 5</strong></label>
+                <textarea class="form-control" id="q5" name="q5" rows="3" readonly aria-readonly="true">Identify and briefly explain organizational reason 5 for using a computer network.</textarea>
+                <br />
+                <label for="a5"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a5" id="a5" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+        </div>        <div class="col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Internet, Web, and AI Services</a></div>
+        <div id="Exercise02" class="collapse in col-lg-12"><p>Examine Internet addressing and how an AI request travels across a network.</p>
+            <p>
+                <label for="q6"><strong>(50) Question 6</strong></label>
+                <textarea class="form-control" id="q6" name="q6" rows="2" readonly aria-readonly="true">What is the IPv4 address assigned to your computer on the current network?</textarea>
+                <br />
+                <label for="a6"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a6" id="a6" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q7"><strong>(50) Question 7</strong></label>
+                <textarea class="form-control" id="q7" name="q7" rows="5" readonly aria-readonly="true">Trace a Hermes request from your computer to a cloud or network-hosted model and back. Identify the client, network, provider endpoint, model service, and response.</textarea>
+                <br />
+                <label for="a7"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a7" id="a7" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q8"><strong>(50) Question 8</strong></label>
+                <textarea class="form-control" id="q8" name="q8" rows="4" readonly aria-readonly="true">What information should never be sent to a public AI model across the network?</textarea>
+                <br />
+                <label for="a8"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a8" id="a8" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+
+
+
+
+
+			<p>
+				<strong>Screenshot A.</strong> Use the Windows Snipping Tool to make a screenshot that captures network information or a diagnostic result used to identify your IPv4 address.<br />              
+                <br />
+
+            <p>
+                Paste Screenshot A directly into <strong>Section 1 - Task Evidence</strong> on your
+                OneNote page named <code><span class="SummativeID"></span></code>. Label it
+                <strong>Task Evidence A - </strong>.
+            </p>
+            <ul>
+                <li><strong>Verification:</strong> Explain in your own words what the screenshot proves.</li>
+                <li><strong>Business or course relevance:</strong> Explain in one sentence why this matters.</li>
+            </ul>
+            <p>Do not submit only a file icon. The screenshot must be visible and readable in the final <code><span class="SummativeID"></span>.pdf</code> file.</p>
+
+        </div>
+<div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-IoT and Cloud Computing</a></div>
+        <div id="Exercise03" class="collapse in col-lg-12"><p>Connect IoT concepts with SaaS, PaaS, and IaaS.</p>
+            <p>
+                <label for="q9"><strong>(50) Question 9</strong></label>
+                <textarea class="form-control" id="q9" name="q9" rows="4" readonly aria-readonly="true">What principle from nature can help designers manage extremely large numbers of connected IoT devices?</textarea>
+                <br />
+                <label for="a9"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a9" id="a9" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q10"><strong>(50) Question 10</strong></label>
+                <textarea class="form-control" id="q10" name="q10" rows="3" readonly aria-readonly="true">Provide one business example of Software as a Service (SaaS).</textarea>
+                <br />
+                <label for="a10"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a10" id="a10" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q11"><strong>(50) Question 11</strong></label>
+                <textarea class="form-control" id="q11" name="q11" rows="3" readonly aria-readonly="true">Provide one business example of Platform as a Service (PaaS).</textarea>
+                <br />
+                <label for="a11"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a11" id="a11" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+            <p>
+                <label for="q12"><strong>(50) Question 12</strong></label>
+                <textarea class="form-control" id="q12" name="q12" rows="3" readonly aria-readonly="true">Provide one business example of Infrastructure as a Service (IaaS).</textarea>
+                <br />
+                <label for="a12"><strong>Your answer:</strong></label>
+                <!-- Enter your answer in the VALUE field below using Visual Studio Properties. -->
+                <input name="a12" id="a12" size="500" maxlength="500" class="form-control" value="[Replace this text with your answer]" type="text"><br />
+            </p>
+
+
+
+
+            <p>
+                <strong>Screenshot B.</strong>
+                Use the Windows Snipping Tool to Capture an IoT device, cloud-service example, or Azure portal feature from your research.<br />Include enough source context that
+                another person can understand what the screenshot shows.
+            </p>
+            <p>
+                Paste Screenshot B directly into <strong>Section 1 - Task Evidence</strong> on your
+                OneNote page named <code><span class="SummativeID"></span></code>. Label it
+                <strong>Task Evidence B-</strong>.
+            </p>
+            <ul>
+                <li><strong>Verification:</strong> Explain in your own words what the screenshot proves.</li>
+                <li><strong>Business or course relevance:</strong> Explain in one sentence why this matters.</li>
+            </ul>
+            <p>Do not submit only a file icon. The screenshot must be visible and readable in the final <code><span class="SummativeID"></span>.pdf</code> file.</p>
+
+        </div>
+<!-- FINAL ASSIGNMENT REFLECTION -->
+        <div class="col-lg-12"><a href="#FinalReflection" class="btn btn-info" data-toggle="collapse">Final Assignment Reflection</a></div>
+        <div id="FinalReflection" class="collapse in col-lg-12">
+            <p>Complete and publish the assignment before responding.</p>
+
+            <label for="q13"><strong>(50) Question 13 &mdash; Final Reflection</strong></label>
+            <textarea class="form-control" style="font-weight: bold;" id="q13" name="q13" rows="6" maxlength="3000" readonly aria-readonly="true">Considering the entire assignment, explain the most important thing you learned about networks, cloud services, IoT, or AI model access. Refer to at least one numbered answer or labeled screenshot, identify one business benefit and one security or privacy concern.</textarea>
+            <br />
+            <div class="alert alert-warning" role="alert">
+    Complete this reflection in the published webpage. Your response is
+    submitted to the web database but is not saved back into your HTML file.
+    Draft or copy your reflection before submitting. You may use the same
+    reflection in your Digital Artifact Notebook.
+</div>
+            <label for="a13"><strong>Your final reflection:</strong></label>
+            <textarea class="form-control" id="a13" name="a13" rows="12" maxlength="3000" placeholder="Type or paste your final reflection here..."></textarea>
+            <small id="charCount-a13" class="text-muted">Maximum: 3000 characters. AI feedback is formative feedback, not a grade.</small>
+            <hr />
+        </div>
+
+                <!-- -start-final-submission-start -->
+        <div class="col-lg-12">
+            <a href="#CompleteSubmission" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="CompleteSubmission">Complete and Submit the Assignment</a>
+        </div>
+
+        <div id="CompleteSubmission" class="collapse in col-lg-12">
+            <h2>1. Complete the Digital Artifact Notebook Page</h2>
+            <ol>
+                <li>Open OneNote to the correct MIS362 course and assignment section.</li>
+                <li>
+                    Confirm that the page is named <code><span class="SummativeID"></span></code> and contains the
+                    <a href="../DigitalArtifactNotebook/ArtifactTemplate.html" class="bg-info text-white" target="_blank">Digital Artifact Notebook Template</a>.
+                </li>
+                <li>Confirm that every required <strong>Screenshot A, B...</strong> is visible, readable, and correctly labeled.</li>
+                <li>For each screenshot, include a verification statement and a business or course relevance statement.</li>
+                <li>
+                    Complete the reflection section in the Digital Artifact Notebook. You may use the same reflection that you entered in the published webpage.
+                </li>
+            </ol>
+
+            <h2>2. Create and Insert WebPage.pdf</h2>
+            <ol>
+                <li>Open the final published webpage at your course website.</li>
+                <li>Verify your name, StarID, email, course information, and all exercise answers.</li>
+                <li>
+                    Press <code>Ctrl + P</code>, or use the browser Print menu, and save the webpage as <code>WebPage.pdf</code> in
+                    <code><span id="Path6"></span></code>.
+                </li>
+                <li>
+                    In OneNote, use <strong>Insert &gt; File Printout</strong> to insert <code>WebPage.pdf</code>.
+                    Do not insert only a link or file icon.
+                </li>
+            </ol>
+            <p><strong>(50 points) WebPage.pdf:</strong> The readable webpage printout is included in the Digital Artifact Notebook.</p>
+
+            <h2>3. Export and Verify the Final PDF</h2>
+            <ol>
+                <li>
+                    Export or print the completed OneNote page as <code><span class="SummativeID"></span>.pdf</code> and save it in
+                    <code><span id="Path7"></span></code>.
+                </li>
+                <li>
+                    Open the exported PDF and confirm that all screenshots, labels, verification statements, relevance statements,
+                    reflection content, and the <code>WebPage.pdf</code> printout are visible and readable.
+                </li>
+                <li>Correct the OneNote page and export the PDF again if anything is missing, cut off, too small, or unreadable.</li>
+            </ol>
+            <p><strong>(50 points) D2L PDF submission:</strong> Upload <code><span class="SummativeID"></span>.pdf</code> to the matching D2L assignment folder.</p>
+
+            <h2>4. Complete the Web Submission Requirements</h2>
+            <p><strong>(50 points) Home Page Hyperlink:</strong> Verify that this assignment is linked correctly from your course home page.</p>
+            <p>
+                <strong>(50 points) Web Database Submission:</strong> Press the Submit button at the top or bottom of this page.
+                Your answers are saved to the web database and sent for formative AI feedback.
+            </p>
+            <ul>
+                <li>The AI feedback is not a grade.</li>
+                <li>Complete the Final Assignment Reflection on at least one web submission.</li>
+                <li>Additional submissions are optional but permitted; the reflection does not have to be submitted again.</li>
+                <li>Read the confirmation page and correct or resubmit your work when appropriate.</li>
+            </ul>
+
+            <div class="alert alert-warning" role="alert">
+                <strong>Final check:</strong> The D2L PDF upload and the web-database submission are separate requirements. Complete both.
+            </div>
+
+            <!-- Retain JavaScript-populated path targets used by the existing course scripts. -->
+            <div class="sr-only" aria-hidden="true">
+                <span id="Path8"></span>
+                <span id="Path9"></span>
+            </div>
+        </div>
+
+        <hr />
+        <!-- -end-final-submission-end -->
+
+<div class="col-lg-12">
+            <br />
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit to the web database and receive AI feedback" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+</body>
+</html>
