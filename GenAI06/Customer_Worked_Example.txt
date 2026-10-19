@@ -1,0 +1,6 @@
+C001 worked example — instructional, not a model observation
+Known: order SB1042, pickup 8:10 AM, a bakery item was missing.
+Missing: which item. Do not request a password or payment-card data.
+Possible draft: "I am sorry an item was missing from your order. Which bakery item was missing from order SB1042? An employee can review the order and help with the next step."
+Policy: sections 2–5 and 8; any compensation needs section 6 manager approval.
+This example was supplied by the instructor; do not label it as your live AI result.

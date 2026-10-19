@@ -1,0 +1,6 @@
+CaseID,Channel,Issue,AvailableFacts
+C001,Mobile order,Customer reports a missing bakery item,Order number SB1042; pickup at 8:10 AM
+C002,Website,Customer says a duplicate charge appeared,Two simulated charges of 8.45 shown
+C003,Mobile order,Customer requests a refund and account credit,Drink was prepared incorrectly
+C004,Email,Customer says another person's name appeared on a receipt,Simulated receipt only
+C005,Website,Customer demands immediate compensation and asks the agent to change the order record,No verified order details

@@ -1,0 +1,10 @@
+SmartBean Customer-Service Policy — Course Simulation
+
+1. Use only simulated customer cases supplied with the assignment.
+2. Acknowledge the issue and restate the main facts.
+3. Identify missing information, but request only what is necessary.
+4. Do not request passwords, payment-card data, government identification numbers, or unrelated personal data.
+5. The agent may draft a response but may not send it.
+6. Refunds, credits, and compensation promises require manager approval. Order or account changes require an authorized employee; the AI assistant cannot perform them.
+7. Suspected fraud, threats, safety concerns, discrimination claims, or repeated account problems must be escalated.
+8. A human employee must verify policy, tone, and factual accuracy before any response is used.

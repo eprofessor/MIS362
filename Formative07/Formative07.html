@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link href="../../ReadOnly/bootstrap.css" rel="stylesheet"/>
+<title>MIS362 Formative07</title>
+</head>
+<body class="container-fluid">
+<form action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" class="container-fluid" id="frmAssignment" method="post" name="frmAssignment">
+<input id="InstID" name="InstID" type="hidden" value="00617282"/>
+<input id="assignmentVersion" name="assignmentVersion" type="hidden" value="Formative07-FA2026-v3"/>
+<textarea hidden="" id="datasetContext" name="datasetContext" readonly="">Assignment: MIS362 Formative07 — SmartBean E-Commerce, Mobile Commerce, and Web Services. The workbook contains 1-ChannelConvenience, 2-MobileCheckout, 3-ServiceData, 4-PrivacyControls, and Reference. Students compare in-store purchase, mobile pickup, and SmartBean delivery from the customer's perspective; analyze a mobile-ordering checkout funnel; inspect a provided JSON response containing store, item, availability, price, pickup-time, and ordering-status data; and review location, payment, confirmation, service-failure, customer-data, and privacy controls. A live browser geolocation demonstration is included only to observe browser permission and location behavior. Students must not submit coordinates. The assignment emphasizes customer convenience rather than channel profitability. Students complete and verify the detailed worksheet analysis. Web answers should be brief and should state the essential conclusion and strongest supporting reason. The AI does not receive the workbook or the geolocation result. Do not require students to reproduce worksheet tables, weighted scores, funnel calculations, JSON fields, or coordinates unless the question specifically asks for them. Do not penalize concise answers when the conclusion is clear, relevant, and consistent with the assignment. Accept alternative reasonable recommendations when supported. Evaluate e-commerce and mobile-commerce reasoning, customer convenience, conversion analysis, web-service interpretation, privacy, transaction trust, safe failure behavior, and business relevance.</textarea>
+<h1 class="text-center">SmartBean E-Commerce, Mobile Commerce, and Web Services</h1>
+<h2 class="sr-only" id="student-info">Student Information</h2>
+<div aria-labelledby="student-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="FirstName">First Name:</label>
+<input aria-readonly="true" autocomplete="given-name" class="form-control" id="FirstName" name="FirstName" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="LastName">Last Name:</label>
+<input aria-readonly="true" autocomplete="family-name" class="form-control" id="LastName" name="LastName" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="StarID">StarID:</label>
+<input aria-readonly="true" autocomplete="username" class="form-control" id="StarID" name="StarID" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="email">Email:</label>
+<input aria-readonly="true" autocomplete="email" class="form-control" id="email" name="email" readonly="" type="email"/>
+</div>
+</div>
+</div>
+<input id="pin" name="pin" type="hidden"/>
+<h2 class="sr-only" id="course-info">Course Information</h2>
+<div aria-labelledby="course-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="Semester">Semester:</label>
+<input aria-readonly="true" class="form-control" id="Semester" name="Semester" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="Class">Class:</label>
+<input aria-readonly="true" class="form-control" id="Class" name="Class" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="Section">Section:</label>
+<input aria-readonly="true" class="form-control" id="Section" name="Section" readonly="" type="text"/>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="form-group">
+<label for="assignment">Assignment:</label>
+<input aria-readonly="true" class="form-control" id="assignment" name="assignment" readonly="" type="text" value="Formative07"/>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database, and receive AI feedback"/>
+<br/>
+</div>
+<div class="col-lg-12 h3 text-danger">
+            150 Points
+            <hr/>
+</div>
+
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Formative07
+Return later: /resume Formative07
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes is the default AI-assisted workflow for MIS362, but Direct Mode is allowed for routine steps when you already understand the task and agent assistance would add no meaningful value.</strong> Resume Hermes when you need explanation, planning, troubleshooting, alternatives, review, or verification.</p>
+            <p><strong>Direct Mode:</strong> Work directly in the required course software and verify the result yourself. Choosing not to use Hermes for a routine step is acceptable unless an assignment explicitly requires it.</p>
+            <p><strong>Suggested Hermes checkpoint:</strong> Ask Hermes to map one SmartBean e-commerce process from customer action to business result and identify one trust, privacy, payment, or service issue to check in your workbook.</p>
+            <p>Hermes is a coach. It may explain concepts, suggest formulas or methods, and help troubleshoot, but you must perform and verify the hands-on work in the required software. No extra Hermes screenshot or chat transcript is required.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Objectives">Learning Objectives</a>
+</div>
+<div class="collapse in col-lg-12" id="Objectives">
+<p>
+                In this assignment, you will use Excel and a browser demonstration to examine customer convenience, mobile checkout, web-service data, and privacy controls.
+            </p>
+<p>After completing this assignment, you will be able to:</p>
+<ol>
+<li>Compare e-commerce and mobile-commerce channels from the customer's perspective.</li>
+<li>Interpret a mobile checkout funnel and identify an important point of customer loss.</li>
+<li>Explain how structured web-service data supports a website or mobile application.</li>
+<li>Evaluate how location permissions and data-minimization choices affect customer privacy.</li>
+<li>Recommend controls that make mobile ordering reliable and trustworthy.</li>
+</ol>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Resources">Resources and Help</a>
+</div>
+<div class="collapse in col-lg-12" id="Resources">
+<p>
+                Suggested Hermes prompt (use the <code>mis362</code> profile; the MIS362 course agent remains available as a secondary resource):
+                <br/>
+<code>I am completing MIS362 Formative07. Explain customer convenience across commerce channels, mobile checkout conversion, JSON web-service data, geolocation permission, and mobile-commerce controls. Help me interpret the worksheet and state a brief supported conclusion.</code>
+</p>
+<p>
+                The AI does not receive your workbook or your browser's location result. Complete and verify the activities, then submit only the essential conclusion and strongest supporting reason for each question.
+            </p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Overview">Assignment Overview</a>
+</div>
+<div class="collapse in col-lg-12" id="Overview">
+<p>
+                SmartBean serves customers through three channels: in-store purchase, mobile pickup, and SmartBean delivery. Each channel offers different forms of convenience and depends on accurate data, reliable services, and customer trust.
+            </p>
+<p>
+                Download and open <a class="bg-info text-white" href="Formative07_SmartBean_Ecommerce.xlsx">Formative07_SmartBean_Ecommerce.xlsx</a>. Save a working copy as <strong>Formative07.xlsx</strong>.
+            </p>
+<p>
+                The detailed analysis belongs in the workbook. Your webpage answers should remain brief and should communicate the conclusion that resulted from that analysis.
+            </p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise01">Exercise 1 — Mobile Location and Privacy</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise01">
+<p>
+                A SmartBean mobile site could request location to identify the nearest café. Use the demonstration below to observe how a browser asks permission and reports location and accuracy.
+            </p>
+<p>
+<strong>Privacy notice:</strong> The result is displayed only on this page. It is not stored in a form field and is not included with your assignment submission. Do not copy coordinates into your answer or workbook.
+            </p>
+<p>
+<button class="btn btn-primary" id="geoButton" type="button">Try Browser Geolocation</button>
+<button class="btn btn-default" id="geoClearButton" type="button">Clear Result</button>
+</p>
+<div aria-live="polite" class="well" id="geoResult">
+                No location request has been made.
+            </div><p id="mapPrivacyNotice"><strong>Map privacy notice:</strong> The embedded map is not loaded until you choose Try Browser Geolocation and allow the browser to return a location. Loading the map sends the returned coordinates to Google Maps so the location can be displayed. Do not continue if you do not want the coordinates sent to Google.</p><div id="geoMapContainer" style="display:none; margin-bottom:20px;"><iframe allowfullscreen="" height="420" id="geoMap" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0;" title="Map showing the location returned by browser geolocation" width="100%"></iframe></div>
+<ol>
+<li>Observe whether the browser asks for permission.</li>
+<li>Review the reported accuracy without copying the coordinates.</li>
+<li>Open <strong>4-PrivacyControls</strong> and review the nearest-store and precise-location rows.</li>
+<li>Consider whether SmartBean needs precise location, approximate location, or manual store selection.</li>
+</ol>
+<div class="form-group">
+<label for="q1"><strong>1. (20) Question 1</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q1" name="q1" readonly="" rows="7">After completing the browser demonstration and reviewing 4-PrivacyControls, briefly recommend whether SmartBean should request precise location, approximate location, or no location. State the strongest reason for your recommendation. Do not include coordinates.</textarea>
+<br/>
+<label for="a1"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a1" maxlength="1500" name="a1" placeholder="State your conclusion and strongest supporting reason. Do not include coordinates." rows="5"></textarea>
+<small class="text-muted" id="charCount-a1">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise02">Exercise 2 — Customer Convenience by Channel</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise02">
+<ol>
+<li>Open <strong>1-ChannelConvenience</strong>.</li>
+<li>Review the weights and 1–5 ratings for in-store purchase, mobile pickup, and SmartBean delivery.</li>
+<li>Change ratings when you can justify a different customer-convenience assumption.</li>
+<li>Review the weighted totals and add brief notes for your most important ratings.</li>
+<li>Remember that different customers or situations may favor different channels.</li>
+</ol>
+<div class="form-group">
+<label for="q2"><strong>2. (20) Question 2</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q2" name="q2" readonly="" rows="7">Using the 1-ChannelConvenience worksheet, review all three SmartBean channels. Briefly identify the strongest channel for overall customer convenience under your assumptions and state the most important reason for your conclusion.</textarea>
+<br/>
+<label for="a2"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a2" maxlength="1500" name="a2" placeholder="State your conclusion and strongest supporting reason..." rows="5"></textarea>
+<small class="text-muted" id="charCount-a2">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise03">Exercise 3 — Mobile Checkout Funnel</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise03">
+<ol>
+<li>Open <strong>2-MobileCheckout</strong>.</li>
+<li>Review the customers lost, conversion rate, and drop-off rate at each stage.</li>
+<li>Consider both the number of customers lost and the percentage lost.</li>
+<li>Identify the stage where improving convenience would have the greatest effect.</li>
+<li>Record your priority and reason in the workbook.</li>
+</ol>
+<div class="form-group">
+<label for="q3"><strong>3. (20) Question 3</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q3" name="q3" readonly="" rows="7">Using the 2-MobileCheckout worksheet, briefly identify the most important point of customer loss and recommend one improvement that would make the SmartBean mobile-ordering process more convenient.</textarea>
+<br/>
+<label for="a3"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a3" maxlength="1500" name="a3" placeholder="State the priority stage and one recommended improvement..." rows="5"></textarea>
+<small class="text-muted" id="charCount-a3">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Exercise04">Exercise 4 — Web-Service Data and Trust</a>
+</div>
+<div class="collapse in col-lg-12" id="Exercise04">
+<p>
+                Inspect this sample response from a SmartBean service:
+            </p>
+<pre><code>{
+  "storeId": "SB-MAIN",
+  "item": "Mocha",
+  "available": true,
+  "price": 5.25,
+  "pickupMinutes": 12,
+  "mobileOrdering": true
+}</code></pre>
+<ol>
+<li>Open <strong>3-ServiceData</strong>.</li>
+<li>Review how the mobile application uses each JSON field.</li>
+<li>Consider what the application should do if a field is missing, invalid, or unavailable.</li>
+<li>Open <strong>4-PrivacyControls</strong> and review payment, confirmation, service-failure, and customer-data controls.</li>
+<li>Focus on how web services improve convenience while controls preserve trust.</li>
+</ol>
+<div class="form-group">
+<label for="q4"><strong>4. (20) Question 4</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q4" name="q4" readonly="" rows="8">Using the 3-ServiceData and 4-PrivacyControls worksheets, briefly explain the most important benefit of using web services in SmartBean mobile commerce and identify the control most necessary to keep the process trustworthy.</textarea>
+<br/>
+<label for="a4"><strong>Your brief answer:</strong></label>
+<textarea class="form-control" id="a4" maxlength="1500" name="a4" placeholder="State one main benefit and one essential control..." rows="5"></textarea>
+<small class="text-muted" id="charCount-a4">0 / 1500 characters</small>
+</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#Evidence">Completion Evidence</a>
+</div>
+<div class="collapse in col-lg-12" id="Evidence">
+<p>Before submitting, confirm that the workbook visibly shows:</p>
+<ul>
+<li>reviewed or revised convenience ratings for all three SmartBean channels;</li>
+<li>weighted channel totals and supporting notes;</li>
+<li>checkout conversion and drop-off calculations;</li>
+<li>a priority stage and proposed convenience improvement;</li>
+<li>interpretation of the JSON service fields and safe failure behavior;</li>
+<li>reasons for the selected privacy and transaction controls;</li>
+<li>no copied geolocation coordinates.</li>
+</ul>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#D2LSubmission">D2L Workbook Submission</a>
+</div>
+<div class="collapse in col-lg-12" id="D2LSubmission">
+<p><strong>(50)</strong> Save and upload <strong>Formative07.xlsx</strong> to the D2L <code>Formative07</code> assignment folder.</p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<a class="btn btn-info" data-toggle="collapse" href="#WebSubmission">Webpage Submission</a>
+</div>
+<div class="collapse in col-lg-12" id="WebSubmission">
+<p><strong>(10) Home Page Hyperlink:</strong> Verify that this assignment is linked from your course home page.</p>
+<p><strong>(10) Webpage Submission:</strong> Press the Submit button at the top or bottom of this page.</p>
+<p>
+                Complete and verify the workbook analysis. Your webpage answers should contain only the essential conclusion and strongest supporting reason.
+            </p>
+<p>
+                Review the AI feedback, correct the workbook or answers as needed, and resubmit before the deadline.
+            </p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database, and receive AI feedback"/>
+<br/>
+</div>
+</form>
+<footer>
+<div class="col-lg-12 text-muted" id="licenseInfo"></div>
+<div class="col-lg-12 text-muted" id="footerText"></div>
+</footer>
+<script src="../../ReadOnly/jquery-1.js"></script>
+<script src="../../ReadOnly/bootstrap.js"></script>
+<script src="../studentConstants.js"></script>
+<script src="../../ReadOnly/courseConstants.js"></script>
+<script src="../../ReadOnly/domForms.js"></script>
+<script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 4; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 1500;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+
+        var geoButton = document.getElementById('geoButton');
+        var geoClearButton = document.getElementById('geoClearButton');
+        var geoResult = document.getElementById('geoResult');
+        var geoMapContainer = document.getElementById('geoMapContainer');
+        var geoMap = document.getElementById('geoMap');
+
+        if (geoButton && geoResult) {
+            geoButton.addEventListener('click', function () {
+                if (!navigator.geolocation) {
+                    geoResult.textContent = 'Geolocation is not supported by this browser.';
+                    return;
+                }
+
+                geoResult.textContent = 'Waiting for browser permission and location result...';
+
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+
+                        geoResult.textContent =
+                            'Location returned. Latitude: ' +
+                            latitude.toFixed(6) +
+                            ', Longitude: ' +
+                            longitude.toFixed(6) +
+                            ', reported accuracy: approximately ' +
+                            Math.round(position.coords.accuracy) +
+                            ' meters. This result is not submitted with the assignment.';
+
+                        if (geoMap && geoMapContainer) {
+                            geoMap.src =
+                                'https://www.google.com/maps?q=' +
+                                encodeURIComponent(latitude + ',' + longitude) +
+                                '&z=16&output=embed';
+                            geoMapContainer.style.display = 'block';
+                        }
+                    },
+                    function (error) {
+                        var message = 'The location request was not completed.';
+                        if (error.code === error.PERMISSION_DENIED) {
+                            message = 'Permission was denied. SmartBean should still allow manual store selection.';
+                        } else if (error.code === error.POSITION_UNAVAILABLE) {
+                            message = 'Location information is unavailable. SmartBean should still allow manual store selection.';
+                        } else if (error.code === error.TIMEOUT) {
+                            message = 'The location request timed out. SmartBean should still allow manual store selection.';
+                        }
+                        geoResult.textContent = message;
+                        if (geoMap && geoMapContainer) {
+                            geoMap.removeAttribute('src');
+                            geoMapContainer.style.display = 'none';
+                        }
+                    },
+                    {
+                        enableHighAccuracy: false,
+                        timeout: 10000,
+                        maximumAge: 0
+                    }
+                );
+            });
+        }
+
+        if (geoClearButton && geoResult) {
+            geoClearButton.addEventListener('click', function () {
+                geoResult.textContent = 'Location result cleared. No location result is submitted with the assignment.';
+                if (geoMap && geoMapContainer) {
+                    geoMap.removeAttribute('src');
+                    geoMapContainer.style.display = 'none';
+                }
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
