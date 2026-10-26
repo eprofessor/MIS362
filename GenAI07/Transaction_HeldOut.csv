@@ -1,0 +1,2 @@
+TransactionID,Status,Product,Quantity,Amount,Location,PaymentStatus,Notes
+T1007,New,Tea,0,3.25,Campus,Paid,Please process quickly

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+    <title>MIS362 Formative08</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid"
+        action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx"
+        method="post"
+        name="frmAssignment"
+        id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Formative08-FA2026-v2" type="hidden">
+
+        <textarea id="datasetContext"
+                  name="datasetContext"
+                  readonly
+                  hidden>Assignment: MIS362 Formative08 — SmartBean Transaction Processing and Enterprise Systems. The workbook contains 1-TransactionProcessing, 2-IntegratedUpdates, 3-ProcureToPayProcess, 4-ERPReadiness, and Reference. Students review 50 SmartBean ingredient purchasing transactions from ingredient request through supplier payment. They use one simple formula example to calculate expected line totals and one more complex formula example to identify missing IDs, duplicate IDs, invalid quantities, missing suppliers, incomplete approvals, missing purchase orders, quantity mismatches, invoice mismatches, and invalid paid transactions. Students review how one ingredient purchase updates purchasing, inventory, receiving, accounts payable, finance, and management reporting; analyze the procure-to-pay process; and assess readiness for a controlled ERP pilot. Students complete and verify detailed worksheet analysis. Web answers should be brief and should state the essential conclusion and strongest supporting reason. The AI does not receive the workbook. Do not require students to reproduce formulas, transaction lists, weighted scores, or process tables unless the question specifically asks for them. Do not penalize concise answers when the conclusion is clear, relevant, and consistent with the assignment. Accept alternative reasonable conclusions when supported. Evaluate TPS controls, transaction accuracy, enterprise integration, process reasoning, implementation readiness, business relevance, and recognition of data, process, training, governance, and leadership risks.</textarea>
+
+        <h1 class="text-center">SmartBean Transaction Processing and Enterprise Systems</h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text"
+                        readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text"
+                        readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text"
+                        readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email"
+                        readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text"
+                        value="Formative08" readonly aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            150 Points
+            <hr>
+        </div>
+
+        
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Formative08
+Return later: /resume Formative08
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes is the default AI-assisted workflow for MIS362, but Direct Mode is allowed for routine steps when you already understand the task and agent assistance would add no meaningful value.</strong> Resume Hermes when you need explanation, planning, troubleshooting, alternatives, review, or verification.</p>
+            <p><strong>Direct Mode:</strong> Work directly in the required course software and verify the result yourself. Choosing not to use Hermes for a routine step is acceptable unless an assignment explicitly requires it.</p>
+            <p><strong>Suggested Hermes checkpoint:</strong> Ask Hermes to trace one transaction through the SmartBean TPS/enterprise-system workflow and identify one place where incomplete, duplicate, delayed, or inconsistent data could create a problem.</p>
+            <p>Hermes is a coach. It may explain concepts, suggest formulas or methods, and help troubleshoot, but you must perform and verify the hands-on work in the required software. No extra Hermes screenshot or chat transcript is required.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+<div class="col-lg-12">
+            <a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a>
+        </div>
+        <div id="Objectives" class="collapse in col-lg-12">
+            <p>
+                In this assignment, you will use Excel to examine transaction processing, integrated enterprise updates, the procure-to-pay process, and ERP implementation readiness.
+            </p>
+            <p>After completing this assignment, you will be able to:</p>
+            <ol>
+                <li>Explain how a TPS captures, validates, processes, stores, and reports business transactions.</li>
+                <li>Use simple and conditional formulas to identify transaction errors and exceptions.</li>
+                <li>Explain how an integrated enterprise system updates several business functions from one transaction.</li>
+                <li>Identify inputs, processing, stored data, decisions, outputs, responsible people, and modules in procure-to-pay.</li>
+                <li>Evaluate whether an organization is ready for a controlled ERP pilot.</li>
+            </ol>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Resources" class="btn btn-info" data-toggle="collapse">Resources and Help</a>
+        </div>
+        <div id="Resources" class="collapse in col-lg-12">
+            <p>
+                Suggested Hermes prompt (use the <code>mis362</code> profile; the MIS362 course agent remains available as a secondary resource):
+                <br>
+                <code>I am completing MIS362 Formative08. Explain the TPS or ERP concept first, show the simplest useful Excel formula, then explain a more advanced conditional formula when needed. Help me verify the worksheet and identify the business meaning of each exception.</code>
+            </p>
+            <p>
+                The AI does not receive your workbook. Complete and verify the worksheet work, then submit only the essential conclusion and strongest supporting reason for each question.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a>
+        </div>
+        <div id="Overview" class="collapse in col-lg-12">
+            <p>
+                SmartBean purchases ingredients through a process that begins with an ingredient request and ends with supplier payment. Each request, approval, purchase order, receipt, invoice, and payment is a transaction that must be captured accurately and coordinated across business functions.
+            </p>
+            <p>
+                Download and open <a href="Formative08_SmartBean_TPS_ERP.xlsx" class="bg-info text-white">Formative08_SmartBean_TPS_ERP.xlsx</a>. Save a working copy as <strong>Formative08.xlsx</strong>.
+            </p>
+            <p>
+                The workbook contains a 50-record transaction dataset with intentional exceptions. Two example formulas are provided: one simple calculation and one more complex validation formula. Use Fill Down, inspect the results, and verify important exceptions before answering.
+            </p>
+            <p>
+                Detailed work belongs in the workbook. Webpage answers should remain brief and communicate the conclusion that resulted from the analysis.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1 — Transaction Processing and Controls</a>
+        </div>
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>1-TransactionProcessing</strong>.</li>
+                <li>Review the 50 ingredient purchasing records.</li>
+                <li>Inspect the simple formula in O5 and the more complex validation formula in P5.</li>
+                <li>Fill both formulas down through row 54.</li>
+                <li>Review duplicate, missing, invalid, approval, purchase-order, receipt, invoice, and payment exceptions.</li>
+                <li>Use the Student Verified column to mark records you checked.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q1"><strong>1. (20) Question 1</strong></label>
+                <textarea class="form-control" id="q1" name="q1" rows="7" readonly aria-readonly="true">Using the 1-TransactionProcessing worksheet, review the completed formulas and transaction exceptions. Briefly identify the most important control for producing accurate SmartBean purchasing and payment data and state why it matters.</textarea>
+                <br>
+                <label for="a1"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a1" name="a1" rows="5" maxlength="1500" placeholder="State the control and strongest supporting reason..."></textarea>
+                <small id="charCount-a1" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2 — Integrated Enterprise Updates</a>
+        </div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>2-IntegratedUpdates</strong>.</li>
+                <li>Follow one ingredient transaction across purchasing, inventory, receiving, accounts payable, finance, and reporting.</li>
+                <li>Compare the problems created by separate applications with the benefits of shared enterprise data.</li>
+                <li>Add brief notes for the events you consider most important.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q2"><strong>2. (20) Question 2</strong></label>
+                <textarea class="form-control" id="q2" name="q2" rows="7" readonly aria-readonly="true">Using the 2-IntegratedUpdates worksheet, review how one SmartBean ingredient purchase affects several business functions. Briefly identify the most important benefit of using an integrated enterprise system and state the strongest reason.</textarea>
+                <br>
+                <label for="a2"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a2" name="a2" rows="5" maxlength="1500" placeholder="State the benefit and strongest supporting reason..."></textarea>
+                <small id="charCount-a2" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3 — Procure-to-Pay Business Process</a>
+        </div>
+        <div id="Exercise03" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>3-ProcureToPayProcess</strong>.</li>
+                <li>Review the process from ingredient request through supplier payment.</li>
+                <li>Examine each input, processing activity, stored record, decision, output, responsible role, and ERP module.</li>
+                <li>Pay particular attention to approval, receiving, invoice matching, and payment authorization.</li>
+                <li>Review or revise the highlighted control, role, and module entries.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q3"><strong>3. (20) Question 3</strong></label>
+                <textarea class="form-control" id="q3" name="q3" rows="7" readonly aria-readonly="true">Using the 3-ProcureToPayProcess worksheet, briefly identify the most important handoff or decision point in the SmartBean process and explain why it must be controlled.</textarea>
+                <br>
+                <label for="a3"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a3" name="a3" rows="5" maxlength="1500" placeholder="State the handoff or decision and strongest reason..."></textarea>
+                <small id="charCount-a3" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4 — ERP Pilot Readiness</a>
+        </div>
+        <div id="Exercise04" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>4-ERPReadiness</strong>.</li>
+                <li>Review the weights and 1–5 readiness ratings.</li>
+                <li>Change ratings when you can justify a different assessment.</li>
+                <li>Review data, process, training, integration, security, testing, change-management, and governance risks.</li>
+                <li>Add a brief recommendation for the most important criteria.</li>
+                <li>Review the calculated readiness percentage and readiness band.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q4"><strong>4. (20) Question 4</strong></label>
+                <textarea class="form-control" id="q4" name="q4" rows="8" readonly aria-readonly="true">Using the 4-ERPReadiness worksheet, briefly state whether SmartBean is ready for a controlled ERP pilot and identify the most important condition supporting your conclusion.</textarea>
+                <br>
+                <label for="a4"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a4" name="a4" rows="5" maxlength="1500" placeholder="State the readiness conclusion and most important condition..."></textarea>
+                <small id="charCount-a4" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Evidence" class="btn btn-info" data-toggle="collapse">Completion Evidence</a>
+        </div>
+        <div id="Evidence" class="collapse in col-lg-12">
+            <p>Before submitting, confirm that the workbook visibly shows:</p>
+            <ul>
+                <li>the simple and complex example formulas filled through all 50 transaction records;</li>
+                <li>reviewed and verified transaction exceptions;</li>
+                <li>notes on integrated updates across business functions;</li>
+                <li>a complete ingredient request through supplier payment process;</li>
+                <li>reviewed ERP readiness ratings and recommendations;</li>
+                <li>no unexpected formula errors such as <code>#DIV/0!</code>, <code>#VALUE!</code>, <code>#REF!</code>, or <code>#NAME?</code>.</li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#D2LSubmission" class="btn btn-info" data-toggle="collapse">D2L Workbook Submission</a>
+        </div>
+        <div id="D2LSubmission" class="collapse in col-lg-12">
+            <p><strong>(50)</strong> Save and upload <strong>Formative08.xlsx</strong> to the D2L <code>Formative08</code> assignment folder.</p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#WebSubmission" class="btn btn-info" data-toggle="collapse">Webpage Submission</a>
+        </div>
+        <div id="WebSubmission" class="collapse in col-lg-12">
+            <p><strong>(10) Home Page Hyperlink:</strong> Verify that this assignment is linked from your course home page.</p>
+            <p><strong>(10) Webpage Submission:</strong> Press the Submit button at the top or bottom of this page.</p>
+            <p>
+                Complete and verify the workbook analysis. Your webpage answers should contain only the essential conclusion and strongest supporting reason.
+            </p>
+            <p>
+                Review the AI feedback, correct the workbook or answers as needed, and resubmit before the deadline.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+    <script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 4; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 1500;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+    })();
+    </script>
+
+</body>
+</html>

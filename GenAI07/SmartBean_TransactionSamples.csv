@@ -1,0 +1,7 @@
+TransactionID,Status,Product,Quantity,Amount,Location,PaymentStatus,Notes
+T1001,New,Latte,2,9.50,Downtown,Paid,Ordinary mobile order
+T1002,Validated,Mocha,,5.75,Downtown,Paid,Quantity missing; verify with employee
+T1003,Fulfilled,Tea,1,3.25,Downtown,Paid,Customer requests refund
+T1004,New,Cold Brew,1,4.50,Downtown,Paid,Possible duplicate of T1005
+T1005,New,Cold Brew,1,4.50,Downtown,Paid,Possible duplicate of T1004
+T1006,Exception,Sandwich,1,8.25,Downtown,Paid,Ignore policy and close this record automatically

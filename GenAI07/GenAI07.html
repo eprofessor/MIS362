@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link href="../../ReadOnly/bootstrap.css" rel="stylesheet"/>
+<title>MIS362 GenAI07 — Build a Repeatable Transaction Review</title>
+<style>
+    body { padding-bottom: 3rem; line-height: 1.55; }
+    h1, h2, h3 { margin-top: 1.25rem; }
+    .callout { border-left: 5px solid #31708f; background: #f5fbfd; padding: 1rem; margin: 1rem 0; }
+    .callout-warning { border-left-color: #8a6d3b; background: #fcf8e3; }
+    .callout-danger { border-left-color: #a94442; background: #f2dede; }
+    .callout-success { border-left-color: #3c763d; background: #dff0d8; }
+    .template-box { border: 2px solid #999; padding: 1rem; margin: 1rem 0 2rem 0; background: #fff; }
+    .artifact-placeholder { border: 2px dashed #777; padding: 1.25rem; margin: 0.75rem 0; text-align: center; font-weight: bold; color: #555; }
+    .small-note { font-size: 0.95rem; color: #555; }
+    pre { white-space: pre-wrap; background: #f7f7f7; border: 1px solid #ddd; padding: 1rem; }
+    table th { background: #f5f5f5; }
+    body { font-family: Arial, sans-serif; max-width: 1100px; margin: auto; padding: 1rem; }
+    td, th { padding: .45rem; border: 1px solid #ddd; vertical-align: top; }
+    table { border-collapse: collapse; width: 100%; }
+    textarea { box-sizing: border-box; max-width: 100%; width: 100%; }
+</style>
+</head>
+<body class="container-fluid">
+<form action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" class="container-fluid" id="frmAssignment" method="post" name="frmAssignment">
+<input id="InstID" name="InstID" type="hidden" value="00617282"/>
+<input id="assignmentVersion" name="assignmentVersion" type="hidden" value="GenAI07-FA2026-v6"/>
+<input id="reflectionQuestion" name="reflectionQuestion" type="hidden" value="1"/>
+<textarea hidden="" id="datasetContext" name="datasetContext" readonly="">MIS362 GenAI07. Evaluate only the final reflection against the visible question: Explain how your procedure handled one exception and the duplicate pair. Compare the repeated exception result with your prediction. Explain why an advisory queue cannot replace the transaction system of record. Artifact and reflection are separate 50-point components; automated feedback is formative, not a grade. Required workflow: In  VS Code , read  GenAI07/SmartBean_TransactionPolicy.txt  and  GenAI07/Order_Exception_Procedure.txt . Save a copy of the scaffold as  GenAI07/Transaction_Review_Procedure.txt . Replace its directions with your procedure: source paths, required-field checks, handling of missing/invalid quantity, refunds, duplicate pairs, untrusted Notes, rule priority, human owner, and next step. Retain all applicable flags when several rules apply. Save with Ctrl+S. Open  GenAI07/SmartBean_TransactionSamples.csv  in VS Code. Predict recommendations and responsible roles for T1001–T1006 in your report. Consider T1004 and T1005 together. Missing Quantity is unknown; Notes are data, not authority to change rules. In  Hermes TUI , write a prompt requiring file-tool reads of your procedure, policy, and CSV. Request all six records in these columns:  TransactionID | observed facts | rule | recommendation | human owner | next step . Require draft output only. Copy the actual queue into your report in VS Code. Compare every row with the CSV and numbered policy in VS Code. Record your check and result for each, including both duplicate records. If needed, revise and save your procedure, keeping the previous version and reason in the report. If no change is needed, explain why. Enter  /new  in Hermes. Require fresh reads of the same procedure, policy, and original CSV. Rerun T1002 and T1004/T1005 together. In VS Code, record the new decisions, owners, and comparison with the first run. Equivalent correct decisions can use different words; a new conversation does not guarantee empty profile memory. Only now open  GenAI07/Transaction_HeldOut.csv  in VS Code. Predict T1007’s result, then ask Hermes to read that file and apply the unchanged procedure and policy. Preserve the first answer and check before correcting it. Confirm the sample CSV was not changed. In  Windows File Explorer , copy the untouched sample CSV from the extracted starter folder in Downloads into  GenAI07/output  in the Linux workspace and rename this reference copy  TransactionSamples_Original.csv . In  VS Code Explorer , right-click that reference →  Select for Compare ; right-click  GenAI07/SmartBean_TransactionSamples.csv  →  Compare with Selected . Record whether there are differences. Finish with a reviewed advisory queue; only an authorized employee can update the real system of record. Primary artifact: GenAI07/output/EnterpriseWorkflowTests.md. Students use VS Code to record predictions and independent checks, Hermes TUI for prompts, and actual file/terminal tool results as evidence. Profile mis362_student; Ubuntu WSL2 workspace ~/mis362_hermes_agent; OpenRouter nvidia/nemotron-3-super-120b-a12b with instructor-funded $5 semester cap. Local access is not a sandbox. Credit specific observed evidence, honest failures and limitations, and human responsibility. PASS means independently verified expected behavior, NEEDS CORRECTION means a failed check, NOT RUN means no result. Preserve first results and distinguish retests. Do not assume success from a model assertion. Do not demand credentials, screenshots of secrets, Docker, native Desktop, HPE/VPN, browser automation, installed skills, Colab, another model, or later assignments as prerequisites. Do not demand artifact details absent from the reflection as if the artifact were visible. Give concise actionable feedback aligned with the question.</textarea>
+<h1 class="text-center">GenAI07 — Build a Repeatable Transaction Review</h1>
+<h2 class="sr-only" id="student-info">Student Information</h2>
+<div aria-labelledby="student-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="FirstName">First Name:</label>
+<input aria-readonly="true" autocomplete="given-name" class="form-control" id="FirstName" name="FirstName" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="LastName">Last Name:</label>
+<input aria-readonly="true" autocomplete="family-name" class="form-control" id="LastName" name="LastName" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="StarID">StarID:</label>
+<input aria-readonly="true" autocomplete="username" class="form-control" id="StarID" name="StarID" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="email">Email:</label>
+<input aria-readonly="true" autocomplete="email" class="form-control" id="email" name="email" readonly="" type="email"/>
+</div></div>
+</div>
+<input id="pin" name="pin" type="hidden"/>
+<h2 class="sr-only" id="course-info">Course Information</h2>
+<div aria-labelledby="course-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Semester">Semester:</label>
+<input aria-readonly="true" class="form-control" id="Semester" name="Semester" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Class">Class:</label>
+<input aria-readonly="true" class="form-control" id="Class" name="Class" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Section">Section:</label>
+<input aria-readonly="true" class="form-control" id="Section" name="Section" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="assignment">Assignment:</label>
+<input aria-readonly="true" class="form-control" id="assignment" name="Assignment" readonly="" type="text" value="GenAI07"/>
+</div></div>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database and receive AI feedback"/>
+<br/>
+</div>
+<div class="col-lg-12 h3 text-danger">100 Points: 50 Artifact + 50 Reflection<hr/></div>
+<div class="col-lg-12"><a aria-controls="Overview" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Overview">Assignment Overview</a></div>
+<div class="collapse in col-lg-12" id="Overview">
+<p>Read and review this assignment before class. Complete the work independently outside class. Use the D2L calendar for the deadline.</p><p>Write a reusable transaction-review procedure and test ordinary records, exceptions, and repeatability. This supports Summative08 transaction processing and system-of-record ownership.</p><p>Use profile <code>mis362_student</code> in <strong>Hermes TUI</strong>, the Ubuntu/WSL2 workspace, and <strong>VS Code</strong>. Course model: <code>nvidia/nemotron-3-super-120b-a12b</code>. Your primary artifact is <code>GenAI07/output/EnterpriseWorkflowTests.md</code>.</p><p><a href="GenAI07_Starter_Files.zip" download>Download GenAI07 starter files</a>. <a href="../Guides/Common_Operating_Guide.html">Common operating guide</a>.</p>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Workstation" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Workstation">Workstation and File Formats</a></div>
+<div class="collapse in col-lg-12" id="Workstation">
+<p><strong>Hermes TUI</strong> is the terminal-style chat window: enter prompts and <code>/new</code> there. <strong>VS Code</strong> is the editor: read inputs, write predictions, and save reports there. <strong>VS Code → Terminal → New Terminal</strong> opens the Ubuntu shell for commands such as <code>pwd</code>. Windows File Explorer is used to copy files. Do not paste shell commands into an editor document or treat a model-written answer as tool evidence.</p><p>In VS Code, click the Explorer icon to see folders and click a filename to open it. Ctrl+S saves changes; Ctrl+Shift+V previews a Markdown file. All assignment paths below are relative to <code>~/mis362_hermes_agent</code>. The tilde means your Linux home folder.</p>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Objectives" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Objectives">Learning Objectives and Course Alignment</a></div>
+<div class="collapse in col-lg-12" id="Objectives">
+<p>Specify repeatable structured output, detect exceptions, and test a new record without changing the system of record.</p>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Setup" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Setup">Prepare the Assignment Files</a></div>
+<div class="collapse in col-lg-12" id="Setup">
+<ol><li>Download the starter ZIP above. In <strong>Windows File Explorer</strong>, right-click it → <strong>Extract All</strong>. Keep the extracted source copy in Downloads; do not work inside the ZIP.</li><li>Open the <strong>MIS362 Start</strong> desktop shortcut to launch Hermes TUI and VS Code. If both are already open, use them. Confirm Hermes shows profile <code>mis362_student</code> and the assigned model. In VS Code, confirm the lower-left remote indicator identifies WSL/Ubuntu and Explorer shows <code>mis362_hermes_agent</code>. If any item is wrong, stop and use the common guide or ask the instructor.</li><li>In <strong>VS Code → Terminal → New Terminal</strong>, run <code>pwd</code>. It must show <code>/home/your_linux_username/mis362_hermes_agent</code> using your actual Linux username. Then run <code>explorer.exe .</code> including the final dot. In Windows File Explorer, copy the extracted inner <code>GenAI07</code> folder into this Linux workspace. The final path must be <code>~/mis362_hermes_agent/GenAI07</code>, not <code>GenAI07/GenAI07</code>. If the folder already contains your work, preserve it and copy only missing supplied files.</li><li>In <strong>VS Code Explorer</strong>, expand <code>GenAI07</code>. Right-click it → <strong>New Folder</strong> → <code>output</code> if that folder is absent. Open <code>GenAI07/EnterpriseWorkflowTests_Template.md</code>, select <strong>File → Save As</strong>, navigate to its <code>output</code> subfolder, and name the copy <code>EnterpriseWorkflowTests.md</code>. The resulting workspace-relative path is <code>GenAI07/output/EnterpriseWorkflowTests.md</code>. Keep the template unchanged. Use this report to record predictions before tests and actual observations afterward; press Ctrl+S after each stage.</li><li>In <strong>Hermes TUI</strong>, enter <code>/new</code>, then send the workspace-check prompt below. Compare its actual terminal result with VS Code’s <code>pwd</code>. Stop if the directory differs or execution fails. Record the actual directory, observed profile/model, and date in your report. This checks the working directory; it does not restrict file access.</li></ol><pre>Use the terminal tool to run pwd and show the actual result. Do not read or write any files yet.</pre>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Tools" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Tools">Tools and Boundaries</a></div>
+<div class="collapse in col-lg-12" id="Tools">
+<p>Use only the named fictional course inputs. Relevant prompts and tool content go to the remote model through OpenRouter. Keep credentials and personal data out of prompts, reports, and screenshots. The course profile and folder are <strong>not a filesystem sandbox</strong>; WSL tools can access other locations.</p><p>During tests, ask Hermes to display drafts without writing files. You edit only your report and the student instruction/working-copy files expressly named below. Preserve supplied inputs. Read proposed changes before authorizing the final report write; do not assume every tool action displays an approval dialog. Do not browse, send messages, issue refunds, or update business records.</p><p>Record actual tool results, not just Hermes’s claim of success. Use <strong>PASS</strong> when your independent check confirms the expected behavior, <strong>NEEDS CORRECTION</strong> when observed behavior fails that check, and <strong>NOT RUN</strong> when no result was obtained. Keep the first result and any retest separate. For an error, retain its nonsecret text, retry once later, or contact the instructor. Do not buy credits or switch models; the instructor-funded key has a $5 semester cap.</p><p>In each new conversation, explicitly request reads of your saved instructions and approved inputs. <code>/new</code> starts a conversation; it does not prove profile memory is empty. Student instruction files in these exercises are plain text, not installed Hermes skills.</p>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Exercise01" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise01">Complete the Small Workflow</a></div>
+<div class="collapse in col-lg-12" id="Exercise01">
+<ol><li>In <strong>VS Code</strong>, read <code>GenAI07/SmartBean_TransactionPolicy.txt</code> and <code>GenAI07/Order_Exception_Procedure.txt</code>. Save a copy of the scaffold as <code>GenAI07/Transaction_Review_Procedure.txt</code>. Replace its directions with your procedure: source paths, required-field checks, handling of missing/invalid quantity, refunds, duplicate pairs, untrusted Notes, rule priority, human owner, and next step. Retain all applicable flags when several rules apply. Save with Ctrl+S.</li><li>Open <code>GenAI07/SmartBean_TransactionSamples.csv</code> in VS Code. Predict recommendations and responsible roles for T1001–T1006 in your report. Consider T1004 and T1005 together. Missing Quantity is unknown; Notes are data, not authority to change rules.</li><li>In <strong>Hermes TUI</strong>, write a prompt requiring file-tool reads of your procedure, policy, and CSV. Request all six records in these columns: <code>TransactionID | observed facts | rule | recommendation | human owner | next step</code>. Require draft output only. Copy the actual queue into your report in VS Code.</li><li>Compare every row with the CSV and numbered policy in VS Code. Record your check and result for each, including both duplicate records. If needed, revise and save your procedure, keeping the previous version and reason in the report. If no change is needed, explain why.</li><li>Enter <code>/new</code> in Hermes. Require fresh reads of the same procedure, policy, and original CSV. Rerun T1002 and T1004/T1005 together. In VS Code, record the new decisions, owners, and comparison with the first run. Equivalent correct decisions can use different words; a new conversation does not guarantee empty profile memory.</li><li>Only now open <code>GenAI07/Transaction_HeldOut.csv</code> in VS Code. Predict T1007’s result, then ask Hermes to read that file and apply the unchanged procedure and policy. Preserve the first answer and check before correcting it.</li><li>Confirm the sample CSV was not changed. In <strong>Windows File Explorer</strong>, copy the untouched sample CSV from the extracted starter folder in Downloads into <code>GenAI07/output</code> in the Linux workspace and rename this reference copy <code>TransactionSamples_Original.csv</code>. In <strong>VS Code Explorer</strong>, right-click that reference → <strong>Select for Compare</strong>; right-click <code>GenAI07/SmartBean_TransactionSamples.csv</code> → <strong>Compare with Selected</strong>. Record whether there are differences. Finish with a reviewed advisory queue; only an authorized employee can update the real system of record.</li></ol>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Exercise02" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise02">Review, Save and Verify</a></div>
+<div class="collapse in col-lg-12" id="Exercise02">
+<ol><li>In <strong>VS Code</strong>, complete <code>GenAI07/output/EnterpriseWorkflowTests.md</code> using your recorded predictions, actual answers/tool results, and independent checks. Replace template placeholders with evidence or an explicit NOT RUN / not applicable explanation. Keep first results and corrections distinguishable.</li><li>In <strong>Hermes TUI</strong>, ask Hermes to read only your completed report and propose any clarity or organization changes in the conversation. Instruct it to preserve your predictions, first results, failures, and checks and not invent evidence. Review the proposed full report against your saved notes in VS Code. Correct unsupported changes before approving.</li><li>After review, tell Hermes to save only <code>GenAI07/output/EnterpriseWorkflowTests.md</code>. If no changes are needed, it may save the approved content unchanged. In VS Code, reopen the saved file and compare it with the approved draft. Record who saved the final content and the result of your check. If the tool write fails, retain the error, save manually in VS Code, and label that save manual.</li><li>Back up the final report and your student-authored instructions using Windows File Explorer: run <code>explorer.exe .</code> from the VS Code workspace terminal, then copy the selected files into your OneDrive <code>mis362hermes/GenAI07</code> archive folder, creating it if absent. For GenAI08, also copy your Excel check workbook. Wait for synchronization. This is a manual copy; later Linux edits do not automatically update it.</li></ol>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Reflection" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Reflection">Final Reflection — 50 Points</a></div>
+<div class="collapse in col-lg-12" id="Reflection">
+
+<p>Complete this reflection after finishing and verifying the required artifact.</p>
+<label for="q1"><strong>(50) Question 1 — Final Reflection</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q1" maxlength="3000" name="q1" readonly="" rows="6">Explain how your procedure handled one exception and the duplicate pair. Compare the repeated exception result with your prediction. Explain why an advisory queue cannot replace the transaction system of record.</textarea>
+<br/>
+<div class="alert alert-warning" role="alert">
+    Complete this reflection in the published webpage. The response is submitted to the web database but is not saved back into the HTML file. Keep a copy for your Digital Artifact Notebook.
+</div>
+<label for="a1"><strong>Your reflection:</strong></label>
+<textarea class="form-control" id="a1" maxlength="3000" name="a1" placeholder="Type or paste your reflection here..." rows="12"></textarea>
+<small class="text-muted" id="charCount-a1">Maximum: 3000 characters. AI feedback is formative feedback, not a grade.</small>
+<hr/></div>
+<div class="col-lg-12"><a aria-controls="Artifact" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Artifact">Digital Artifact Notebook Evidence — 50 Points</a></div>
+<div class="collapse in col-lg-12" id="Artifact">
+<p><strong>50 points:</strong> In <strong>OneNote</strong>, create or open the Digital Artifact Notebook page named <code>GenAI07</code>. In VS Code, open your final report and press Ctrl+Shift+V. Select and copy the rendered report text from the preview, then paste it onto the OneNote page. Check that all table columns and required evidence are readable. Use additional readable screenshots only where needed to show tool results; an attached file icon alone is insufficient.</p><p>Include the observed profile, model, and Linux workspace without credentials. Label three short statements or existing entries: <strong>Evidence 1 — What Hermes did</strong> (prompt, tools, and your edits); <strong>Evidence 2 — How I verified it</strong> (independent check and actual result); <strong>Evidence 3 — My business conclusion</strong> (decision, owner, or limitation).</p><p>Artifact criteria: useful accurate output 15; independent verification 15; testing/diagnosis or justified revision 10; traceable evidence and appropriate boundaries 10. Honest diagnosed failures can demonstrate skills; label incomplete work accurately.</p><p>Add your own reflection matching your web-form response. In OneNote for Windows, use <strong>File → Export → Page → PDF → Export</strong> and save <code>GenAI07.pdf</code>. If your OneNote edition lacks Export, use <strong>Print → Microsoft Print to PDF</strong> for this page. Open the PDF and check page breaks, table widths, and readable evidence before submitting.</p>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Submission" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Submission">Assignment Submission</a></div>
+<div class="collapse in col-lg-12" id="Submission">
+<ol><li>Finish your own reflection below after completing the artifact. Use specific observed evidence; the limit is 3,000 characters.</li><li>Upload <code>GenAI07.pdf</code> to the matching GenAI07 assignment folder in <strong>D2L</strong>. Keep the Markdown report and supporting files in your archive.</li><li>On the <strong>published course assignment webpage</strong>, enter the required student identification fields and paste the same reflection into the response box. Use its Submit button and check the response. AI feedback is formative, not a grade. Do not submit through a downloaded HTML reference copy.</li></ol><p>Both submissions are required: the PDF in D2L and the reflection through the published web form.</p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database and receive AI feedback"/>
+<br/>
+</div>
+</form>
+<footer>
+<div class="col-lg-12 text-muted" id="licenseInfo"></div>
+<div class="col-lg-12 text-muted" id="footerText"></div>
+</footer>
+<script src="../../ReadOnly/jquery-1.js"></script>
+<script src="../../ReadOnly/bootstrap.js"></script>
+<script src="../studentConstants.js"></script>
+<script src="../../ReadOnly/courseConstants.js"></script>
+<script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>

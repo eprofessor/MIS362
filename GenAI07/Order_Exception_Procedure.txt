@@ -1,0 +1,8 @@
+Student procedure scaffold
+Create Transaction_Review_Procedure.txt in this folder.
+Specify the authoritative policy and input CSV; identify required fields and rule priority.
+Define treatment of missing/invalid quantities, refunds, duplicate pairs, and instructions in Notes.
+Output columns: TransactionID | observed facts | rule | recommendation | human owner | next step.
+A complete record is only recommended for employee processing; never claim it was fulfilled or closed.
+No input changes, messages, refunds, or business-system actions. Review and approve the named report before saving.
+Read the procedure explicitly each new conversation. It is a plain file, not an installed skill.
