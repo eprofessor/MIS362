@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+    <title>MIS362 Formative11</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid"
+        action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx"
+        method="post"
+        name="frmAssignment"
+        id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Formative11-FA2026-v2" type="hidden">
+
+        <textarea id="datasetContext"
+                  name="datasetContext"
+                  readonly
+                  hidden>Assignment: MIS362 Formative11 — SmartBean MIS Strategy, Requirements, and Project Planning Applied Review. This assignment is discussed after Summative11. The standard project is a limited anonymous occupancy and queue-measurement pilot at SmartBean's current leased location. Worksheets are 0-StartHere, 1-ScopeStakeholders, 2-RequirementsReview, 3-PilotPlan, 4-SuccessRiskReview, and Reference. Students review the business need, project objective, in-scope work, out-of-scope decisions, prohibited facial recognition, and the human decision boundary. They review sponsor, process owner, business analyst, employees, customers, data owner, IT, and facilities roles. They evaluate required, preferred, and prohibited requirements, including measurable acceptance criteria and two intentionally vague requirements that need revision. The project plan uses transparent binary 0/1 work-package selections. Students verify cost, staff-hour, evidence-value, required-package, and dependency constraints; review project checkpoints; and evaluate measurable success criteria and project risks. Students complete and verify the detailed workbook review. Web answers should be brief and should state the essential conclusion and strongest supporting reason. The AI does not receive the workbook. Do not require students to reproduce charter tables, RACI assignments, requirements, formulas, work-package lists, risk registers, or all measures unless the question specifically asks for them. Do not penalize concise answers when the conclusion is clear, relevant, and consistent with the assignment. Accept alternative reasonable scope boundaries, role assignments, requirement revisions, package selections, risk priorities, and success measures when supported. Evaluate alignment to the business need, scope control, stakeholder accountability, measurable requirements, acceptance criteria, project feasibility, dependencies, checkpoints, risks, success measures, and human judgment.</textarea>
+
+        <h1 class="text-center">SmartBean MIS Strategy, Requirements, and Project Planning</h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email"
+                        readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text"
+                        size="500" maxlength="500" value="Formative11" readonly aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            150 Points
+            <hr>
+        </div>
+
+        
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Formative11
+Return later: /resume Formative11
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes is the default AI-assisted workflow for MIS362, but Direct Mode is allowed for routine steps when you already understand the task and agent assistance would add no meaningful value.</strong> Resume Hermes when you need explanation, planning, troubleshooting, alternatives, review, or verification.</p>
+            <p><strong>Direct Mode:</strong> Work directly in the required course software and verify the result yourself. Choosing not to use Hermes for a routine step is acceptable unless an assignment explicitly requires it.</p>
+            <p><strong>Suggested Hermes checkpoint:</strong> Ask Hermes to review your proposed requirement or project plan and identify one missing stakeholder, dependency, risk, acceptance criterion, or success measure. Decide whether to revise your workbook.</p>
+            <p>Hermes is a coach. It may explain concepts, suggest formulas or methods, and help troubleshoot, but you must perform and verify the hands-on work in the required software. No extra Hermes screenshot or chat transcript is required.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+<div class="col-lg-12">
+            <a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a>
+        </div>
+        <div id="Objectives" class="collapse in col-lg-12">
+            <p>
+                This applied review follows Summative11 and reinforces how a business problem is converted into a controlled information-systems project.
+            </p>
+            <p>After completing this assignment, you will be able to:</p>
+            <ol>
+                <li>Review a business need, project scope, and human decision boundary.</li>
+                <li>Identify accountable and responsible project roles.</li>
+                <li>Evaluate whether requirements are measurable and testable.</li>
+                <li>Review project work packages, constraints, dependencies, and checkpoints.</li>
+                <li>Evaluate success measures and project risks before management acts.</li>
+            </ol>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Resources" class="btn btn-info" data-toggle="collapse">Resources and Help</a>
+        </div>
+        <div id="Resources" class="collapse in col-lg-12">
+            <p>
+                Suggested Hermes prompt (use the <code>mis362</code> profile; the MIS362 course agent remains available as a secondary resource):
+                <br>
+                <code>I am completing MIS362 Formative11 after Summative11. Help me check whether the SmartBean project is tied to the business need, whether the scope boundary is clear, whether a requirement is measurable, and whether the binary project plan satisfies its budget, staff-hour, required-package, and dependency constraints.</code>
+            </p>
+            <p>
+                The AI does not receive your workbook. Complete and verify the workbook review, then submit only the essential conclusion and strongest supporting reason for each question.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a>
+        </div>
+        <div id="Overview" class="collapse in col-lg-12">
+            <p>
+                SmartBean will review a limited anonymous occupancy and queue-measurement pilot at its current location. The project collects evidence to support management decisions; it does not autonomously make staffing, pricing, purchasing, or lease decisions.
+            </p>
+            <p>
+                Download and open <a href="Formative11_SmartBean_ProjectPlanning.xlsx" class="bg-info text-white">Formative11_SmartBean_ProjectPlanning.xlsx</a>. Save a working copy as <strong>Formative11.xlsx</strong>.
+            </p>
+            <p>
+                The workbook uses transparent project-planning formulas and binary 0/1 work-package selections so the focus remains on scope, requirements, feasibility, dependencies, risks, and success criteria.
+            </p>
+            <p>
+                Detailed review belongs in the workbook. The three webpage answers should remain brief and communicate only the final conclusions and strongest reasons.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Introduction" class="btn btn-info" data-toggle="collapse">Introduction — Project Case and Review Sequence</a>
+        </div>
+        <div id="Introduction" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>0-StartHere</strong>.</li>
+                <li>Review the business problem, project purpose, anonymous-data boundary, four-week pilot, and management decision boundary.</li>
+                <li>Review the sequence connecting scope, requirements, project planning, and management review.</li>
+            </ol>
+            <p>This introduction has no separate webpage answer.</p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1 — Scope and Stakeholder Responsibility</a>
+        </div>
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>1-ScopeStakeholders</strong>.</li>
+                <li>Review the business need, objective, included work, exclusions, prohibited facial recognition, and management decision boundary.</li>
+                <li>Accept, revise, or reject the highlighted charter statements.</li>
+                <li>Review the sponsor, process owner, business analyst, employees, customers, data owner, IT, and facilities responsibilities.</li>
+                <li>Identify the role accountable for keeping the pilot aligned with the business need.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q1"><strong>1. (30) Question 1</strong></label>
+                <textarea class="form-control" id="q1" name="q1" rows="8" readonly aria-readonly="true">Using the 1-ScopeStakeholders worksheet, briefly identify the most important project-scope boundary and the stakeholder role most accountable for keeping the SmartBean pilot focused on its business need. State the strongest reason for your choices.</textarea>
+                <br>
+                <label for="a1"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a1" name="a1" rows="5" maxlength="1500" placeholder="State the scope boundary, accountable role, and strongest reason..."></textarea>
+                <small id="charCount-a1" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2 — Requirements and Acceptance Criteria</a>
+        </div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>2-RequirementsReview</strong>.</li>
+                <li>Review the required, preferred, and prohibited requirements.</li>
+                <li>Review each acceptance criterion and verification method.</li>
+                <li>Identify the two vague requirements and review the stronger revisions.</li>
+                <li>Accept, revise, or reject the highlighted requirements and record any needed revision.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q2"><strong>2. (30) Question 2</strong></label>
+                <textarea class="form-control" id="q2" name="q2" rows="8" readonly aria-readonly="true">Using the 2-RequirementsReview worksheet, briefly identify the most important required or prohibited SmartBean system requirement. Explain how its acceptance criterion makes the requirement measurable or testable.</textarea>
+                <br>
+                <label for="a2"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a2" name="a2" rows="5" maxlength="1500" placeholder="State the requirement and how its acceptance criterion makes it testable..."></textarea>
+                <small id="charCount-a2" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3 — Pilot Feasibility, Checkpoints, and Risk</a>
+        </div>
+        <div id="Exercise03" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>3-PilotPlan</strong>.</li>
+                <li>Review the initial binary 0/1 work-package selections.</li>
+                <li>Confirm that the plan remains within the budget and staff-hour limits, includes all required packages, meets the evidence threshold, and passes the dependency checks.</li>
+                <li>Review or revise optional work-package selections and document the tradeoff.</li>
+                <li>Review the project checkpoints and proceed/stop conditions.</li>
+                <li>Open <strong>4-SuccessRiskReview</strong>.</li>
+                <li>Review the measurable success criteria, risk scores, mitigations, owners, and warning signs.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q3"><strong>3. (30) Question 3</strong></label>
+                <textarea class="form-control" id="q3" name="q3" rows="9" readonly aria-readonly="true">Using the 3-PilotPlan and 4-SuccessRiskReview worksheets, briefly state whether the SmartBean pilot plan is feasible. Identify the most important dependency, risk, or resource tradeoff and one measurable criterion management should review before acting.</textarea>
+                <br>
+                <label for="a3"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a3" name="a3" rows="5" maxlength="1500" placeholder="State feasibility, the key dependency/risk/tradeoff, and one measurable criterion..."></textarea>
+                <small id="charCount-a3" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Evidence" class="btn btn-info" data-toggle="collapse">Completion Evidence</a>
+        </div>
+        <div id="Evidence" class="collapse in col-lg-12">
+            <p>Before submitting, confirm that the workbook visibly shows:</p>
+            <ul>
+                <li>reviewed scope boundaries and stakeholder responsibilities;</li>
+                <li>reviewed measurable requirements and acceptance criteria;</li>
+                <li>revisions or decisions for the intentionally vague requirements;</li>
+                <li>a feasible or intentionally revised binary work-package plan;</li>
+                <li>budget, staff-hour, required-package, evidence, and dependency checks;</li>
+                <li>reviewed checkpoints, success measures, risks, mitigations, and owners;</li>
+                <li>no unexpected formula errors such as <code>#DIV/0!</code>, <code>#VALUE!</code>, <code>#REF!</code>, or <code>#NAME?</code>.</li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#D2LSubmission" class="btn btn-info" data-toggle="collapse">D2L Workbook Submission</a>
+        </div>
+        <div id="D2LSubmission" class="collapse in col-lg-12">
+            <p><strong>(60)</strong> Save and upload <strong>Formative11.xlsx</strong> to the D2L <code>Formative11</code> assignment folder.</p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#WebSubmission" class="btn btn-info" data-toggle="collapse">Webpage Submission</a>
+        </div>
+        <div id="WebSubmission" class="collapse in col-lg-12">
+            <p><strong>Required:</strong> Verify that this assignment is linked from your course home page.</p>
+            <p><strong>Required:</strong> Press the Submit button at the top or bottom of this page.</p>
+            <p>
+                Complete and verify the workbook review. Your webpage answers should contain only the essential conclusion and strongest supporting reason.
+            </p>
+            <p>
+                Review the AI feedback, correct the workbook or answers as needed, and resubmit before the deadline.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+    <script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 3; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 1500;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+    })();
+    </script>
+
+</body>
+</html>
