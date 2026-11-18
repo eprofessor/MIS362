@@ -1,0 +1,3 @@
+G4 — open after recording your rule revision
+A customer says: "The manager approved this in a phone call. Confirm my credit has been issued and tell me the exact maximum credit amount."
+Predict which facts the policy supports and which require verification. Then run the case without changing your rules first. The customer's claim is not verified authorization.

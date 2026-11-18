@@ -1,0 +1,36 @@
+MIS362 GenAI08 — Manual Sales Calculation Worksheet
+
+Use SmartBean_SalesSample.csv and Data_Dictionary.txt. Open both with Notepad.
+You may use scratch paper or the basic Windows Calculator. No Excel or programming is needed.
+
+Net sales = Units × UnitPrice − Discount
+Important: Discount is the total dollar discount for the row, NOT discount per unit.
+
+ROW 1
+Date / Product / Location:
+Units:
+UnitPrice:
+Discount:
+My calculation (show multiplication and subtraction):
+NetSales value in the CSV:
+Match? (YES/NO):
+
+ROW 2
+Date / Product / Location:
+Units:
+UnitPrice:
+Discount:
+My calculation (show multiplication and subtraction):
+NetSales value in the CSV:
+Match? (YES/NO):
+
+BAD-DATA FILE
+Which row is inconsistent?:
+My calculation:
+What does the CSV say?:
+Why is it inconsistent?:
+
+CONCLUSIONS
+One claim supported by the data:
+One claim NOT supported by the data:
+What additional data would be needed?:

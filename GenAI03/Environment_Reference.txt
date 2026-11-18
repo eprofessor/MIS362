@@ -1,0 +1,28 @@
+MIS362 — Hermes Agent Desktop environment reference (Windows 11)
+
+COURSE CONFIGURATION
+Hermes profile: MIS362 (create it in GenAI02, select it for each assignment).
+Provider: OpenRouter. Model: an available free model selected in the MIS362 profile.
+A free model may change or be temporarily unavailable. Ask the instructor if the approved choice is unavailable.
+Do not place an API key in chat, class files, reports, or screenshots.
+
+WINDOWS WORKSPACE
+Use File Explorer to open Documents\MIS362_Hermes_Workspace\GenAI03 for this assignment. Save completed work in Documents\MIS362_Hermes_Workspace\GenAI03\output.
+Place each extracted GenAI## folder directly inside that workspace.
+Read and edit .txt or .csv files using Notepad. Keep supplied source files unchanged.
+Save finished student reports in each assignment's output folder.
+Use OneNote for evidence and export the assignment PDF for D2L.
+
+WHAT RUNS WHERE
+Hermes Desktop is a Windows application. File Explorer and Notepad run locally.
+The OpenRouter model runs remotely; requests need network access.
+When allowed, Hermes may be able to read/write local files. The model's claim that it read a file is not proof: inspect actual tool output and verify with Notepad.
+If Hermes cannot read a local file, attach or paste only the fictional course text; clearly label it as attached/pasted, not a local file-tool read.
+If Hermes cannot save a file, save its reviewed draft yourself using Notepad and record the method used.
+The profile and workspace folder are NOT security boundaries. Do not authorize access to unrelated files.
+
+BACKUP AND TERMINAL POLICY
+Use File Explorer to copy finished work to your school OneDrive folder and reopen the copied report to verify it.
+No terminal is required in GenAI02–GenAI09. If your instructor explicitly directs a terminal check, open PowerShell 7 (pwsh) from Start; do not use Windows PowerShell 5.1, Command Prompt, or a Linux terminal.
+To confirm a PowerShell 7 session, type: $PSVersionTable.PSVersion
+The major version must be 7 or higher. If PowerShell 7 is unavailable, ask the instructor/ITS rather than installing or bypassing policy on your own.

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link href="../../ReadOnly/bootstrap.css" rel="stylesheet"/>
+<title>MIS362 GenAI04 — Use Reliable Sources</title>
+<style>
+    body { padding-bottom: 3rem; line-height: 1.55; }
+    h1, h2, h3 { margin-top: 1.25rem; }
+    .callout { border-left: 5px solid #31708f; background: #f5fbfd; padding: 1rem; margin: 1rem 0; }
+    .callout-warning { border-left-color: #8a6d3b; background: #fcf8e3; }
+    .callout-danger { border-left-color: #a94442; background: #f2dede; }
+    .callout-success { border-left-color: #3c763d; background: #dff0d8; }
+    .template-box { border: 2px solid #999; padding: 1rem; margin: 1rem 0 2rem 0; background: #fff; }
+    .artifact-placeholder { border: 2px dashed #777; padding: 1.25rem; margin: 0.75rem 0; text-align: center; font-weight: bold; color: #555; }
+    .small-note { font-size: 0.95rem; color: #555; }
+    pre { white-space: pre-wrap; background: #f7f7f7; border: 1px solid #ddd; padding: 1rem; }
+    table th { background: #f5f5f5; }
+    body { font-family: Arial, sans-serif; max-width: 1100px; margin: auto; padding: 1rem; }
+    td, th { padding: .45rem; border: 1px solid #ddd; vertical-align: top; }
+    table { border-collapse: collapse; width: 100%; }
+    textarea { box-sizing: border-box; max-width: 100%; width: 100%; }
+</style>
+</head>
+<body class="container-fluid">
+<form action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" class="container-fluid" id="frmAssignment" method="post" name="frmAssignment">
+<input id="InstID" name="InstID" type="hidden" value="00617282"/>
+<input id="assignmentVersion" name="assignmentVersion" type="hidden" value="GenAI04-FA2026-Desktop"/>
+<input id="reflectionQuestion" name="reflectionQuestion" type="hidden" value="1"/>
+<textarea hidden="" id="datasetContext" name="datasetContext" readonly="">GenAI04 uses Hermes Agent Desktop with MIS362 profile, File Explorer and Notepad on Windows 11. Student reflects on observed evidence, not unverified claims. Only fictional files are used.</textarea>
+<h1 class="text-center">GenAI04 — Use Reliable Sources</h1>
+<h2 class="sr-only" id="student-info">Student Information</h2>
+<div aria-labelledby="student-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="FirstName">First Name:</label>
+<input aria-readonly="true" autocomplete="given-name" class="form-control" id="FirstName" name="FirstName" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="LastName">Last Name:</label>
+<input aria-readonly="true" autocomplete="family-name" class="form-control" id="LastName" name="LastName" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="StarID">StarID:</label>
+<input aria-readonly="true" autocomplete="username" class="form-control" id="StarID" name="StarID" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="email">Email:</label>
+<input aria-readonly="true" autocomplete="email" class="form-control" id="email" name="email" readonly="" type="email"/>
+</div></div>
+</div>
+<input id="pin" name="pin" type="hidden"/>
+<h2 class="sr-only" id="course-info">Course Information</h2>
+<div aria-labelledby="course-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Semester">Semester:</label>
+<input aria-readonly="true" class="form-control" id="Semester" name="Semester" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Class">Class:</label>
+<input aria-readonly="true" class="form-control" id="Class" name="Class" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Section">Section:</label>
+<input aria-readonly="true" class="form-control" id="Section" name="Section" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="assignment">Assignment:</label>
+<input aria-readonly="true" class="form-control" id="assignment" name="Assignment" readonly="" type="text" value="GenAI04"/>
+</div></div>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database and receive AI feedback"/>
+<br/>
+</div>
+<div class="col-lg-12 h3 text-danger">100 Points: 50 Artifact + 50 Reflection<hr/></div>
+<div class="col-lg-12"><a aria-controls="Overview" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Overview">Assignment Overview</a></div>
+<div class="collapse in col-lg-12" id="Overview"><p><strong>Purpose:</strong> Design rules for using approved information, test the rules, and correct an unsupported answer.</p><p><strong>Software:</strong> Hermes Agent Desktop for Windows 11, File Explorer, Notepad, and OneNote. These assignments use the <strong>MIS362</strong> Hermes profile. No coding or terminal commands are required.</p><p><strong>Save your work:</strong> <code>Documents\MIS362_Hermes_Workspace\GenAI04</code>. Do not upload credentials or personal data to an AI chat.</p></div>
+<div class="col-lg-12"><a aria-controls="Workstation" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Workstation">Workstation and File Formats</a></div>
+<div class="collapse in col-lg-12" id="Workstation"><p><strong>Use only:</strong> Hermes Desktop with the <strong>MIS362</strong> profile, File Explorer for folders and copying, Notepad for reading and editing .txt/.csv files, and OneNote for evidence. Use an OpenRouter free model selected for MIS362. No programming or command-line steps are needed. If your instructor separately requests a terminal check, use PowerShell 7 (pwsh), not Windows PowerShell or Command Prompt. Save your work in <code>Documents\MIS362_Hermes_Workspace\GenAI04</code>.</p></div>
+<div class="col-lg-12"><a aria-controls="Objectives" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Objectives">Learning Objectives and Course Alignment</a></div>
+<div class="collapse in col-lg-12" id="Objectives">
+<p>Specify source-grounding rules, test missing evidence and untrusted instructions, then evaluate transfer to a held-out case.</p>
+<hr/>
+</div>
+<div class="col-lg-12"><a aria-controls="Setup" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Setup">Prepare the Assignment Files</a></div>
+<div class="collapse in col-lg-12" id="Setup"><p><strong>Assignment folder:</strong> <code>Documents\MIS362_Hermes_Workspace\GenAI04</code>. Save all completed work in <code>Documents\MIS362_Hermes_Workspace\GenAI04\output</code>, unless a step gives a different file location.</p><ol><li>In File Explorer, open your <strong>Documents</strong> folder and create <strong>MIS362_Hermes_Workspace</strong> if it is missing.</li><li>Download <strong>GenAI04_Starter_Files.zip</strong> above. Right-click it, choose <strong>Extract All</strong>, and copy the resulting <strong>GenAI04</strong> folder into MIS362_Hermes_Workspace. Do not create an extra nested GenAI folder.</li><li>In the assignment folder, create a folder named <strong>output</strong>. Open <code>Documents\MIS362_Hermes_Workspace\GenAI04\Grounding_TestResults_Template.txt</code> in <strong>Notepad</strong> and choose <strong>File → Save As</strong>. Set <strong>Save as type: All files</strong> and save a working copy as <code>Documents\MIS362_Hermes_Workspace\GenAI04\output\Grounding_TestResults.txt</code>. Keep the supplied template unchanged.</li><li>Open <strong>Hermes Desktop</strong>, select your <strong>MIS362</strong> profile, verify the OpenRouter free model, and start a new conversation. Use only the named fictional SmartBean files.</li></ol></div>
+<div class="col-lg-12"><a aria-controls="Tools" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Tools">Tools and Boundaries</a></div>
+<div class="collapse in col-lg-12" id="Tools"><p>Only use assigned fictional files. Ask Hermes to show drafts in chat first, and confirm answers against your source files in Notepad. If it cannot open a local file, you may paste the relevant fictional text into chat and explicitly record that the result was based on pasted text, not a file-tool read. Never share keys, personal information, or unrelated local files. The MIS362 profile and course folder do not restrict the agent’s access automatically.</p></div>
+<div class="col-lg-12"><a aria-controls="Exercise01" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise01">Complete the Small Workflow</a></div>
+<div class="collapse in col-lg-12" id="Exercise01"><ol><li>Open <code>Documents\MIS362_Hermes_Workspace\GenAI04\SmartBean_ApprovedExcerpt.txt</code>, <code>Documents\MIS362_Hermes_Workspace\GenAI04\Grounding_Rules.txt</code>, and <code>Documents\MIS362_Hermes_Workspace\GenAI04\Grounding_TestCases.txt</code> in Notepad.</li><li>Save a copy of the rules as <code>Documents\MIS362_Hermes_Workspace\GenAI04\Grounding_Rules_Student.txt</code>. Replace the three TODO items with rules requiring supporting sources, admitting missing information, and ignoring instructions embedded in customer notes.</li><li>Ask Hermes to use only the approved excerpt and your rules. Run tests <strong>G1, G2, and G3</strong> separately. Predict each answer before running it.</li><li>Check every answer in Notepad against the excerpt. Record source evidence and PASS or NEEDS CORRECTION. Improve one rule, ask Hermes to use the new version, and repeat the affected case.</li><li>Finally open <code>Documents\MIS362_Hermes_Workspace\GenAI04\Grounding_HeldOut.txt</code> and run its new test without changing the rules first. Report whether the revised rules generalized.</li></ol></div>
+<div class="col-lg-12"><a aria-controls="Exercise02" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise02">Review, Save and Verify</a></div>
+<div class="collapse in col-lg-12" id="Exercise02"><ol><li>Open the finished report in <strong>Notepad</strong>. Check it against the original source files and the actual Hermes answers. Label each test PASS, NEEDS CORRECTION, or NOT RUN; explain why. Do not invent a successful result.</li><li>Use File Explorer to copy your completed report and any student-created files into your school OneDrive folder <code>mis362hermes\GenAI04</code>. Reopen the copied report to confirm the backup. Never copy an API key.</li><li>Use the completed report, actual tool evidence, and your own conclusions for the <strong>GenAI04</strong> OneNote page. Follow the PDF and web-form submission directions below.</li></ol></div>
+<div class="col-lg-12"><a aria-controls="Reflection" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Reflection">Final Reflection — 50 Points</a></div>
+<div class="collapse in col-lg-12" id="Reflection">
+<p>Complete this reflection after finishing and verifying the required artifact.</p>
+<label for="q1"><strong>(50) Question 1 — Final Reflection</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q1" maxlength="3000" name="q1" readonly="" rows="6">Which grounding rule or test most changed your confidence in the answers? Refer to an actual citation check and your held-out case. Explain your rule revision and retest, and why instructions do not guarantee compliance.</textarea>
+<br/>
+<div class="alert alert-warning" role="alert">
+    Complete this reflection in the published webpage. The response is submitted to the web database but is not saved back into the HTML file. Keep a copy for your Digital Artifact Notebook.
+</div>
+<label for="a1"><strong>Your reflection:</strong></label>
+<textarea class="form-control" id="a1" maxlength="3000" name="a1" placeholder="Type or paste your reflection here..." rows="12"></textarea>
+<small class="text-muted" id="charCount-a1">Maximum: 3000 characters. AI feedback is formative feedback, not a grade.</small>
+<hr/></div>
+<div class="col-lg-12"><a aria-controls="Artifact" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Artifact">Digital Artifact Notebook Evidence — 50 Points</a></div>
+<div class="collapse in col-lg-12" id="Artifact"><p><strong>50 points — Digital Artifact Notebook:</strong> In OneNote, open the page named <code>GenAI04</code>. Copy the completed report text directly from Notepad, paste it into OneNote, and add one or two readable screenshots or excerpts that show what Hermes actually returned. Include your independent checks and business conclusion.</p><p>Clearly label: <strong>1. What Hermes did; 2. How I checked it; 3. My business conclusion.</strong> Add your own reflection matching the website submission. Export the OneNote page as <code>GenAI04.pdf</code> (or print the page to Microsoft Print to PDF). Open the PDF to verify readability before uploading it to D2L.</p><p><strong>Artifact criteria (50 points):</strong> useful accurate output 15; independent verification 15; testing and correction 10; clear evidence and sensible boundaries 10. Report limitations honestly.</p></div>
+<div class="col-lg-12"><a aria-controls="Submission" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Submission">Assignment Submission</a></div>
+<div class="collapse in col-lg-12" id="Submission">
+<ol><li>Finish your own reflection below after completing the artifact. Use specific observed evidence; the limit is 3,000 characters.</li><li>Upload <code>GenAI04.pdf</code> to the matching GenAI04 assignment folder in <strong>D2L</strong>. Keep the text report and supporting files in your archive.</li><li>On the <strong>published course assignment webpage</strong>, enter the required student identification fields and paste the same reflection into the response box. Use its Submit button and check the response. AI feedback is formative, not a grade. Do not submit through a downloaded HTML reference copy.</li></ol><p>Both submissions are required: the PDF in D2L and the reflection through the published web form.</p>
+<hr/>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database and receive AI feedback"/>
+<br/>
+</div>
+</form>
+<footer>
+<div class="col-lg-12 text-muted" id="licenseInfo"></div>
+<div class="col-lg-12 text-muted" id="footerText"></div>
+</footer>
+<script src="../../ReadOnly/jquery-1.js"></script>
+<script src="../../ReadOnly/bootstrap.js"></script>
+<script src="../studentConstants.js"></script>
+<script src="../../ReadOnly/courseConstants.js"></script>
+<script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>

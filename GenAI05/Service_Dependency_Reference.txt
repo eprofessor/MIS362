@@ -1,7 +1,15 @@
-Hermes runs in Ubuntu WSL2. Windows provides the host network path. OpenRouter routes the request to a remote model provider running the selected Nemotron 3 Super model.
-A responding terminal proves local execution only. A model answer proves a model response only; inspect file-tool results separately.
-Local execution is not network-disabled and is not Docker-isolated. Use fictional course inputs only.
-A previous answer may reflect previously read content. Replacing a file does not prove the model reread it; explicitly request a fresh read and verify the version and answer.
-The instructor is the authority for supplied teaching materials. In the simulated business the service manager owns policy, and the student is the working-copy custodian.
-OneDrive is an archive/source copy, not an automatically synchronized Linux folder.
-The key's $5 semester limit is managed by the instructor at OpenRouter. No automatic switch to another model is configured by the course installer. Provider routing within the same model is different from switching models.
+MIS362 — Hermes Desktop service dependency reference
+
+Hermes Desktop runs as a Windows 11 application. File Explorer and Notepad work locally on the computer.
+Hermes sends model requests over the network through OpenRouter to an available free model. Service availability and rate limits can change.
+A successful response demonstrates that an AI request worked at that time. It does not prove that a local file was read or saved.
+Confirm file operations using actual tool output and by opening the file in Notepad.
+If file tools are unavailable, attach or paste only the fictional source text and identify this accurately in the report.
+
+Possible causes of a failed model request include connectivity, provider problems, rate limits, an unavailable free model, or account configuration.
+A previous answer may reflect older text. After a policy update, explicitly provide or request the new version and verify that the response uses it.
+In the simulated business, the service manager owns the policy; the student is responsible for checking the working copy.
+The MIS362 profile and course folder do not isolate system files or protect unrelated data. Never share API keys, personal records, or unrelated files.
+OneDrive is used as a backup when the student copies and checks the files; do not assume this course workspace is synchronized automatically.
+
+No terminal activity is necessary for this assignment. If the instructor specifically requests terminal work, use PowerShell 7 (pwsh), not Windows PowerShell 5.1, Command Prompt, or Linux.

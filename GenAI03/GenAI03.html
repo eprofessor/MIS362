@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 <link href="../../ReadOnly/bootstrap.css" rel="stylesheet"/>
-<title>MIS362 GenAI03 — Hermes Workspace and Agent Infrastructure</title>
+<title>MIS362 GenAI03 — Understand Your AI Workspace as an MIS</title>
 <style>
     body { padding-bottom: 3rem; line-height: 1.55; }
     h1, h2, h3 { margin-top: 1.25rem; }
@@ -18,15 +18,19 @@
     .small-note { font-size: 0.95rem; color: #555; }
     pre { white-space: pre-wrap; background: #f7f7f7; border: 1px solid #ddd; padding: 1rem; }
     table th { background: #f5f5f5; }
+    body { font-family: Arial, sans-serif; max-width: 1100px; margin: auto; padding: 1rem; }
+    td, th { padding: .45rem; border: 1px solid #ddd; vertical-align: top; }
+    table { border-collapse: collapse; width: 100%; }
+    textarea { box-sizing: border-box; max-width: 100%; width: 100%; }
 </style>
 </head>
 <body class="container-fluid">
 <form action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" class="container-fluid" id="frmAssignment" method="post" name="frmAssignment">
 <input id="InstID" name="InstID" type="hidden" value="00617282"/>
-<input id="assignmentVersion" name="assignmentVersion" type="hidden" value="GenAI03-FA2026-v6"/>
+<input id="assignmentVersion" name="assignmentVersion" type="hidden" value="GenAI03-FA2026-Desktop"/>
 <input id="reflectionQuestion" name="reflectionQuestion" type="hidden" value="1"/>
-<textarea hidden="" id="datasetContext" name="datasetContext" readonly="">MIS362 GenAI03. Evaluate the final reflection explaining how the active mis362 profile and the OneDrive mis362_hermes workspace together support a small management information system. Reward accurate distinction between profile state and workspace files, local versus remote processing, OneDrive synchronization, file organization, approval prompts, and credential protection. The artifact is graded separately.</textarea>
-<h1 class="text-center">Generative AI Hermes Workspace and Agent Infrastructure</h1>
+<textarea hidden="" id="datasetContext" name="datasetContext" readonly="">GenAI03 uses Hermes Agent Desktop with MIS362 profile, File Explorer and Notepad on Windows 11. Student reflects on observed evidence, not unverified claims. Only fictional files are used.</textarea>
+<h1 class="text-center">GenAI03 — Understand Your AI Workspace as an MIS</h1>
 <h2 class="sr-only" id="student-info">Student Information</h2>
 <div aria-labelledby="student-info" class="row">
 <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
@@ -72,165 +76,28 @@
 <br/>
 </div>
 <div class="col-lg-12 h3 text-danger">100 Points: 50 Artifact + 50 Reflection<hr/></div>
-<div class="col-lg-12">
-<a aria-controls="Overview" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Overview">Assignment Overview</a>
-</div>
-<div class="collapse in col-lg-12" id="Overview">
-<p>This assignment is synchronized with Summative03. You will create the bounded SmartBean Hermes workspace in OneDrive and connect it to the separate <code>mis362</code> Hermes profile.</p>
-<p>Download the two Markdown starter files <a href="README_mis362_hermes.md" target="_blank">README_mis362_hermes.md</a> and <a href="Hermes_Architecture_Template.md" target="_blank">Hermes_Architecture_Template.md</a>.</p>
-<div class="callout">
-<p><strong>Profile and workspace are different:</strong> the <code>mis362</code> profile stores Hermes configuration, API keys, memory, sessions, and skills. The OneDrive folder <code>mis362_hermes</code> stores course instructions, knowledge, data, outputs, and testing evidence.</p>
-</div>
-<hr/></div>
-
-<div class="col-lg-12">
-<a aria-controls="Workstation" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Workstation">Recommended Workstation Layout and File Formats</a>
-</div>
-<div class="collapse in col-lg-12" id="Workstation">
-<h2>Use the multiple monitors</h2>
-<p>Use the classroom workstation displays instead of stacking every application on one screen. Keep the important windows visible so you can compare instructions, agent actions, files, and verification evidence as you work.</p>
-<ul>
-<li><strong>Monitor 1:</strong> Keep Hermes Desktop open with the active <code>mis362</code> profile visible.</li>
-<li><strong>Monitor 2:</strong> Keep a browser open to OpenRouter in one tab and the published assignment in another. Use OpenRouter only to verify provider/model status or usage; never display the API-key page in assignment evidence.</li>
-<li><strong>Laptop display or third monitor:</strong> Keep Notepad++ open with the required course file. Use File Explorer or OneNote beside it when organizing workspace files or evidence.</li>
-</ul>
-<p>Use Windows Snap (<kbd>Windows</kbd> + <kbd>Left Arrow</kbd> or <kbd>Right Arrow</kbd>) when two windows must share a display. Before taking a screenshot, close or hide API-key, billing, authentication, and private-information pages.</p>
-
-<h2>Use Notepad++ for Markdown and plain-text files</h2>
-<p>Use <strong>Markdown (<code>.md</code>)</strong> for student-created artifacts that benefit from headings, lists, checklists, or tables. Use <strong>plain text (<code>.txt</code>)</strong> for simple source excerpts, rules, prompts, or configuration notes where formatting adds no value. Hermes can read both formats.</p>
-<ol>
-<li>Open File Explorer and turn on <strong>View &gt; Show &gt; File name extensions</strong>.</li>
-<li>Open the starter file in Notepad++.</li>
-<li>For a Markdown file, select <strong>Language &gt; M &gt; Markdown</strong> so headings and lists are easier to read.</li>
-<li>Use <strong>File &gt; Save As</strong>, select <strong>All types (*.*)</strong>, and enter the exact required filename ending in <code>.md</code> or <code>.txt</code>.</li>
-<li>Use UTF-8 encoding and confirm the file did not become <code>filename.md.txt</code>.</li>
-<li>Do not use Microsoft Word to create these files because it can add formatting and change the file type.</li>
-</ol>
-<p>If Notepad++ is not installed, use the official Notepad++ installer or contact the instructor before continuing. Windows Notepad may be used only as a temporary fallback.</p>
-<hr/>
-</div>
-<div class="col-lg-12">
-<a aria-controls="Objectives" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Objectives">Learning Objectives and Course Alignment</a>
-</div>
+<div class="col-lg-12"><a aria-controls="Overview" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Overview">Assignment Overview</a></div>
+<div class="collapse in col-lg-12" id="Overview"><p><strong>Purpose:</strong> Identify the people, processes, data, hardware, software, and networks involved in an AI-supported business task.</p><p><strong>Software:</strong> Hermes Agent Desktop for Windows 11, File Explorer, Notepad, and OneNote. These assignments use the <strong>MIS362</strong> Hermes profile. No coding or terminal commands are required.</p><p><strong>Save your work:</strong> <code>Documents\MIS362_Hermes_Workspace\GenAI03</code>. Do not upload credentials or personal data to an AI chat.</p></div>
+<div class="col-lg-12"><a aria-controls="Workstation" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Workstation">Workstation and File Formats</a></div>
+<div class="collapse in col-lg-12" id="Workstation"><p><strong>Use only:</strong> Hermes Desktop with the <strong>MIS362</strong> profile, File Explorer for folders and copying, Notepad for reading and editing .txt/.csv files, and OneNote for evidence. Use an OpenRouter free model selected for MIS362. No programming or command-line steps are needed. If your instructor separately requests a terminal check, use PowerShell 7 (pwsh), not Windows PowerShell or Command Prompt. Save your work in <code>Documents\MIS362_Hermes_Workspace\GenAI03</code>.</p></div>
+<div class="col-lg-12"><a aria-controls="Objectives" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Objectives">Learning Objectives and Course Alignment</a></div>
 <div class="collapse in col-lg-12" id="Objectives">
-<p>Primary course outcomes: <strong>1, 3, 4, 10, and 12</strong>.</p>
-<ul><li>Create an organized agent workspace.</li><li>Distinguish the client, agent application, model provider, storage, network, instructions, data, outputs, and testing evidence.</li><li>Explain local versus remote processing.</li><li>Use bounded file-writing with human approval.</li></ul>
+<p>Observe a real read/write cycle and explain the people, process, data, hardware, software, and network involved.</p>
 <hr/>
 </div>
-<div class="col-lg-12">
-<a aria-controls="Setup" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Setup">Verify the GenAI02 Installation and Enable Workspace Files</a>
-</div>
-<div class="collapse in col-lg-12" id="Setup">
-<h2>Required before beginning</h2>
-<ul>
-<li>Completed GenAI02.</li>
-<li>Hermes Desktop and CLI work.</li>
-<li>The OpenRouter model responds inside the active <code>mis362</code> profile.</li>
-<li>PowerShell 7.6 is available.</li>
-<li>OneDrive is signed in and visible in File Explorer.</li>
-<li>Notepad++ is installed and was verified in GenAI02.</li>
-</ul>
-<h2>Confirm the course profile and workspace</h2>
-<ol>
-<li>Open Hermes Desktop and use the profile selector or Profiles page to select <code>mis362</code>.</li>
-<li>Confirm that Hermes shows <code>mis362</code> as the active profile. PowerShell verification is:
-    <pre>hermes profile list
-hermes profile use mis362
-hermes profile show mis362</pre>
-    The active profile is marked in the list. Do not continue if <code>mis362</code> is not active.
-  </li>
-<li>The workspace does not exist yet. Create it in the next step.</li>
-<li>Remember that a Hermes profile separates configuration, API keys, memory, sessions, and skills, but it does not by itself restrict file access. Continue to use the approved workspace and normal approval prompts.</li>
-</ol>
-<h2>Create the OneDrive workspace</h2>
-<ol>
-<li>Open File Explorer and select your institutional OneDrive folder in the left navigation pane.</li>
-<li>Create a folder named exactly <code>mis362_hermes</code>. Use lowercase letters and the underscore.</li>
-<li>Inside it create these folders exactly:</li>
-</ol>
-<pre>mis362_hermes/
-  01_Instructions/
-  02_Knowledge/
-  03_Data/
-  04_Outputs/
-  05_Testing/</pre>
-<ol start="4">
-<li>Right-click <code>mis362_hermes</code> and choose <strong>Always keep on this device</strong> when that OneDrive option is available.</li>
-<li>Wait until File Explorer shows the workspace and starter files as locally available/synchronized before asking Hermes to read them.</li>
-<li>Do not store API keys, passwords, private information, or real customer records in this OneDrive workspace.</li>
-</ol>
-<h2>Place the starter and prior-assignment files</h2>
-<ul>
-<li>Place <code>README_mis362_hermes.md</code> in the main <code>mis362_hermes</code> folder.</li>
-<li>Place <code>Hermes_Architecture_Template.md</code> in <code>04_Outputs</code>.</li>
-<li>Move or copy <code>GenAI01_CourseAgentVerification.txt</code> and <code>GenAI02_AgentComparison.md</code> into <code>05_Testing</code>.</li>
-</ul>
-<h2>Open the workspace in the active mis362 profile</h2>
-<ol>
-<li>In Hermes Desktop, confirm the active profile is <code>mis362</code>.</li>
-<li>Use the project/folder control to open the local File Explorer folder <code>mis362_hermes</code>.</li>
-<li>Copy the full local OneDrive path from File Explorer. Do not use a browser URL.</li>
-<li>Optional PowerShell method to make this the profile's starting directory:</li>
-</ol>
-<pre>hermes profile use mis362
-hermes config set terminal.cwd "PASTE THE FULL LOCAL ONEDRIVE PATH TO mis362_hermes"
-hermes desktop --cwd "PASTE THE FULL LOCAL ONEDRIVE PATH TO mis362_hermes"</pre>
-<p>Replace the placeholder with the actual path. Do not type the words <code>PASTE THE FULL...</code>.</p>
-<h2>Enable and verify bounded file tools</h2>
-<ol>
-<li>Enable file reading and file writing/patch tools only after <code>mis362_hermes</code> is open as the current workspace.</li>
-<li>Keep normal write-approval prompts enabled.</li>
-<li>Open both Markdown files in Notepad++, then ask Hermes to read <code>README_mis362_hermes.md</code> and list the five folders without changing anything.</li>
-<li>Ask Hermes to create a temporary text file in <code>05_Testing</code>. Review the proposed path and contents before approving it.</li>
-<li>Confirm the file was created only inside <code>mis362_hermes</code>, then delete the temporary test file manually.</li>
-</ol>
-<div class="callout-warning"><strong>Profiles do not sandbox files.</strong> The active profile separates Hermes state, but the student must still verify the workspace path and every proposed file write.</div>
-<hr/></div>
-<div class="col-lg-12">
-<a aria-controls="Tools" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Tools">Hermes Tools and Safety Boundaries</a>
-</div>
-<div class="collapse in col-lg-12" id="Tools">
-<div class="callout-success"><h3>Enabled AI tools for this assignment</h3><ul>
-<li>Profile selection and verification for <code>mis362</code>.</li>
-<li>File browser, file preview, read-file tools, and file-writing/patch tools limited to the OneDrive workspace <code>mis362_hermes</code>.</li>
-<li>Normal approval prompts for every proposed file write.</li></ul></div>
-<div class="callout-danger"><h3>Prohibited AI tools and actions</h3><ul>
-<li>Terminal execution beyond the listed setup commands, browser automation, messaging, account connections, scheduled tasks, purchases, record changes, and writing outside <code>mis362_hermes</code>.</li>
-<li>Storing credentials, private information, or real business records in OneDrive.</li></ul></div>
-<p><strong>Approval rule:</strong> Verify the active profile, workspace path, proposed filename, and proposed content before approving any file write.</p>
-<hr/></div>
-<div class="col-lg-12">
-<a aria-controls="Exercise01" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise01">Exercise 1 — Create the Workspace</a>
-</div>
-<div class="collapse in col-lg-12" id="Exercise01">
-<ol>
-<li>Confirm that <code>mis362</code> is the active profile.</li>
-<li>In OneDrive, create and verify the complete <code>mis362_hermes</code> folder tree.</li>
-<li>Mark the workspace for local availability and wait for synchronization.</li>
-<li>Place <code>README_mis362_hermes.md</code> in the main folder, <code>Hermes_Architecture_Template.md</code> in <code>04_Outputs</code>, and prior GenAI outputs in <code>05_Testing</code>.</li>
-<li>Open the local OneDrive folder as the Hermes project/workspace and complete the read/write verification.</li>
-</ol>
-<hr/></div>
-<div class="col-lg-12">
-<a aria-controls="Exercise02" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise02">Exercise 2 — Document the Architecture</a>
-</div>
-<div class="collapse in col-lg-12" id="Exercise02">
-<ol>
-<li>Open <code>04_Outputs/Hermes_Architecture_Template.md</code>.</li>
-<li>Ask Hermes to read the README and architecture template and propose a completed architecture description.</li>
-<li>Require the description to identify: active profile, OneDrive workspace, Windows client, Hermes Desktop, provider/model endpoint, local versus remote processing, network path, folder purposes, OneDrive synchronization, credential location, approval prompts, and prohibited actions.</li>
-<li>Review the proposed file path and content. Approve the write only when it is accurate and limited to the workspace.</li>
-<li>Save the final required output as <code>04_Outputs/Hermes_Architecture.md</code>.</li>
-<li>Wait for OneDrive to synchronize the finished file.</li>
-</ol>
-<hr/></div>
-<div class="col-lg-12">
-<a aria-controls="Reflection" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Reflection">Final Reflection — 50 Points</a>
-</div>
+<div class="col-lg-12"><a aria-controls="Setup" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Setup">Prepare the Assignment Files</a></div>
+<div class="collapse in col-lg-12" id="Setup"><p><strong>Assignment folder:</strong> <code>Documents\MIS362_Hermes_Workspace\GenAI03</code>. Save all completed work in <code>Documents\MIS362_Hermes_Workspace\GenAI03\output</code>, unless a step gives a different file location.</p><ol><li>In File Explorer, open your <strong>Documents</strong> folder and create <strong>MIS362_Hermes_Workspace</strong> if it is missing.</li><li>Download <strong>GenAI03_Starter_Files.zip</strong> above. Right-click it, choose <strong>Extract All</strong>, and copy the resulting <strong>GenAI03</strong> folder into MIS362_Hermes_Workspace. Do not create an extra nested GenAI folder.</li><li>In the assignment folder, create a folder named <strong>output</strong>. Open <code>Documents\MIS362_Hermes_Workspace\GenAI03\Hermes_Architecture_Template.txt</code> in <strong>Notepad</strong> and choose <strong>File → Save As</strong>. Set <strong>Save as type: All files</strong> and save a working copy as <code>Documents\MIS362_Hermes_Workspace\GenAI03\output\Hermes_Architecture.txt</code>. Keep the supplied template unchanged.</li><li>Open <strong>Hermes Desktop</strong>, select your <strong>MIS362</strong> profile, verify the OpenRouter free model, and start a new conversation. Use only the named fictional SmartBean files.</li></ol></div>
+<div class="col-lg-12"><a aria-controls="Tools" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Tools">Tools and Boundaries</a></div>
+<div class="collapse in col-lg-12" id="Tools"><p>Only use assigned fictional files. Ask Hermes to show drafts in chat first, and confirm answers against your source files in Notepad. If it cannot open a local file, you may paste the relevant fictional text into chat and explicitly record that the result was based on pasted text, not a file-tool read. Never share keys, personal information, or unrelated local files. The MIS362 profile and course folder do not restrict the agent’s access automatically.</p></div>
+<div class="col-lg-12"><a aria-controls="Exercise01" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise01">Complete the Small Workflow</a></div>
+<div class="collapse in col-lg-12" id="Exercise01"><ol><li>Open <code>Documents\MIS362_Hermes_Workspace\GenAI03\Environment_Reference.txt</code> and <code>Documents\MIS362_Hermes_Workspace\GenAI03\SmartBean_Brief.txt</code> in Notepad. List the facts you expect the AI to use.</li><li>Ask Hermes to read only these two files from your GenAI03 folder and draft <strong>three bullets</strong> summarizing the SmartBean brief. If file tools are unavailable, paste the brief into chat and label the test “pasted text,” not “file read.”</li><li>Check each bullet against the brief in Notepad. For every bullet, identify an exact supporting fact or mark it unsupported. Ask Hermes to correct any unsupported bullet.</li><li>In your report, describe <strong>people, processes, data, hardware, software, and networks</strong> in this workflow. Identify what stays on the laptop and what uses the remote AI service. State one benefit and one risk.</li></ol></div>
+<div class="col-lg-12"><a aria-controls="Exercise02" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Exercise02">Review, Save and Verify</a></div>
+<div class="collapse in col-lg-12" id="Exercise02"><ol><li>Open the finished report in <strong>Notepad</strong>. Check it against the original source files and the actual Hermes answers. Label each test PASS, NEEDS CORRECTION, or NOT RUN; explain why. Do not invent a successful result.</li><li>Use File Explorer to copy your completed report and any student-created files into your school OneDrive folder <code>mis362hermes\GenAI03</code>. Reopen the copied report to confirm the backup. Never copy an API key.</li><li>Use the completed report, actual tool evidence, and your own conclusions for the <strong>GenAI03</strong> OneNote page. Follow the PDF and web-form submission directions below.</li></ol></div>
+<div class="col-lg-12"><a aria-controls="Reflection" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Reflection">Final Reflection — 50 Points</a></div>
 <div class="collapse in col-lg-12" id="Reflection">
 <p>Complete this reflection after finishing and verifying the required artifact.</p>
 <label for="q1"><strong>(50) Question 1 — Final Reflection</strong></label>
-<textarea aria-readonly="true" class="form-control" id="q1" maxlength="3000" name="q1" readonly="" rows="6">How is the SmartBean Hermes workspace similar to a small management information system? Explain the roles of people, processes, data, infrastructure, model services, and controls, including one local-versus-remote processing tradeoff.</textarea>
+<textarea aria-readonly="true" class="form-control" id="q1" maxlength="3000" name="q1" readonly="" rows="6">Use one observed tool result and one summary source check to explain your workspace as a small MIS. Distinguish local execution, remote inference, profile state, working files, and your manual OneDrive backup. Explain one benefit and one limitation, and distinguish what you observed from information supplied in the reference.</textarea>
 <br/>
 <div class="alert alert-warning" role="alert">
     Complete this reflection in the published webpage. The response is submitted to the web database but is not saved back into the HTML file. Keep a copy for your Digital Artifact Notebook.
@@ -238,41 +105,12 @@ hermes desktop --cwd "PASTE THE FULL LOCAL ONEDRIVE PATH TO mis362_hermes"</pre>
 <label for="a1"><strong>Your reflection:</strong></label>
 <textarea class="form-control" id="a1" maxlength="3000" name="a1" placeholder="Type or paste your reflection here..." rows="12"></textarea>
 <small class="text-muted" id="charCount-a1">Maximum: 3000 characters. AI feedback is formative feedback, not a grade.</small>
-<hr/>
-</div>
-<div class="col-lg-12">
-<a aria-controls="Artifact" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Artifact">Digital Artifact Notebook Evidence — 50 Points</a>
-</div>
-<div class="collapse in col-lg-12" id="Artifact">
-<p>Create or open the OneNote Digital Artifact Notebook page named <code><span class="SummativeID"></span></code>.</p>
-<p><strong>(50 points)</strong> Add exactly one primary artifact:</p>
-<div class="template-box">
-<p>Show the active mis362 profile, the OneDrive mis362_hermes five-folder workspace, and a readable preview of 04_Outputs/Hermes_Architecture.md in one screenshot.</p>
-<div class="artifact-placeholder">[PASTE ONE WORKSPACE-AND-ARCHITECTURE SCREENSHOT HERE]</div>
-<h3>Evidence 1 — What Hermes did</h3>
-<p>Describe the prompt, approved tools, and work performed. Name the required output file.</p>
-<h3>Evidence 2 — How I verified it</h3>
-<p>Describe the independent check, comparison, source review, calculation, test case, or approval review used to verify the result.</p>
-<h3>Evidence 3 — My business conclusion</h3>
-<p>State the business meaning, recommendation, limitation, or human-approval decision supported by the work.</p>
-</div>
-<p>Do not include passwords, API keys, authentication screens, private information, or real customer data. Add the same final reflection used in the web form to the OneNote page.</p>
-<p>Export the completed OneNote page as <code><span class="SummativeID"></span>.pdf</code> and upload it to the matching D2L assignment folder.</p>
-<hr/>
-</div>
-<div class="col-lg-12">
-<a aria-controls="Submission" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Submission">Assignment Submission</a>
-</div>
+<hr/></div>
+<div class="col-lg-12"><a aria-controls="Artifact" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Artifact">Digital Artifact Notebook Evidence — 50 Points</a></div>
+<div class="collapse in col-lg-12" id="Artifact"><p><strong>50 points — Digital Artifact Notebook:</strong> In OneNote, open the page named <code>GenAI03</code>. Copy the completed report text directly from Notepad, paste it into OneNote, and add one or two readable screenshots or excerpts that show what Hermes actually returned. Include your independent checks and business conclusion.</p><p>Clearly label: <strong>1. What Hermes did; 2. How I checked it; 3. My business conclusion.</strong> Add your own reflection matching the website submission. Export the OneNote page as <code>GenAI03.pdf</code> (or print the page to Microsoft Print to PDF). Open the PDF to verify readability before uploading it to D2L.</p><p><strong>Artifact criteria (50 points):</strong> useful accurate output 15; independent verification 15; testing and correction 10; clear evidence and sensible boundaries 10. Report limitations honestly.</p></div>
+<div class="col-lg-12"><a aria-controls="Submission" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Submission">Assignment Submission</a></div>
 <div class="collapse in col-lg-12" id="Submission">
-<ol>
-<li>Confirm the mis362 profile, create and synchronize the OneDrive mis362_hermes workspace, verify bounded file access, and save 04_Outputs/Hermes_Architecture.md.</li>
-<li>Confirm that the required output file exists in the required folder and contains no credentials or private information.</li>
-<li>Complete the Final Reflection at least once and keep a copy.</li>
-<li>Add one primary artifact, the three labeled evidence statements, and the reflection to the OneNote page named <code><span class="SummativeID"></span></code>.</li>
-<li>Export the OneNote page as <code><span class="SummativeID"></span>.pdf</code> and upload it to the matching D2L folder.</li>
-<li>Submit this webpage using the button at the top or bottom and review the formative AI feedback.</li>
-</ol>
-<div class="callout-warning"><strong>Two separate submissions are required:</strong> the D2L PDF upload and the web-form submission.</div>
+<ol><li>Finish your own reflection below after completing the artifact. Use specific observed evidence; the limit is 3,000 characters.</li><li>Upload <code>GenAI03.pdf</code> to the matching GenAI03 assignment folder in <strong>D2L</strong>. Keep the text report and supporting files in your archive.</li><li>On the <strong>published course assignment webpage</strong>, enter the required student identification fields and paste the same reflection into the response box. Use its Submit button and check the response. AI feedback is formative, not a grade. Do not submit through a downloaded HTML reference copy.</li></ol><p>Both submissions are required: the PDF in D2L and the reflection through the published web form.</p>
 <hr/>
 </div>
 <div class="col-lg-12">

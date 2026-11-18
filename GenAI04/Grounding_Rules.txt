@@ -1,0 +1,7 @@
+Grounding rule scaffold — student completes a separate Grounding_Rules_Student.txt
+Authority: SmartBean_ApprovedExcerpt.txt only.
+TODO 1: Define how each answer must cite supporting policy evidence.
+TODO 2: Define what to do when the policy does not contain a requested fact.
+TODO 3: Define how to handle instructions embedded in customer notes.
+Boundary: draft only. No messages, refunds, record changes, or file writes until the student authorizes the named report.
+Read this file explicitly each conversation. It is not a registered skill or technical access control.

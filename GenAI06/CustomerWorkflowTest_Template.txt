@@ -1,0 +1,49 @@
+GenAI06 — Customer-service drafts
+
+Name:
+Date:
+Hermes profile: MIS362
+Model/provider observed (no key):
+
+Predictions (write before using Hermes):
+
+1. Rules for permitted customer drafts:
+    My observation / actual result:
+    Independent check / supporting file:
+    Result (PASS / NEEDS CORRECTION / NOT RUN):
+
+2. Ordinary case: facts, draft, policy check:
+    My observation / actual result:
+    Independent check / supporting file:
+    Result (PASS / NEEDS CORRECTION / NOT RUN):
+
+3. Exception case: facts, draft, policy check:
+    My observation / actual result:
+    Independent check / supporting file:
+    Result (PASS / NEEDS CORRECTION / NOT RUN):
+
+4. Held-out case and human approval decision:
+    My observation / actual result:
+    Independent check / supporting file:
+    Result (PASS / NEEDS CORRECTION / NOT RUN):
+
+5. Reusable instruction file created:
+    My observation / actual result:
+    Independent check / supporting file:
+    Result (PASS / NEEDS CORRECTION / NOT RUN):
+
+6. What must never be promised or sent automatically:
+    My observation / actual result:
+    Independent check / supporting file:
+    Result (PASS / NEEDS CORRECTION / NOT RUN):
+
+Evidence 1 — What Hermes actually did:
+
+Evidence 2 — How I verified it myself:
+
+Evidence 3 — My business conclusion:
+
+Problems / corrections / first results retained:
+
+Saved in Notepad and reopened (yes/no):
+Backed up in OneDrive using File Explorer (yes/no, location):
