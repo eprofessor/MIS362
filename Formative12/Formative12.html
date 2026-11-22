@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+    <title>MIS362 Formative12</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid"
+        action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx"
+        method="post"
+        name="frmAssignment"
+        id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Formative12-FA2026-v2" type="hidden">
+
+        <textarea id="datasetContext"
+                  name="datasetContext"
+                  readonly
+                  hidden>Assignment: MIS362 Formative12 — SmartBean System Acquisition, Governance, and Implementation Applied Review. This assignment is discussed after Summative12. The proposed system supports anonymous occupancy and queue measurement with AI-assisted management summaries, but it may not autonomously change staffing, pricing, purchasing, or lease decisions. Worksheets are 0-StartHere, 1-AcquisitionDecision, 2-GovernanceControls, 3-ImplementationReadiness, 4-PilotDecision, and Reference. Students compare four vendor-neutral packages in one smaller decision matrix: custom build plus organization-hosted deployment, buy and configure plus organization-hosted deployment, subscription plus public cloud, and combined acquisition plus hybrid deployment. They review implementation speed, pilot cost, privacy and data control, support, reliability, accessibility, scalability, data portability and exit, and fit with the remaining lease timeline. Students review governance risks involving credentials, excessive permissions, prompt injection, untrusted documents, data leakage, inaccurate output, excessive authority, logging, vendor changes, portability, and accessibility. Students then apply critical readiness gates. Any unresolved critical gate requires revision before the pilot regardless of the weighted acquisition score. The final worksheet combines acquisition, governance, readiness, checkpoints, and pilot evidence for the larger location decision. The earlier mixed-reference and random-data exercises are not part of this assignment. Students complete and verify the detailed workbook review. Web answers should be brief and should state the essential conclusion and strongest supporting reason. The AI does not receive the workbook. Do not require students to reproduce matrix ratings, formulas, control tables, readiness gates, scores, checkpoints, or all pilot measures unless the question specifically asks for them. Do not penalize concise answers when the conclusion is clear, relevant, and consistent with the assignment. Accept alternative reasonable ratings, risk priorities, controls, owners, readiness conclusions, and recommendations when supported. Evaluate acquisition and deployment fit, tradeoffs, governance reasoning, control ownership and verification, critical-gate logic, implementation readiness, human approval, pilot evidence, and relevance to the larger location decision.</textarea>
+
+        <h1 class="text-center">SmartBean System Acquisition, Governance, and Implementation</h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email"
+                        readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text"
+                        size="500" maxlength="500" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text"
+                        size="500" maxlength="500" value="Formative12" readonly aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            150 Points
+            <hr>
+        </div>
+
+        
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Formative12
+Return later: /resume Formative12
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes is the default AI-assisted workflow for MIS362, but Direct Mode is allowed for routine steps when you already understand the task and agent assistance would add no meaningful value.</strong> Resume Hermes when you need explanation, planning, troubleshooting, alternatives, review, or verification.</p>
+            <p><strong>Direct Mode:</strong> Work directly in the required course software and verify the result yourself. Choosing not to use Hermes for a routine step is acceptable unless an assignment explicitly requires it.</p>
+            <p><strong>Suggested Hermes checkpoint:</strong> Ask Hermes to compare two acquisition or deployment alternatives and identify one governance, security, readiness, or implementation control that should affect the decision.</p>
+            <p>Hermes is a coach. It may explain concepts, suggest formulas or methods, and help troubleshoot, but you must perform and verify the hands-on work in the required software. No extra Hermes screenshot or chat transcript is required.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+<div class="col-lg-12">
+            <a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a>
+        </div>
+        <div id="Objectives" class="collapse in col-lg-12">
+            <p>
+                This applied review follows Summative12 and reinforces how SmartBean should acquire, govern, and implement a limited AI-enabled information system.
+            </p>
+            <p>After completing this assignment, you will be able to:</p>
+            <ol>
+                <li>Compare vendor-neutral acquisition and deployment packages.</li>
+                <li>Identify the most important tradeoffs in a system-acquisition decision.</li>
+                <li>Evaluate governance, security, accessibility, and human-approval controls.</li>
+                <li>Apply critical readiness gates that override a favorable weighted score.</li>
+                <li>Recommend whether SmartBean should begin, revise, or reject the proposed pilot.</li>
+            </ol>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Resources" class="btn btn-info" data-toggle="collapse">Resources and Help</a>
+        </div>
+        <div id="Resources" class="collapse in col-lg-12">
+            <p>
+                Suggested Hermes prompt (use the <code>mis362</code> profile; the MIS362 course agent remains available as a secondary resource):
+                <br>
+                <code>I am completing MIS362 Formative12 after Summative12. Help me compare the vendor-neutral acquisition packages, identify the most important governance control, and verify whether every critical readiness gate is satisfied before recommending a pilot.</code>
+            </p>
+            <p>
+                The AI does not receive your workbook. Complete and verify the workbook review, then submit only the essential conclusion and strongest supporting reason for each question.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a>
+        </div>
+        <div id="Overview" class="collapse in col-lg-12">
+            <p>
+                SmartBean is evaluating how to acquire, deploy, govern, and implement an anonymous occupancy and queue-measurement platform that can prepare AI-assisted management summaries.
+            </p>
+            <p>
+                Download and open <a href="Formative12_SmartBean_AcquisitionGovernance.xlsx" class="bg-info text-white">Formative12_SmartBean_AcquisitionGovernance.xlsx</a>. Save a working copy as <strong>Formative12.xlsx</strong>.
+            </p>
+            <p>
+                The workbook uses one smaller vendor-neutral acquisition matrix, a governance-and-control review, critical readiness gates, and a final pilot decision. Critical privacy, security, accessibility, human-approval, logging, rollback, and portability conditions cannot be offset by a high weighted score.
+            </p>
+            <p>
+                Detailed review belongs in the workbook. The three webpage answers should remain brief and communicate only the final conclusions and strongest reasons.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Introduction" class="btn btn-info" data-toggle="collapse">Introduction — Approved Project Facts</a>
+        </div>
+        <div id="Introduction" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>0-StartHere</strong>.</li>
+                <li>Review the business purpose, anonymous-data boundary, AI-supported feature, management decision boundary, lease timing, safeguards, and vendor-exit requirement.</li>
+                <li>Review the sequence connecting acquisition, governance, readiness, and the pilot decision.</li>
+            </ol>
+            <p>This introduction has no separate webpage answer.</p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1 — Acquisition and Deployment</a>
+        </div>
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>1-AcquisitionDecision</strong>.</li>
+                <li>Review the four vendor-neutral packages and criterion weights.</li>
+                <li>Review or revise the 1–5 ratings for speed, cost, control, support, reliability, accessibility, scalability, portability, and lease-timing fit.</li>
+                <li>Review the weighted scores without treating the highest score as an automatic decision.</li>
+                <li>Record the strongest advantage and most important tradeoff for your preferred package.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q1"><strong>1. (30) Question 1</strong></label>
+                <textarea class="form-control" id="q1" name="q1" rows="8" readonly aria-readonly="true">Using the 1-AcquisitionDecision worksheet, briefly recommend an acquisition and deployment combination for the SmartBean pilot. State the strongest advantage and the most important tradeoff.</textarea>
+                <br>
+                <label for="a1"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a1" name="a1" rows="5" maxlength="1500" placeholder="State the package, strongest advantage, and most important tradeoff..."></textarea>
+                <small id="charCount-a1" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2 — Governance, Security, and Control Ownership</a>
+        </div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>2-GovernanceControls</strong>.</li>
+                <li>Review the risks, technical controls, administrative or human controls, owners, and verification evidence.</li>
+                <li>Review or revise likelihood, impact, current status, and student priority.</li>
+                <li>Identify the risk with the most important unresolved control.</li>
+                <li>Confirm who is responsible for verifying that the control works.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q2"><strong>2. (30) Question 2</strong></label>
+                <textarea class="form-control" id="q2" name="q2" rows="8" readonly aria-readonly="true">Using the 2-GovernanceControls worksheet, briefly identify the highest-priority SmartBean governance or security risk. State the most important control and the role responsible for verifying that the control works.</textarea>
+                <br>
+                <label for="a2"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a2" name="a2" rows="5" maxlength="1500" placeholder="State the risk, control, responsible role, and strongest reason..."></textarea>
+                <small id="charCount-a2" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3 — Readiness Gates and Pilot Decision</a>
+        </div>
+        <div id="Exercise03" class="collapse in col-lg-12">
+            <ol>
+                <li>Open <strong>3-ImplementationReadiness</strong>.</li>
+                <li>Review every readiness gate, required evidence, owner, status, and correction.</li>
+                <li>Confirm that any critical gate not marked Ready produces a revise-before-pilot result.</li>
+                <li>Open <strong>4-PilotDecision</strong>.</li>
+                <li>Review the acquisition result, governance risks, readiness result, checkpoints, and possible pilot evidence.</li>
+                <li>Recommend whether SmartBean should begin a limited pilot, revise the proposal, or reject the current proposal.</li>
+            </ol>
+
+            <div class="form-group">
+                <label for="q3"><strong>3. (30) Question 3</strong></label>
+                <textarea class="form-control" id="q3" name="q3" rows="9" readonly aria-readonly="true">Using the 3-ImplementationReadiness and 4-PilotDecision worksheets, briefly recommend whether SmartBean should begin a limited pilot, revise the proposal, or reject it. Identify the most important readiness condition and one pilot result management should review before making the larger location decision.</textarea>
+                <br>
+                <label for="a3"><strong>Your brief answer:</strong></label>
+                <textarea class="form-control" id="a3" name="a3" rows="5" maxlength="1500" placeholder="State the recommendation, critical condition, and one pilot result..."></textarea>
+                <small id="charCount-a3" class="text-muted">0 / 1500 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Evidence" class="btn btn-info" data-toggle="collapse">Completion Evidence</a>
+        </div>
+        <div id="Evidence" class="collapse in col-lg-12">
+            <p>Before submitting, confirm that the workbook visibly shows:</p>
+            <ul>
+                <li>reviewed ratings and a recommendation for one acquisition and deployment package;</li>
+                <li>the strongest advantage and most important tradeoff;</li>
+                <li>reviewed governance risks, controls, owners, verification evidence, and priorities;</li>
+                <li>critical readiness gates and the resulting readiness decision;</li>
+                <li>a pilot recommendation, critical condition, stop condition, and location-decision evidence;</li>
+                <li>no unexpected formula errors such as <code>#DIV/0!</code>, <code>#VALUE!</code>, <code>#REF!</code>, or <code>#NAME?</code>.</li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#D2LSubmission" class="btn btn-info" data-toggle="collapse">D2L Workbook Submission</a>
+        </div>
+        <div id="D2LSubmission" class="collapse in col-lg-12">
+            <p><strong>(60)</strong> Save and upload <strong>Formative12.xlsx</strong> to the D2L <code>Formative12</code> assignment folder.</p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#WebSubmission" class="btn btn-info" data-toggle="collapse">Webpage Submission</a>
+        </div>
+        <div id="WebSubmission" class="collapse in col-lg-12">
+            <p><strong>Required:</strong> Verify that this assignment is linked from your course home page.</p>
+            <p><strong>Required:</strong> Press the Submit button at the top or bottom of this page.</p>
+            <p>
+                Complete and verify the workbook review. Your webpage answers should contain only the essential conclusion and strongest supporting reason.
+            </p>
+            <p>
+                Review the AI feedback, correct the workbook or answers as needed, and resubmit before the deadline.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+    <script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 3; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 1500;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+    })();
+    </script>
+
+</body>
+</html>
